@@ -1,0 +1,26 @@
+﻿district,latitude,longitude,coordinate_method,coordinate_crs,boundary_source
+Ampara,7.12490520709576,81.68547230660559,representative_point,EPSG:4326,Sri Lanka NSDI
+Anuradhapura,8.369010867783887,80.4401597774747,representative_point,EPSG:4326,Sri Lanka NSDI
+Badulla,7.082047173584256,81.08869271632418,representative_point,EPSG:4326,Sri Lanka NSDI
+Batticaloa,7.834329549194089,81.40987531047581,representative_point,EPSG:4326,Sri Lanka NSDI
+Colombo,6.84854571835556,80.02854563841434,representative_point,EPSG:4326,Sri Lanka NSDI
+Galle,6.2036159890825076,80.23103410688707,representative_point,EPSG:4326,Sri Lanka NSDI
+Gampaha,7.1185254099239295,80.02119195674865,representative_point,EPSG:4326,Sri Lanka NSDI
+Hambantota,6.276106131372352,81.1780272189781,representative_point,EPSG:4326,Sri Lanka NSDI
+Jaffna,9.64278977901427,79.90894107026998,representative_point,EPSG:4326,Sri Lanka NSDI
+Kalutara,6.575559940566353,80.13453925261899,representative_point,EPSG:4326,Sri Lanka NSDI
+Kandy,7.215058876812035,80.64046074368187,representative_point,EPSG:4326,Sri Lanka NSDI
+Kegalle,7.112724732740706,80.32134589580835,representative_point,EPSG:4326,Sri Lanka NSDI
+Kilinochchi,9.447946315462543,80.38585146202126,representative_point,EPSG:4326,Sri Lanka NSDI
+Kurunegala,7.7281420968954455,80.25734392502389,representative_point,EPSG:4326,Sri Lanka NSDI
+Mannar,8.88100117280858,80.16308552154176,representative_point,EPSG:4326,Sri Lanka NSDI
+Matale,7.697800449948737,80.66032986880026,representative_point,EPSG:4326,Sri Lanka NSDI
+Matara,6.158308756938364,80.51946108195682,representative_point,EPSG:4326,Sri Lanka NSDI
+Moneragala,6.876686284092277,81.37545637384694,representative_point,EPSG:4326,Sri Lanka NSDI
+Mullaitivu,9.180864186543815,80.52649613902175,representative_point,EPSG:4326,Sri Lanka NSDI
+Nuwara Eliya,7.013160657654822,80.75709330931232,representative_point,EPSG:4326,Sri Lanka NSDI
+Polonnaruwa,7.993980891940543,81.05058448984975,representative_point,EPSG:4326,Sri Lanka NSDI
+Puttalam,7.916216544388385,79.91403181850706,representative_point,EPSG:4326,Sri Lanka NSDI
+Ratnapura,6.580030721472881,80.59041472527228,representative_point,EPSG:4326,Sri Lanka NSDI
+Trincomalee,8.56830414611212,81.0628953495768,representative_point,EPSG:4326,Sri Lanka NSDI
+Vavuniya,8.836116678763878,80.48615246566625,representative_point,EPSG:4326,Sri Lanka NSDI
