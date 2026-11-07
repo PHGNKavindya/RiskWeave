@@ -1,0 +1,10 @@
+check,value
+Total rows,24775
+Total columns,27
+Missing district keys,0
+Missing week_start,0
+Missing week_end,0
+Missing dengue cases,0
+Duplicate district-reporting-period keys,0
+Invalid date intervals,0
+Negative dengue case values,0

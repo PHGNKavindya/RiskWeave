@@ -1,0 +1,33 @@
+{
+    "project": "RiskWeave",
+    "notebook": "08_environmental_anomaly_detection.ipynb",
+    "input_file": "c:\\Users\\Nethmi\\Documents\\GitHub\\RiskWeave\\data\\processed\\dengue_weather_weekly_25_districts.csv",
+    "weather_data_source": "Open-Meteo ERA5 (as currently used in the project)",
+    "rows_in_source_dataset": 24775,
+    "district_count": 25,
+    "date_start": "2006-12-23",
+    "date_end": "2025-12-13",
+    "weather_features_used": [
+        "precipitation_mean_daily",
+        "precipitation_hours",
+        "temperature_2m_mean",
+        "temperature_2m_max",
+        "temperature_2m_min",
+        "relative_humidity_2m_mean",
+        "relative_humidity_2m_max",
+        "relative_humidity_2m_min",
+        "dew_point_2m_mean",
+        "wind_speed_10m_mean",
+        "wind_speed_10m_max",
+        "cloud_cover_mean",
+        "shortwave_radiation_mean_daily",
+        "et0_fao_evapotranspiration"
+    ],
+    "rolling_window_reporting_periods": 52,
+    "minimum_baseline_observations": 26,
+    "provisional_absolute_robust_score_threshold": 3.5,
+    "baseline_excludes_current_observation": true,
+    "score_formula": "(observed_value - baseline_median) / (1.4826 * baseline_MAD)",
+    "zero_or_missing_mad_scores": "Not scored; retained as unavailable",
+    "interpretation": "Candidate unusual environmental observations only; not a dengue outbreak prediction or confirmation."
+}

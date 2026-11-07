@@ -1,0 +1,2 @@
+experiment,test_MAE,test_RMSE,training_validation_rows,test_rows,primary_validation_metric
+C - Daily-Derived Weather,12.861396909305677,30.692116859204837,21025,3725,RMSE

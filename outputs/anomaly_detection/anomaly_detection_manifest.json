@@ -1,0 +1,17 @@
+{
+    "project": "RiskWeave",
+    "notebook": "07_dengue_anomaly_detection.ipynb",
+    "input_file": "data\\processed\\dengue_weather_weekly_25_districts.csv",
+    "method": "District-specific trailing rolling median and MAD",
+    "signal": "Seven-day-equivalent dengue case count",
+    "baseline_window_reporting_periods": 52,
+    "minimum_baseline_observations": 26,
+    "current_observation_excluded_from_baseline": true,
+    "robust_score_formula": "(value - rolling_median) / (1.4826 * rolling_MAD)",
+    "provisional_high_anomaly_threshold": 3.5,
+    "zero_mad_policy": "Score left missing; not automatically flagged",
+    "interpretation": "Candidate statistical anomalies only; not confirmed outbreaks",
+    "rows_processed": 24775,
+    "districts": 25,
+    "candidate_high_anomalies": 2061
+}

@@ -1,0 +1,49 @@
+{
+    "project": "RiskWeave",
+    "notebook": "09_shap_explainability.ipynb",
+    "analysis": "SHAP Explainability",
+    "model": {
+        "model_file": "riskweave_final_dengue_forecasting_model.joblib",
+        "model_type": "Pipeline",
+        "selected_features": [
+            "district_key",
+            "dengue_current_period",
+            "dengue_lag_1",
+            "dengue_lag_2",
+            "dengue_lag_3",
+            "dengue_lag_4",
+            "dengue_lag_51",
+            "dengue_lag_52",
+            "dengue_rolling_mean_4",
+            "month",
+            "week_sin",
+            "week_cos"
+        ],
+        "feature_count": 12,
+        "weather_features_used": false
+    },
+    "dataset": {
+        "source_file": "dengue_weather_weekly_25_districts.csv",
+        "district_count": 25,
+        "background_observations": 100,
+        "test_observations_explained": 100,
+        "test_period_start": "2023-02-11",
+        "test_period_end": "2025-12-06"
+    },
+    "shap_method": {
+        "explainer": "PermutationExplainer",
+        "background_sample_size": 100,
+        "test_sample_size": 100,
+        "random_state": 42,
+        "max_evals": 25,
+        "district_encoding": "Numerical category mapping for SHAP calculation only"
+    },
+    "interpretation_limitations": [
+        "SHAP explains model behaviour, not causality.",
+        "Explanations are based on sampled test observations.",
+        "District numerical encoding introduces an artificial ordering.",
+        "Weather variables are not included in the final forecasting model.",
+        "Correlated dengue history features may share contributions.",
+        "SHAP results do not establish dengue outbreak confirmation."
+    ]
+}

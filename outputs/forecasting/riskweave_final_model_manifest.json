@@ -1,0 +1,31 @@
+{
+  "project": "RiskWeave",
+  "notebook": "06_dengue_case_forecasting.ipynb",
+  "selected_model": "Histogram Gradient Boosting",
+  "selected_feature_set": "Without weather",
+  "forecast_origin": "Latest completed reporting period",
+  "forecast_target": "Next reporting period dengue cases",
+  "number_of_predictors": 12,
+  "features": [
+    "district_key",
+    "dengue_current_period",
+    "dengue_lag_1",
+    "dengue_lag_2",
+    "dengue_lag_3",
+    "dengue_lag_4",
+    "dengue_lag_51",
+    "dengue_lag_52",
+    "dengue_rolling_mean_4",
+    "month",
+    "week_sin",
+    "week_cos"
+  ],
+  "training_rows": 17325,
+  "validation_rows": 3700,
+  "test_rows": 3725,
+  "test_MAE": 12.384965664315903,
+  "test_RMSE": 28.87209601424702,
+  "weather_ablation_file": "weather_ablation_comparison.csv",
+  "weather_features_improved_test_metrics": false,
+  "weather_source_note": "Open-Meteo ERA5 weather data was evaluated in the ablation experiment but excluded from the selected forecasting model."
+}
