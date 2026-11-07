@@ -1,0 +1,17 @@
+{
+  "master_file": "c:\\Users\\Nethmi\\Documents\\GitHub\\RiskWeave\\data\\raw\\weather_era5_2006_2025\\weather_daily_era5_2006-12-23_to_2025-12-19.csv",
+  "rows": 173425,
+  "districts": 25,
+  "weather_variables": 16,
+  "expected_start": "2006-12-23",
+  "expected_end": "2025-12-19",
+  "observed_start": "2006-12-23",
+  "observed_end": "2025-12-19",
+  "expected_rows": 173425,
+  "duplicate_district_date_rows": 0,
+  "invalid_dates": 0,
+  "missing_weather_values": 0,
+  "districts_with_expected_rows": 25,
+  "districts_with_complete_date_coverage": 25,
+  "note": "Outlier and range flags require review. No records were automatically deleted or imputed."
+}

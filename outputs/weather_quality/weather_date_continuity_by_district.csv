@@ -1,0 +1,26 @@
+district,rows,unique_dates,missing_dates,unexpected_dates,duplicate_pairs,first_date,last_date,row_count_ok,date_coverage_ok
+Ampara,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Anuradhapura,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Badulla,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Batticaloa,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Colombo,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Galle,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Gampaha,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Hambantota,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Jaffna,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Kalutara,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Kandy,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Kegalle,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Kilinochchi,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Kurunegala,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Mannar,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Matale,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Matara,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Moneragala,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Mullaitivu,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Nuwara Eliya,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Polonnaruwa,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Puttalam,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Ratnapura,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Trincomalee,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True
+Vavuniya,6937,6937,0,0,0,2006-12-23,2025-12-19,True,True

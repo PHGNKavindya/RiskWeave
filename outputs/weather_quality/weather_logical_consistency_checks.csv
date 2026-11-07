@@ -1,0 +1,9 @@
+check,flagged_rows
+temperature_min_above_mean,0
+temperature_mean_above_max,0
+temperature_min_above_max,0
+humidity_min_above_mean,0
+humidity_mean_above_max,0
+humidity_min_above_max,0
+wind_mean_above_max,0
+rain_above_precipitation,0
