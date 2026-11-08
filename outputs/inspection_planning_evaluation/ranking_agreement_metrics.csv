@@ -1,0 +1,5 @@
+metric,value
+Spearman correlation,0.9830769230769232
+Kendall correlation,0.9066666666666665
+Mean absolute rank difference,0.96
+Maximum absolute rank difference,3.0

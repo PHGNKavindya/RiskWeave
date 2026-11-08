@@ -1,0 +1,13 @@
+metric,value
+evaluation_period_start,2025-12-20
+evaluation_period_end,2025-12-26
+number_of_districts,25
+spearman_correlation,0.9830769230769232
+kendall_correlation,0.9066666666666665
+mean_absolute_rank_difference,0.96
+maximum_absolute_rank_difference,3
+forecast_coverage_top_10_percent,82.42659279778395
+recent_case_coverage_top_10_percent,82.42659279778395
+forecast_top_10_distance_km,813.1202341724959
+recent_case_top_10_distance_km,813.1202341724959
+top_10_routes_identical,True
