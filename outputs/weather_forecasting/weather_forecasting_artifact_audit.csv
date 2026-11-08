@@ -1,0 +1,16 @@
+filename,category,exists,file_size_kb
+precipitation_sum_1day_model.joblib,weather_forecasting,True,98.36
+precipitation_sum_7day_model.joblib,weather_forecasting,True,315.86
+temperature_2m_mean_1day_model.joblib,weather_forecasting,True,5895.81
+temperature_2m_mean_7day_model.joblib,weather_forecasting,True,5583.9
+all_weather_forecasting_validation_comparison.csv,weather_forecasting,True,1.84
+weather_forecasting_baseline_improvement.csv,weather_forecasting,True,0.44
+weather_forecasting_residual_statistics.csv,weather_forecasting,True,0.68
+rainfall_error_by_intensity.csv,weather_forecasting,True,1.02
+temperature_error_by_range.csv,weather_forecasting,True,1.05
+weather_forecasting_district_error_analysis.csv,weather_forecasting,True,9.1
+consolidated_shap_summary.csv,shap_analysis,True,5.99
+rainfall_shap_horizon_comparison.csv,shap_analysis,True,8.87
+temperature_shap_horizon_comparison.csv,shap_analysis,True,10.66
+rainfall_horizon_comparison.png,shap_analysis,True,288.26
+temperature_horizon_comparison.png,shap_analysis,True,286.6

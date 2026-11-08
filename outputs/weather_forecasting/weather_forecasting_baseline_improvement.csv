@@ -1,0 +1,5 @@
+target,horizon_days,selected_model,persistence_mae,model_mae,mae_improvement_percent
+precipitation_sum,1,XGBoost,6.050677299499512,5.287182331085205,12.618338916826055
+precipitation_sum,7,HistGradientBoosting,7.316732406616211,5.701455468748201,22.076479610042636
+temperature_2m_mean,1,RandomForest,0.6133770942687988,0.5777789399509046,5.8036328142201805
+temperature_2m_mean,7,RandomForest,0.8589507937431335,0.7038896761961041,18.052386548396388

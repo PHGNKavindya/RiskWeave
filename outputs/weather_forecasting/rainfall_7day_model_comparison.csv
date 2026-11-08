@@ -1,0 +1,4 @@
+target,horizon_days,model,training_records,validation_records,training_time_seconds,MAE,RMSE,R2,n_estimators,max_depth,learning_rate,tree_method,max_bin,max_iter,max_leaf_nodes,min_samples_leaf,max_features
+precipitation_sum,7,HistGradientBoosting,51525,9150,2.22,5.701455468748201,10.64221830540979,0.09324088298170763,,,0.05,,,50.0,31.0,,
+precipitation_sum,7,RandomForest,51525,9150,5.02,5.710916229172443,10.514661765562975,0.11484726040552151,30.0,12.0,,,,,,5.0,sqrt
+precipitation_sum,7,XGBoost,51525,9150,1.7,5.719686985015869,10.638855639993114,0.09381389617919922,50.0,4.0,0.05,hist,64.0,,,,

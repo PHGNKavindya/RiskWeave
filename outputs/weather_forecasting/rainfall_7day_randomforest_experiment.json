@@ -1,0 +1,15 @@
+{
+    "target": "precipitation_sum",
+    "horizon_days": 7,
+    "model": "RandomForest",
+    "training_records": 51525,
+    "validation_records": 9150,
+    "training_time_seconds": 5.02,
+    "MAE": 5.710916229172443,
+    "RMSE": 10.514661765562975,
+    "R2": 0.11484726040552151,
+    "n_estimators": 30,
+    "max_depth": 12,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt"
+}

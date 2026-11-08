@@ -1,0 +1,13 @@
+{
+    "target": "temperature_2m_mean",
+    "horizon_days": 7,
+    "model": "HistGradientBoosting",
+    "mae": 0.7290149670684918,
+    "rmse": 0.9305045525475021,
+    "r2": 0.9176702272670018,
+    "training_time_seconds": 2.478935480117798,
+    "training_records": 51525,
+    "validation_records": 9150,
+    "validation_start": "2024-01-01",
+    "validation_end": "2024-12-31"
+}

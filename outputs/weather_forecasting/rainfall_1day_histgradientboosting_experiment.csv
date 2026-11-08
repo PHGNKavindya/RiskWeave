@@ -1,0 +1,2 @@
+target,horizon_days,model,training_records,validation_records,training_time_seconds,MAE,RMSE,R2,max_iterations,learning_rate,max_leaf_nodes,early_stopping,training_sample_method,experiment_date
+precipitation_sum,1,HistGradientBoosting,51575,9150,2.15,5.3144344067494265,10.338243164847162,0.1443008709778475,50,0.05,31,False,Every third chronological record per district,2026-11-08T18:37:45.693912

@@ -1,0 +1,13 @@
+{
+    "target": "temperature_2m_mean",
+    "horizon_days": 1,
+    "model": "XGBoost",
+    "mae": 0.6130130290985107,
+    "rmse": 0.7747764941914139,
+    "r2": 0.9429214596748352,
+    "training_time_seconds": 1.6544687747955322,
+    "training_records": 51575,
+    "validation_records": 9150,
+    "validation_start": "2024-01-01",
+    "validation_end": "2024-12-31"
+}

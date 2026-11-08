@@ -1,0 +1,16 @@
+{
+    "target": "precipitation_sum",
+    "horizon_days": 7,
+    "model": "XGBoost",
+    "training_records": 51525,
+    "validation_records": 9150,
+    "training_time_seconds": 1.7,
+    "MAE": 5.719686985015869,
+    "RMSE": 10.638855639993114,
+    "R2": 0.09381389617919922,
+    "n_estimators": 50,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "tree_method": "hist",
+    "max_bin": 64
+}

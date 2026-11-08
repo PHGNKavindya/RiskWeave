@@ -1,0 +1,14 @@
+{
+    "target": "precipitation_sum",
+    "horizon_days": 7,
+    "model": "HistGradientBoosting",
+    "training_records": 51525,
+    "validation_records": 9150,
+    "training_time_seconds": 2.22,
+    "MAE": 5.701455468748201,
+    "RMSE": 10.64221830540979,
+    "R2": 0.09324088298170763,
+    "max_iter": 50,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 31
+}

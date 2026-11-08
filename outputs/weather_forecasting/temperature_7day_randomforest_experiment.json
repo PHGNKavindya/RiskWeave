@@ -1,0 +1,13 @@
+{
+    "target": "temperature_2m_mean",
+    "horizon_days": 7,
+    "model": "RandomForest",
+    "mae": 0.7038896761961041,
+    "rmse": 0.893140572335069,
+    "r2": 0.9241493077593219,
+    "training_time_seconds": 5.442340850830078,
+    "training_records": 51525,
+    "validation_records": 9150,
+    "validation_start": "2024-01-01",
+    "validation_end": "2024-12-31"
+}

@@ -1,0 +1,4 @@
+target,horizon_days,model,training_records,validation_records,training_time_seconds,MAE,RMSE,R2,max_iterations,learning_rate,max_leaf_nodes,early_stopping,training_sample_method,experiment_date,n_estimators,max_depth,tree_method,max_bin,min_samples_leaf,max_features
+precipitation_sum,1,XGBoost,51575,9150,1.66,5.287182331085205,10.286133878717427,0.15290534496307373,,0.05,,,,,50.0,4.0,hist,64.0,,
+precipitation_sum,1,HistGradientBoosting,51575,9150,2.15,5.3144344067494265,10.338243164847162,0.1443008709778475,50.0,0.05,31.0,False,Every third chronological record per district,2026-11-08T18:37:45.693912,,,,,,
+precipitation_sum,1,RandomForest,51575,9150,5.35,5.328660569149712,10.24235096855411,0.16010129630829817,,,,,,,30.0,12.0,,,5.0,sqrt
