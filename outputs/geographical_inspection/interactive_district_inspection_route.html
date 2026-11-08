@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8047257c5f0290c9c75beb865f40ac17 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8047257c5f0290c9c75beb865f40ac17" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8047257c5f0290c9c75beb865f40ac17 = L.map(
+                "map_8047257c5f0290c9c75beb865f40ac17",
+                {
+                    center: [7.8, 80.7],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3555f79519f90cd095cf5fd3456a6d58 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3555f79519f90cd095cf5fd3456a6d58.addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var poly_line_61311da10dd79aea61573a7c2b8edc25 = L.polyline(
+                [[6.84854571835556, 80.02854563841434], [7.1185254099239295, 80.02119195674865], [6.575559940566353, 80.13453925261899], [6.203615989082508, 80.23103410688707], [6.158308756938364, 80.51946108195682], [6.580030721472881, 80.59041472527228], [7.215058876812035, 80.64046074368187], [9.64278977901427, 79.90894107026998], [7.916216544388385, 79.91403181850706], [7.728142096895445, 80.25734392502389], [7.697800449948737, 80.66032986880026], [7.112724732740706, 80.32134589580835], [7.082047173584256, 81.08869271632418], [6.876686284092277, 81.37545637384694], [6.276106131372352, 81.1780272189781], [7.834329549194089, 81.40987531047581], [7.993980891940543, 81.05058448984975], [8.56830414611212, 81.0628953495768], [8.836116678763878, 80.48615246566625], [8.88100117280858, 80.16308552154176], [9.180864186543817, 80.52649613902175], [9.447946315462543, 80.38585146202126], [8.369010867783887, 80.4401597774747], [7.013160657654822, 80.75709330931232], [7.12490520709576, 81.68547230660559]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            poly_line_61311da10dd79aea61573a7c2b8edc25.bindTooltip(
+                `<div>
+                     Priority-aware district route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b65671696f3ee28589b0056a39dceb3f = L.marker(
+                [6.84854571835556, 80.02854563841434],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_9bc051e4a981a70c4d76e7ce1f65daff = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                1\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_6bb792de06332382ba7a9c18627116ae = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_bfa26deae7a33eb3fc054b4093f4b082 = $(`<div id="html_bfa26deae7a33eb3fc054b4093f4b082" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 1<br>             <b>District:</b> colombo<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 303.55<br>             <b>Distance from previous:</b>             0.00 km             </div>`)[0];
+                popup_6bb792de06332382ba7a9c18627116ae.setContent(html_bfa26deae7a33eb3fc054b4093f4b082);
+            
+        
+
+        marker_b65671696f3ee28589b0056a39dceb3f.bindPopup(popup_6bb792de06332382ba7a9c18627116ae)
+        ;
+
+        
+    
+    
+            marker_b65671696f3ee28589b0056a39dceb3f.bindTooltip(
+                `<div>
+                     Stop 1: colombo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b65671696f3ee28589b0056a39dceb3f.setIcon(div_icon_9bc051e4a981a70c4d76e7ce1f65daff);
+            
+    
+            var marker_30ddf525b6351e7602d3a676edae0e16 = L.marker(
+                [7.1185254099239295, 80.02119195674865],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_2811f25eae9cd4cb2be2f71e14b6e215 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                2\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_81d2e6e635fdc4b7959fcf5615dee33f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c57d772e65ccb95fb8693a8cb2db2473 = $(`<div id="html_c57d772e65ccb95fb8693a8cb2db2473" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 2<br>             <b>District:</b> gampaha<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 190.49<br>             <b>Distance from previous:</b>             30.03 km             </div>`)[0];
+                popup_81d2e6e635fdc4b7959fcf5615dee33f.setContent(html_c57d772e65ccb95fb8693a8cb2db2473);
+            
+        
+
+        marker_30ddf525b6351e7602d3a676edae0e16.bindPopup(popup_81d2e6e635fdc4b7959fcf5615dee33f)
+        ;
+
+        
+    
+    
+            marker_30ddf525b6351e7602d3a676edae0e16.bindTooltip(
+                `<div>
+                     Stop 2: gampaha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_30ddf525b6351e7602d3a676edae0e16.setIcon(div_icon_2811f25eae9cd4cb2be2f71e14b6e215);
+            
+    
+            var marker_74ea7ec76acbbecf984886b19e38059d = L.marker(
+                [6.575559940566353, 80.13453925261899],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_4b66c70ff4fb38bf0156e8c6bab8324f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                3\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_713153a594ff0ebf46dc19aba8ac1564 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_90d95bd5881c2b525d0721992e9106da = $(`<div id="html_90d95bd5881c2b525d0721992e9106da" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 3<br>             <b>District:</b> kalutara<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 73.39<br>             <b>Distance from previous:</b>             61.66 km             </div>`)[0];
+                popup_713153a594ff0ebf46dc19aba8ac1564.setContent(html_90d95bd5881c2b525d0721992e9106da);
+            
+        
+
+        marker_74ea7ec76acbbecf984886b19e38059d.bindPopup(popup_713153a594ff0ebf46dc19aba8ac1564)
+        ;
+
+        
+    
+    
+            marker_74ea7ec76acbbecf984886b19e38059d.bindTooltip(
+                `<div>
+                     Stop 3: kalutara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_74ea7ec76acbbecf984886b19e38059d.setIcon(div_icon_4b66c70ff4fb38bf0156e8c6bab8324f);
+            
+    
+            var marker_0e4dc62fc6fb0b16fd28986b00dd8e24 = L.marker(
+                [6.203615989082508, 80.23103410688707],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_a0b86265428a3250ef1841c93360b609 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                4\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_94a0909d4bea1dcc72579e88bc8500b0 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_52aa5c916505428f3deddf79e561951f = $(`<div id="html_52aa5c916505428f3deddf79e561951f" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 4<br>             <b>District:</b> galle<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 76.96<br>             <b>Distance from previous:</b>             42.71 km             </div>`)[0];
+                popup_94a0909d4bea1dcc72579e88bc8500b0.setContent(html_52aa5c916505428f3deddf79e561951f);
+            
+        
+
+        marker_0e4dc62fc6fb0b16fd28986b00dd8e24.bindPopup(popup_94a0909d4bea1dcc72579e88bc8500b0)
+        ;
+
+        
+    
+    
+            marker_0e4dc62fc6fb0b16fd28986b00dd8e24.bindTooltip(
+                `<div>
+                     Stop 4: galle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e4dc62fc6fb0b16fd28986b00dd8e24.setIcon(div_icon_a0b86265428a3250ef1841c93360b609);
+            
+    
+            var marker_3ac37a2b99e23b63096af86a0516c867 = L.marker(
+                [6.158308756938364, 80.51946108195682],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_46320b98695088e3441df2f277142147 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                5\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_cf191f0bd6753f7d876cb46e247c1d75 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_19225095d1ce880d4d58e5aad031dfa0 = $(`<div id="html_19225095d1ce880d4d58e5aad031dfa0" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 5<br>             <b>District:</b> matara<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 48.07<br>             <b>Distance from previous:</b>             32.28 km             </div>`)[0];
+                popup_cf191f0bd6753f7d876cb46e247c1d75.setContent(html_19225095d1ce880d4d58e5aad031dfa0);
+            
+        
+
+        marker_3ac37a2b99e23b63096af86a0516c867.bindPopup(popup_cf191f0bd6753f7d876cb46e247c1d75)
+        ;
+
+        
+    
+    
+            marker_3ac37a2b99e23b63096af86a0516c867.bindTooltip(
+                `<div>
+                     Stop 5: matara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3ac37a2b99e23b63096af86a0516c867.setIcon(div_icon_46320b98695088e3441df2f277142147);
+            
+    
+            var marker_04aeb362345e32aa6caf607c11d954a2 = L.marker(
+                [6.580030721472881, 80.59041472527228],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_73006b0862ef5be2a5c6ee3796ead083 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                6\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_392ceaeb0ce2e6064a25326569748181 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1a915f03d5e951b4034d088af3d7388b = $(`<div id="html_1a915f03d5e951b4034d088af3d7388b" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 6<br>             <b>District:</b> ratnapura<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 54.54<br>             <b>Distance from previous:</b>             47.54 km             </div>`)[0];
+                popup_392ceaeb0ce2e6064a25326569748181.setContent(html_1a915f03d5e951b4034d088af3d7388b);
+            
+        
+
+        marker_04aeb362345e32aa6caf607c11d954a2.bindPopup(popup_392ceaeb0ce2e6064a25326569748181)
+        ;
+
+        
+    
+    
+            marker_04aeb362345e32aa6caf607c11d954a2.bindTooltip(
+                `<div>
+                     Stop 6: ratnapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_04aeb362345e32aa6caf607c11d954a2.setIcon(div_icon_73006b0862ef5be2a5c6ee3796ead083);
+            
+    
+            var marker_07dc77d6003050df3b5b501975cfb368 = L.marker(
+                [7.215058876812035, 80.64046074368187],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_df83be058855874a5c048dd2553dba06 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                7\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_16825f108ca26a043c89fd28981e9caf = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_465032084118148b250d7f72e1538b53 = $(`<div id="html_465032084118148b250d7f72e1538b53" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 7<br>             <b>District:</b> kandy<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 75.03<br>             <b>Distance from previous:</b>             70.83 km             </div>`)[0];
+                popup_16825f108ca26a043c89fd28981e9caf.setContent(html_465032084118148b250d7f72e1538b53);
+            
+        
+
+        marker_07dc77d6003050df3b5b501975cfb368.bindPopup(popup_16825f108ca26a043c89fd28981e9caf)
+        ;
+
+        
+    
+    
+            marker_07dc77d6003050df3b5b501975cfb368.bindTooltip(
+                `<div>
+                     Stop 7: kandy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07dc77d6003050df3b5b501975cfb368.setIcon(div_icon_df83be058855874a5c048dd2553dba06);
+            
+    
+            var marker_ddff3478945dace8acd67dfdd079c51c = L.marker(
+                [9.64278977901427, 79.90894107026998],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_68bdf88502953888d8442416f54e215f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#e74c3c;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                8\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_cadf1d71c4fba42fed56507c8af57c9c = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4ded8473b17720b8f6c2300835cf334c = $(`<div id="html_4ded8473b17720b8f6c2300835cf334c" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 8<br>             <b>District:</b> jaffna<br>             <b>Priority:</b> High<br>             <b>Predicted cases:</b> 71.46<br>             <b>Distance from previous:</b>             281.69 km             </div>`)[0];
+                popup_cadf1d71c4fba42fed56507c8af57c9c.setContent(html_4ded8473b17720b8f6c2300835cf334c);
+            
+        
+
+        marker_ddff3478945dace8acd67dfdd079c51c.bindPopup(popup_cadf1d71c4fba42fed56507c8af57c9c)
+        ;
+
+        
+    
+    
+            marker_ddff3478945dace8acd67dfdd079c51c.bindTooltip(
+                `<div>
+                     Stop 8: jaffna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ddff3478945dace8acd67dfdd079c51c.setIcon(div_icon_68bdf88502953888d8442416f54e215f);
+            
+    
+            var marker_6b524099fa056be505bcffacd4656c14 = L.marker(
+                [7.916216544388385, 79.91403181850706],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_e94b6b44618b3ba1e7ecad57b7973a42 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                9\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_460968a889fb80e20f201f5bb3f78473 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f2ace256ee39a0b077a99850cd0dfee4 = $(`<div id="html_f2ace256ee39a0b077a99850cd0dfee4" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 9<br>             <b>District:</b> puttalam<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 22.74<br>             <b>Distance from previous:</b>             191.99 km             </div>`)[0];
+                popup_460968a889fb80e20f201f5bb3f78473.setContent(html_f2ace256ee39a0b077a99850cd0dfee4);
+            
+        
+
+        marker_6b524099fa056be505bcffacd4656c14.bindPopup(popup_460968a889fb80e20f201f5bb3f78473)
+        ;
+
+        
+    
+    
+            marker_6b524099fa056be505bcffacd4656c14.bindTooltip(
+                `<div>
+                     Stop 9: puttalam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b524099fa056be505bcffacd4656c14.setIcon(div_icon_e94b6b44618b3ba1e7ecad57b7973a42);
+            
+    
+            var marker_278cd6f89fa4d006eb84a2a37380af27 = L.marker(
+                [7.728142096895445, 80.25734392502389],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_f006802dc919c83fe020e7826d618bdc = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                10\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_1632974019292e01081bae85457ed656 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8a8ab723739bd83854b68b7c5d300cd0 = $(`<div id="html_8a8ab723739bd83854b68b7c5d300cd0" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 10<br>             <b>District:</b> kurunegala<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 28.27<br>             <b>Distance from previous:</b>             43.22 km             </div>`)[0];
+                popup_1632974019292e01081bae85457ed656.setContent(html_8a8ab723739bd83854b68b7c5d300cd0);
+            
+        
+
+        marker_278cd6f89fa4d006eb84a2a37380af27.bindPopup(popup_1632974019292e01081bae85457ed656)
+        ;
+
+        
+    
+    
+            marker_278cd6f89fa4d006eb84a2a37380af27.bindTooltip(
+                `<div>
+                     Stop 10: kurunegala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_278cd6f89fa4d006eb84a2a37380af27.setIcon(div_icon_f006802dc919c83fe020e7826d618bdc);
+            
+    
+            var marker_3d3b8ffb1300a96debd19b38713064b5 = L.marker(
+                [7.697800449948737, 80.66032986880026],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_7dff9aaf572ee9ce1ec784aedcd5f352 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                11\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_86485ad37110e2366d0e32a13b0ecc8e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_6c8ef5958d535783c06c1d8e7c6c0171 = $(`<div id="html_6c8ef5958d535783c06c1d8e7c6c0171" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 11<br>             <b>District:</b> matale<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 19.54<br>             <b>Distance from previous:</b>             44.53 km             </div>`)[0];
+                popup_86485ad37110e2366d0e32a13b0ecc8e.setContent(html_6c8ef5958d535783c06c1d8e7c6c0171);
+            
+        
+
+        marker_3d3b8ffb1300a96debd19b38713064b5.bindPopup(popup_86485ad37110e2366d0e32a13b0ecc8e)
+        ;
+
+        
+    
+    
+            marker_3d3b8ffb1300a96debd19b38713064b5.bindTooltip(
+                `<div>
+                     Stop 11: matale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d3b8ffb1300a96debd19b38713064b5.setIcon(div_icon_7dff9aaf572ee9ce1ec784aedcd5f352);
+            
+    
+            var marker_9af7789c3204f8ccec14370d4fde2984 = L.marker(
+                [7.112724732740706, 80.32134589580835],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_e890b184d1633563d2451eea43f07587 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                12\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_86e02a9040ef83545f638027f6d9ef0f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c8a6c1ba0588e818e1513577d7d4e42a = $(`<div id="html_c8a6c1ba0588e818e1513577d7d4e42a" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 12<br>             <b>District:</b> kegalle<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 36.22<br>             <b>Distance from previous:</b>             75.03 km             </div>`)[0];
+                popup_86e02a9040ef83545f638027f6d9ef0f.setContent(html_c8a6c1ba0588e818e1513577d7d4e42a);
+            
+        
+
+        marker_9af7789c3204f8ccec14370d4fde2984.bindPopup(popup_86e02a9040ef83545f638027f6d9ef0f)
+        ;
+
+        
+    
+    
+            marker_9af7789c3204f8ccec14370d4fde2984.bindTooltip(
+                `<div>
+                     Stop 12: kegalle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9af7789c3204f8ccec14370d4fde2984.setIcon(div_icon_e890b184d1633563d2451eea43f07587);
+            
+    
+            var marker_6cb969959f714c4ccd8d4b8915889f55 = L.marker(
+                [7.082047173584256, 81.08869271632418],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_8511fc8f6398428c6c148fd06e8de2ee = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                13\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_d466bcbd9c2613b41e026f5711c5e616 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_91c6f1a632aa377edcc55b5233428598 = $(`<div id="html_91c6f1a632aa377edcc55b5233428598" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 13<br>             <b>District:</b> badulla<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 22.36<br>             <b>Distance from previous:</b>             84.74 km             </div>`)[0];
+                popup_d466bcbd9c2613b41e026f5711c5e616.setContent(html_91c6f1a632aa377edcc55b5233428598);
+            
+        
+
+        marker_6cb969959f714c4ccd8d4b8915889f55.bindPopup(popup_d466bcbd9c2613b41e026f5711c5e616)
+        ;
+
+        
+    
+    
+            marker_6cb969959f714c4ccd8d4b8915889f55.bindTooltip(
+                `<div>
+                     Stop 13: badulla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6cb969959f714c4ccd8d4b8915889f55.setIcon(div_icon_8511fc8f6398428c6c148fd06e8de2ee);
+            
+    
+            var marker_137c8eef0c096c27211175cf689923eb = L.marker(
+                [6.876686284092277, 81.37545637384694],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_797a0992c41901d64392ba71b44e2ddf = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                14\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_496b1a5ae01edf1454c56f5d8c3f83e2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0df89516adb2ac28d3fa15d9a0f45efa = $(`<div id="html_0df89516adb2ac28d3fa15d9a0f45efa" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 14<br>             <b>District:</b> moneragala<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 19.34<br>             <b>Distance from previous:</b>             39.03 km             </div>`)[0];
+                popup_496b1a5ae01edf1454c56f5d8c3f83e2.setContent(html_0df89516adb2ac28d3fa15d9a0f45efa);
+            
+        
+
+        marker_137c8eef0c096c27211175cf689923eb.bindPopup(popup_496b1a5ae01edf1454c56f5d8c3f83e2)
+        ;
+
+        
+    
+    
+            marker_137c8eef0c096c27211175cf689923eb.bindTooltip(
+                `<div>
+                     Stop 14: moneragala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_137c8eef0c096c27211175cf689923eb.setIcon(div_icon_797a0992c41901d64392ba71b44e2ddf);
+            
+    
+            var marker_15d04039a424d22b5cbc6bd145d56894 = L.marker(
+                [6.276106131372352, 81.1780272189781],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_e26d223f9c24f3211979dcdfa7a18d0e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                15\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_a8e1bc3faa9735b47e5aa393548bc906 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f207e7aef52f90315f40231af7a3b195 = $(`<div id="html_f207e7aef52f90315f40231af7a3b195" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 15<br>             <b>District:</b> hambantota<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 37.36<br>             <b>Distance from previous:</b>             70.25 km             </div>`)[0];
+                popup_a8e1bc3faa9735b47e5aa393548bc906.setContent(html_f207e7aef52f90315f40231af7a3b195);
+            
+        
+
+        marker_15d04039a424d22b5cbc6bd145d56894.bindPopup(popup_a8e1bc3faa9735b47e5aa393548bc906)
+        ;
+
+        
+    
+    
+            marker_15d04039a424d22b5cbc6bd145d56894.bindTooltip(
+                `<div>
+                     Stop 15: hambantota
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_15d04039a424d22b5cbc6bd145d56894.setIcon(div_icon_e26d223f9c24f3211979dcdfa7a18d0e);
+            
+    
+            var marker_49ea4d67a0b05c40cebe2b5ad381fb90 = L.marker(
+                [7.834329549194089, 81.40987531047581],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_57fd59aad4c36b8005da7c6dbd58feb5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#f39c12;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                16\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_5d886dc1fcc6fcc35181d60ead908192 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a2dcebeebf1da589bd61c1d8c6bb2964 = $(`<div id="html_a2dcebeebf1da589bd61c1d8c6bb2964" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 16<br>             <b>District:</b> batticaloa<br>             <b>Priority:</b> Medium<br>             <b>Predicted cases:</b> 18.03<br>             <b>Distance from previous:</b>             175.15 km             </div>`)[0];
+                popup_5d886dc1fcc6fcc35181d60ead908192.setContent(html_a2dcebeebf1da589bd61c1d8c6bb2964);
+            
+        
+
+        marker_49ea4d67a0b05c40cebe2b5ad381fb90.bindPopup(popup_5d886dc1fcc6fcc35181d60ead908192)
+        ;
+
+        
+    
+    
+            marker_49ea4d67a0b05c40cebe2b5ad381fb90.bindTooltip(
+                `<div>
+                     Stop 16: batticaloa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49ea4d67a0b05c40cebe2b5ad381fb90.setIcon(div_icon_57fd59aad4c36b8005da7c6dbd58feb5);
+            
+    
+            var marker_d0c24a066bab8b74737f7235a9bdc3a2 = L.marker(
+                [7.993980891940543, 81.05058448984975],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_690e15135dd8e704885369ef42ddfa17 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                17\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_979e1396d69e1cb2cd5a4b55db945f5e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1772926c31b1519d346b56d726f03fe3 = $(`<div id="html_1772926c31b1519d346b56d726f03fe3" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 17<br>             <b>District:</b> polonnaruwa<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 10.57<br>             <b>Distance from previous:</b>             43.37 km             </div>`)[0];
+                popup_979e1396d69e1cb2cd5a4b55db945f5e.setContent(html_1772926c31b1519d346b56d726f03fe3);
+            
+        
+
+        marker_d0c24a066bab8b74737f7235a9bdc3a2.bindPopup(popup_979e1396d69e1cb2cd5a4b55db945f5e)
+        ;
+
+        
+    
+    
+            marker_d0c24a066bab8b74737f7235a9bdc3a2.bindTooltip(
+                `<div>
+                     Stop 17: polonnaruwa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0c24a066bab8b74737f7235a9bdc3a2.setIcon(div_icon_690e15135dd8e704885369ef42ddfa17);
+            
+    
+            var marker_4bdece2affc5b23bada91ad5cf5e8f31 = L.marker(
+                [8.56830414611212, 81.0628953495768],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_6ce4540351d960f13f9bed7190f6eee9 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                18\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_4d9ef9cd083a62a100e37c924e5a1cbe = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4c46e62e5a211bf839c8a65a3121682c = $(`<div id="html_4c46e62e5a211bf839c8a65a3121682c" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 18<br>             <b>District:</b> trincomalee<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 14.64<br>             <b>Distance from previous:</b>             63.88 km             </div>`)[0];
+                popup_4d9ef9cd083a62a100e37c924e5a1cbe.setContent(html_4c46e62e5a211bf839c8a65a3121682c);
+            
+        
+
+        marker_4bdece2affc5b23bada91ad5cf5e8f31.bindPopup(popup_4d9ef9cd083a62a100e37c924e5a1cbe)
+        ;
+
+        
+    
+    
+            marker_4bdece2affc5b23bada91ad5cf5e8f31.bindTooltip(
+                `<div>
+                     Stop 18: trincomalee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4bdece2affc5b23bada91ad5cf5e8f31.setIcon(div_icon_6ce4540351d960f13f9bed7190f6eee9);
+            
+    
+            var marker_0e2bbb75f8759b2cb5bab8495dcde536 = L.marker(
+                [8.836116678763878, 80.48615246566625],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_3c238c5f4c807b9a593e5440b1b7250e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                19\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_40e6deb0c3a4f0612ae0f327152d279e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b5d82e83633230aa4bca725ec8686b23 = $(`<div id="html_b5d82e83633230aa4bca725ec8686b23" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 19<br>             <b>District:</b> vavuniya<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 2.61<br>             <b>Distance from previous:</b>             70.04 km             </div>`)[0];
+                popup_40e6deb0c3a4f0612ae0f327152d279e.setContent(html_b5d82e83633230aa4bca725ec8686b23);
+            
+        
+
+        marker_0e2bbb75f8759b2cb5bab8495dcde536.bindPopup(popup_40e6deb0c3a4f0612ae0f327152d279e)
+        ;
+
+        
+    
+    
+            marker_0e2bbb75f8759b2cb5bab8495dcde536.bindTooltip(
+                `<div>
+                     Stop 19: vavuniya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e2bbb75f8759b2cb5bab8495dcde536.setIcon(div_icon_3c238c5f4c807b9a593e5440b1b7250e);
+            
+    
+            var marker_9f26071a875687e584ef93d7742c13e8 = L.marker(
+                [8.88100117280858, 80.16308552154176],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_52cfa497d245ba28a770cc8c126c4c2f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                20\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_09bd195f6516e99e63b9f509e77a95fb = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e4f9ecab05c64158a1501ec37333f71a = $(`<div id="html_e4f9ecab05c64158a1501ec37333f71a" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 20<br>             <b>District:</b> mannar<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 3.68<br>             <b>Distance from previous:</b>             35.84 km             </div>`)[0];
+                popup_09bd195f6516e99e63b9f509e77a95fb.setContent(html_e4f9ecab05c64158a1501ec37333f71a);
+            
+        
+
+        marker_9f26071a875687e584ef93d7742c13e8.bindPopup(popup_09bd195f6516e99e63b9f509e77a95fb)
+        ;
+
+        
+    
+    
+            marker_9f26071a875687e584ef93d7742c13e8.bindTooltip(
+                `<div>
+                     Stop 20: mannar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f26071a875687e584ef93d7742c13e8.setIcon(div_icon_52cfa497d245ba28a770cc8c126c4c2f);
+            
+    
+            var marker_cc9b544813e0c958fd7f383b04b531b0 = L.marker(
+                [9.180864186543817, 80.52649613902175],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_e352c6485d851efec76da1be07fa6f01 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                21\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_f84eb8c36ed62130957de8f27246c459 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a2d00e2e10064b210ef2f65e342af1d6 = $(`<div id="html_a2d00e2e10064b210ef2f65e342af1d6" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 21<br>             <b>District:</b> mullaitivu<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 2.80<br>             <b>Distance from previous:</b>             52.00 km             </div>`)[0];
+                popup_f84eb8c36ed62130957de8f27246c459.setContent(html_a2d00e2e10064b210ef2f65e342af1d6);
+            
+        
+
+        marker_cc9b544813e0c958fd7f383b04b531b0.bindPopup(popup_f84eb8c36ed62130957de8f27246c459)
+        ;
+
+        
+    
+    
+            marker_cc9b544813e0c958fd7f383b04b531b0.bindTooltip(
+                `<div>
+                     Stop 21: mullaitivu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cc9b544813e0c958fd7f383b04b531b0.setIcon(div_icon_e352c6485d851efec76da1be07fa6f01);
+            
+    
+            var marker_d164b1c8df06c84076f1d27a33c6ae2c = L.marker(
+                [9.447946315462543, 80.38585146202126],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_c57958b6dbbb393bd31e3e151feb77d7 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                22\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_ee14dfbf35901f813d3412296508e316 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3c0288190fa8a956f1fc1c07c0cc45d0 = $(`<div id="html_3c0288190fa8a956f1fc1c07c0cc45d0" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 22<br>             <b>District:</b> kilinochchi<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 6.24<br>             <b>Distance from previous:</b>             33.47 km             </div>`)[0];
+                popup_ee14dfbf35901f813d3412296508e316.setContent(html_3c0288190fa8a956f1fc1c07c0cc45d0);
+            
+        
+
+        marker_d164b1c8df06c84076f1d27a33c6ae2c.bindPopup(popup_ee14dfbf35901f813d3412296508e316)
+        ;
+
+        
+    
+    
+            marker_d164b1c8df06c84076f1d27a33c6ae2c.bindTooltip(
+                `<div>
+                     Stop 22: kilinochchi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d164b1c8df06c84076f1d27a33c6ae2c.setIcon(div_icon_c57958b6dbbb393bd31e3e151feb77d7);
+            
+    
+            var marker_61895d5f4917d60c618df08f170470ea = L.marker(
+                [8.369010867783887, 80.4401597774747],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_a243b300e4a0777b32b198d3d52b91a5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                23\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_79ea59b14f24207e5c361cfd50a6bded = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5af3890601330160ec654bcef4fe07d2 = $(`<div id="html_5af3890601330160ec654bcef4fe07d2" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 23<br>             <b>District:</b> anuradhapura<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 12.51<br>             <b>Distance from previous:</b>             120.12 km             </div>`)[0];
+                popup_79ea59b14f24207e5c361cfd50a6bded.setContent(html_5af3890601330160ec654bcef4fe07d2);
+            
+        
+
+        marker_61895d5f4917d60c618df08f170470ea.bindPopup(popup_79ea59b14f24207e5c361cfd50a6bded)
+        ;
+
+        
+    
+    
+            marker_61895d5f4917d60c618df08f170470ea.bindTooltip(
+                `<div>
+                     Stop 23: anuradhapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_61895d5f4917d60c618df08f170470ea.setIcon(div_icon_a243b300e4a0777b32b198d3d52b91a5);
+            
+    
+            var marker_1811f9a9685d963cf9aa1598b202a472 = L.marker(
+                [7.013160657654822, 80.75709330931232],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_cc63dc08ddb2f9698bda2d592545fc42 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                24\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_f8c41e5cb619eafc6066003ba6ad21bd = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c9494e11e6deb8f1b3a99bdebbae7427 = $(`<div id="html_c9494e11e6deb8f1b3a99bdebbae7427" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 24<br>             <b>District:</b> nuwaraeliya<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 5.90<br>             <b>Distance from previous:</b>             154.76 km             </div>`)[0];
+                popup_f8c41e5cb619eafc6066003ba6ad21bd.setContent(html_c9494e11e6deb8f1b3a99bdebbae7427);
+            
+        
+
+        marker_1811f9a9685d963cf9aa1598b202a472.bindPopup(popup_f8c41e5cb619eafc6066003ba6ad21bd)
+        ;
+
+        
+    
+    
+            marker_1811f9a9685d963cf9aa1598b202a472.bindTooltip(
+                `<div>
+                     Stop 24: nuwaraeliya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1811f9a9685d963cf9aa1598b202a472.setIcon(div_icon_cc63dc08ddb2f9698bda2d592545fc42);
+            
+    
+            var marker_1019dfb337b146225e22b278d85462b9 = L.marker(
+                [7.12490520709576, 81.68547230660559],
+                {
+}
+            ).addTo(map_8047257c5f0290c9c75beb865f40ac17);
+        
+    
+            var div_icon_259b2f0f26a23478603077c8ffd17068 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                background-color:#2ecc71;\n                color:white;\n                border-radius:50%;\n                width:28px;\n                height:28px;\n                text-align:center;\n                line-height:28px;\n                font-weight:bold;\n                border:2px solid white;\n            \"\u003e\n                25\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+        var popup_ac21b0de39670223477ccce992046f21 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_693e1ebcb32a95639ea901e83f526e13 = $(`<div id="html_693e1ebcb32a95639ea901e83f526e13" style="width: 100.0%; height: 100.0%;">             <b>Route order:</b> 25<br>             <b>District:</b> ampara<br>             <b>Priority:</b> Low<br>             <b>Predicted cases:</b> 16.95<br>             <b>Distance from previous:</b>             103.20 km             </div>`)[0];
+                popup_ac21b0de39670223477ccce992046f21.setContent(html_693e1ebcb32a95639ea901e83f526e13);
+            
+        
+
+        marker_1019dfb337b146225e22b278d85462b9.bindPopup(popup_ac21b0de39670223477ccce992046f21)
+        ;
+
+        
+    
+    
+            marker_1019dfb337b146225e22b278d85462b9.bindTooltip(
+                `<div>
+                     Stop 25: ampara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1019dfb337b146225e22b278d85462b9.setIcon(div_icon_259b2f0f26a23478603077c8ffd17068);
+            
+</script>
+</html>

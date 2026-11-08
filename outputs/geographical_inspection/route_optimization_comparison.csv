@@ -1,0 +1,3 @@
+method,total_distance_km,districts_visited,unique_districts,starting_district,ending_district
+Priority-aware Nearest Neighbour,1967.3469769372534,25,25,colombo,ampara
+Priority-aware 2-opt,1898.6899996002198,25,25,colombo,ampara
