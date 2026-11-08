@@ -1,0 +1,2 @@
+Model,max_iter,learning_rate,max_leaf_nodes,l2_regularization,Validation_MAE,Validation_RMSE,Validation_R2
+Tuned HistGradientBoosting,100,0.05,15,1.0,8.697863605930786,18.1818723954029,0.6557834386981092
