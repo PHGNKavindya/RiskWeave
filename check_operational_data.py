@@ -193,42 +193,54 @@ print(
 )
 
 
-# ==================================================
-# 7. CHECK DAILY DATE CONTINUITY PER DISTRICT
-# ==================================================
 
-print("\n" + "=" * 65)
-print("DISTRICT DATE CONTINUITY")
-print("=" * 65)
+# ========================================================
+# 7. CHECK DAILY CONTINUITY
+# ========================================================
 
-for district, group in combined.groupby("district"):
+expected_start = era5_df["date"].min()
 
-    dates = pd.DatetimeIndex(
-        group["date"].drop_duplicates().sort_values()
-    )
+expected_end = max(
+    era5_df["date"].max(),
+    historical_api_df["date"].max(),
+    forecast_api_df["date"].max()
+)
 
-    expected_dates = pd.date_range(
-        dates.min(),
-        dates.max(),
-        freq="D"
+expected_dates = pd.date_range(
+    start=expected_start,
+    end=expected_end,
+    freq="D"
+)
+
+for district, group in combined_df.groupby("district"):
+
+    actual_dates = pd.DatetimeIndex(
+        group["date"].sort_values()
     )
 
     missing_dates = expected_dates.difference(
-        dates
+        actual_dates
     )
 
-    print(
-        district,
-        "| Missing dates:",
-        len(missing_dates)
+    unexpected_dates = actual_dates.difference(
+        expected_dates
     )
 
-    if len(missing_dates) > 0:
-        print(
-            "Missing examples:",
-            missing_dates[:10].strftime("%Y-%m-%d").tolist()
+    if (
+        len(missing_dates) > 0
+        or len(unexpected_dates) > 0
+        or len(actual_dates) != len(expected_dates)
+    ):
+
+        raise ValueError(
+            f"Date continuity failed for {district}.\n"
+            f"Missing dates: {missing_dates.tolist()[:10]}\n"
+            f"Unexpected dates: {unexpected_dates.tolist()[:10]}"
         )
 
+print("Daily continuity validation: PASSED")
+print("Expected start:", expected_start.date())
+print("Expected end:", expected_end.date())
 
 # ==================================================
 # 8. FINAL DUPLICATE STATUS
