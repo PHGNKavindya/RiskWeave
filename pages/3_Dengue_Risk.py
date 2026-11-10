@@ -1,14 +1,48 @@
 
 from pathlib import Path
-import json
 
 import pandas as pd
-import plotly.express as px
 import streamlit as st
+import streamlit.components.v1 as components
 
 
 # ============================================================
-# 1. PAGE CONFIGURATION
+# 1. PROJECT PATHS
+# ============================================================
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+PREDICTION_FILE = (
+    PROJECT_ROOT
+    / "outputs"
+    / "dengue_forecasting"
+    / "next_week_dengue_predictions.csv"
+)
+
+MAP_FILE = (
+    PROJECT_ROOT
+    / "outputs"
+    / "dengue_forecasting"
+    / "next_week_dengue_map.html"
+)
+
+DENGUE_FILE = (
+    PROJECT_ROOT
+    / "data"
+    / "processed"
+    / "dengue_weekly_25_districts.csv"
+)
+
+MODEL_FILE = (
+    PROJECT_ROOT
+    / "outputs"
+    / "forecasting"
+    / "riskweave_daily_weather_experiment_model.joblib"
+)
+
+
+# ============================================================
+# 2. PAGE CONFIGURATION
 # ============================================================
 
 st.set_page_config(
@@ -17,380 +51,403 @@ st.set_page_config(
     layout="wide"
 )
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
-DATA_PATH = (
-    PROJECT_ROOT
-    / "data"
-    / "processed"
-    / "dengue_weekly_25_districts.csv"
-)
+# ============================================================
+# 3. CUSTOM STYLING
+# ============================================================
 
-FORECAST_PATH = (
-    PROJECT_ROOT
-    / "outputs"
-    / "forecasting"
-    / "next_period_dengue_forecast.csv"
-)
+st.markdown(
+    """
+    <style>
+    .main-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #163A5F;
+    }
 
-MANIFEST_PATH = (
-    PROJECT_ROOT
-    / "outputs"
-    / "forecasting"
-    / "riskweave_final_model_manifest.json"
+    .sub-title {
+        color: #64748b;
+        font-size: 1rem;
+    }
+
+    .warning-box {
+        background-color: #fff7ed;
+        border-left: 5px solid #f59e0b;
+        padding: 15px;
+        border-radius: 5px;
+        color: #7c2d12;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
 
 # ============================================================
-# 2. PAGE HEADER
-# ============================================================
-
-st.title("Dengue Risk Prediction")
-st.caption(
-    "Historical dengue surveillance, district comparisons "
-    "and model-generated forecasting results."
-)
-
-
-# ============================================================
-# 3. DATA LOADING
+# 4. LOAD DATA
 # ============================================================
 
 @st.cache_data
-def load_dengue_data():
-    df = pd.read_csv(DATA_PATH)
+def load_predictions():
 
-    df["week_start"] = pd.to_datetime(df["week_start"])
-    df["week_end"] = pd.to_datetime(df["week_end"])
+    if not PREDICTION_FILE.exists():
+        return None
 
-    df["dengue_cases"] = pd.to_numeric(
-        df["dengue_cases"],
+    data = pd.read_csv(PREDICTION_FILE)
+
+    required_columns = {
+        "district_key",
+        "predicted_dengue_cases"
+    }
+
+    if not required_columns.issubset(data.columns):
+        raise ValueError(
+            "Prediction file has missing columns."
+        )
+
+    return data
+
+
+@st.cache_data
+def load_latest_dengue_date():
+
+    if not DENGUE_FILE.exists():
+        return None
+
+    dengue = pd.read_csv(DENGUE_FILE)
+
+    dengue["week_start"] = pd.to_datetime(
+        dengue["week_start"],
         errors="coerce"
     )
 
-    return df
+    return dengue["week_start"].max()
 
 
-@st.cache_data
-def load_forecast_data():
-    df = pd.read_csv(FORECAST_PATH)
+# ============================================================
+# 5. HEADER
+# ============================================================
 
-    for col in [
-        "forecast_origin_start",
-        "forecast_origin_end",
-        "forecast_target_start",
-        "forecast_target_end"
-    ]:
-        df[col] = pd.to_datetime(df[col])
+st.markdown(
+    '<div class="main-title">🦟 Dengue Risk Forecasting</div>',
+    unsafe_allow_html=True
+)
 
-    df["predicted_dengue_cases"] = pd.to_numeric(
-        df["predicted_dengue_cases"],
-        errors="coerce"
-    )
+st.markdown(
+    '<div class="sub-title">'
+    'District-level dengue case predictions for Sri Lanka'
+    '</div>',
+    unsafe_allow_html=True
+)
 
-    return df
+st.divider()
 
 
-@st.cache_data
-def load_model_manifest():
-    with open(MANIFEST_PATH, "r", encoding="utf-8") as file:
-        return json.load(file)
-
+# ============================================================
+# 6. LOAD CURRENT OUTPUTS
+# ============================================================
 
 try:
-    dengue_df = load_dengue_data()
-    forecast_df = load_forecast_data()
-    manifest = load_model_manifest()
 
-except FileNotFoundError as error:
-    st.error(f"Required RiskWeave file not found: {error}")
-    st.stop()
+    predictions = load_predictions()
+    latest_dengue_date = load_latest_dengue_date()
 
 except Exception as error:
+
     st.error(f"Unable to load dengue data: {error}")
     st.stop()
 
 
-# ============================================================
-# 4. DATA VALIDATION
-# ============================================================
+if predictions is None:
 
-required_columns = {
-    "district_key",
-    "week_start",
-    "week_end",
-    "dengue_cases"
-}
+    st.warning(
+        "Dengue predictions are not available. "
+        "Run the dengue prediction module first."
+    )
 
-if not required_columns.issubset(dengue_df.columns):
-    st.error("The dengue dataset does not contain all required columns.")
+    st.code(
+        "python -m src.dengue_forecasting.dengue_predictions"
+    )
+
     st.stop()
 
-if dengue_df.empty:
-    st.warning("The dengue dataset is empty.")
+
+if len(predictions) != 25:
+
+    st.error(
+        f"Expected 25 district predictions, "
+        f"but found {len(predictions)}."
+    )
+
     st.stop()
 
-latest_date = dengue_df["week_end"].max()
 
-latest_period = dengue_df[
-    dengue_df["week_end"] == latest_date
-].copy()
+if predictions["predicted_dengue_cases"].isna().any():
 
-number_of_districts = dengue_df["district_key"].nunique()
-
-total_latest_cases = latest_period["dengue_cases"].sum()
-
-latest_forecast_date = forecast_df["forecast_target_end"].max()
+    st.error("Prediction data contains missing values.")
+    st.stop()
 
 
 # ============================================================
-# 5. HISTORICAL DATA OVERVIEW
+# 7. FORECAST DATA STATUS
 # ============================================================
 
-st.subheader("Historical Dengue Surveillance")
+st.subheader("Forecast Data Status")
+
+if latest_dengue_date is not None:
+
+    st.info(
+        f"Latest dengue reporting period starts: "
+        f"{latest_dengue_date.strftime('%d %B %Y')}"
+    )
+
+    st.markdown(
+        """
+        <div class="warning-box">
+        <strong>Historical-input forecast</strong><br>
+        These predictions use dengue case features from the latest
+        available historical reporting period. They are not yet
+        validated as current November 2026 forecasts using live
+        weather inputs.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+else:
+
+    st.warning(
+        "The latest dengue reporting date could not be determined."
+    )
+
+
+# ============================================================
+# 8. SUMMARY METRICS
+# ============================================================
+
+total_predicted = int(
+    predictions["predicted_dengue_cases"].sum()
+)
+
+average_predicted = predictions[
+    "predicted_dengue_cases"
+].mean()
+
+highest_district_row = predictions.loc[
+    predictions["predicted_dengue_cases"].idxmax()
+]
+
+highest_district = highest_district_row["district_key"]
+
+highest_cases = int(
+    highest_district_row["predicted_dengue_cases"]
+)
+
+lowest_district_row = predictions.loc[
+    predictions["predicted_dengue_cases"].idxmin()
+]
+
+lowest_district = lowest_district_row["district_key"]
+
+lowest_cases = int(
+    lowest_district_row["predicted_dengue_cases"]
+)
+
+
+st.subheader("Dengue Prediction Overview")
 
 col1, col2, col3, col4 = st.columns(4)
 
-col1.metric(
-    "Reporting Districts",
-    f"{number_of_districts}"
-)
+with col1:
+    st.metric(
+        "Total Predicted Cases",
+        f"{total_predicted:,}"
+    )
 
-col2.metric(
-    "Historical Records",
-    f"{len(dengue_df):,}"
-)
+with col2:
+    st.metric(
+        "Average per District",
+        f"{average_predicted:.1f}"
+    )
 
-col3.metric(
-    "Latest Reporting Period",
-    latest_date.strftime("%d %b %Y")
-)
+with col3:
+    st.metric(
+        "Highest Prediction",
+        f"{highest_cases:,}",
+        help=highest_district.title()
+    )
 
-col4.metric(
-    "Latest Period Cases",
-    f"{total_latest_cases:,.0f}"
-)
+with col4:
+    st.metric(
+        "Districts Covered",
+        len(predictions)
+    )
 
-st.caption(
-    f"Historical dataset coverage: "
-    f"{dengue_df['week_start'].min():%d %b %Y} "
-    f"to {latest_date:%d %b %Y}"
-)
-
-
-# ============================================================
-# 6. DISTRICT FILTER
-# ============================================================
 
 st.divider()
-st.subheader("District-level Analysis")
 
-districts = sorted(dengue_df["district_key"].dropna().unique())
 
-selected_district = st.selectbox(
-    "Select a district",
-    ["All Districts"] + districts
+# ============================================================
+# 9. INTERACTIVE SRI LANKA MAP
+# ============================================================
+
+st.subheader("Sri Lanka Dengue Prediction Map")
+
+st.write(
+    "Explore predicted dengue case counts across all 25 districts. "
+    "Select a district on the map to see its prediction."
 )
 
-if selected_district == "All Districts":
-    filtered_df = dengue_df.copy()
-else:
-    filtered_df = dengue_df[
-        dengue_df["district_key"] == selected_district
-    ].copy()
+if MAP_FILE.exists():
 
+    try:
 
-# ============================================================
-# 7. HISTORICAL DENGUE TREND
-# ============================================================
+        with open(MAP_FILE, "r", encoding="utf-8") as file:
+            map_html = file.read()
 
-st.markdown("#### Weekly Dengue Case Trend")
+        components.html(
+            map_html,
+            height=650,
+            scrolling=False
+        )
 
-if selected_district == "All Districts":
+    except Exception as error:
 
-    trend_df = (
-        filtered_df.groupby("week_start", as_index=False)
-        ["dengue_cases"].sum()
-    )
-
-    fig = px.line(
-        trend_df,
-        x="week_start",
-        y="dengue_cases",
-        title="Weekly Dengue Cases Across Reporting Districts",
-        labels={
-            "week_start": "Reporting Week",
-            "dengue_cases": "Dengue Cases"
-        }
-    )
+        st.error(f"Unable to display dengue map: {error}")
 
 else:
 
-    fig = px.line(
-        filtered_df.sort_values("week_start"),
-        x="week_start",
-        y="dengue_cases",
-        title=f"Weekly Dengue Cases - {selected_district.title()}",
-        labels={
-            "week_start": "Reporting Week",
-            "dengue_cases": "Dengue Cases"
-        }
+    st.warning(
+        "Dengue map has not been generated yet."
     )
 
-fig.update_layout(
-    hovermode="x unified",
-    height=420
-)
+    st.code(
+        "python -m src.dengue_forecasting.dengue_map"
+    )
 
-st.plotly_chart(fig, use_container_width=True)
+
+st.divider()
 
 
 # ============================================================
-# 8. LATEST DISTRICT COMPARISON
+# 10. DISTRICT PREDICTION TABLE
 # ============================================================
 
-st.markdown("#### Latest Reported Dengue Cases by District")
+st.subheader("District-level Dengue Predictions")
 
-district_latest = (
-    latest_period.groupby("district_key", as_index=False)
-    ["dengue_cases"].sum()
-    .sort_values("dengue_cases", ascending=False)
+display_data = predictions.copy()
+
+display_data["district_key"] = (
+    display_data["district_key"]
+    .str.replace("_", " ")
+    .str.title()
 )
 
-bar_fig = px.bar(
-    district_latest,
-    x="district_key",
-    y="dengue_cases",
-    labels={
+display_data = display_data.rename(
+    columns={
         "district_key": "District",
-        "dengue_cases": "Reported Dengue Cases"
-    },
-    title=f"Latest Reporting Period Ending {latest_date:%d %b %Y}"
+        "predicted_dengue_cases": "Predicted Cases"
+    }
 )
 
-bar_fig.update_layout(
-    xaxis_tickangle=-45,
-    height=450
-)
-
-st.plotly_chart(bar_fig, use_container_width=True)
-
-
-with st.expander("View latest district-level observations"):
-    st.dataframe(
-        district_latest,
-        use_container_width=True,
-        hide_index=True
-    )
-
-
-# ============================================================
-# 9. HISTORICAL MODEL FORECAST
-# ============================================================
-
-st.divider()
-st.subheader("Dengue Forecasting Results")
-
-st.warning(
-    "Historical forecast only: the available dengue forecast "
-    "was generated using December 2025 observations. It is not "
-    "a current November 2026 prediction."
-)
-
-st.write(
-    f"Forecast origin: "
-    f"{forecast_df['forecast_origin_start'].min():%d %b %Y} "
-    f"to {forecast_df['forecast_origin_end'].max():%d %b %Y}"
-)
-
-st.write(
-    f"Forecast target: "
-    f"{forecast_df['forecast_target_start'].min():%d %b %Y} "
-    f"to {forecast_df['forecast_target_end'].max():%d %b %Y}"
-)
-
-forecast_display = forecast_df[
-    [
-        "district_key",
-        "latest_observed_dengue_cases",
-        "predicted_dengue_cases"
-    ]
-].copy()
-
-forecast_display = forecast_display.sort_values(
-    "predicted_dengue_cases",
+display_data = display_data.sort_values(
+    "Predicted Cases",
     ascending=False
-)
+).reset_index(drop=True)
 
-forecast_display.columns = [
-    "District",
-    "Latest Observed Cases",
-    "Predicted Cases"
-]
+display_data.index = display_data.index + 1
 
 st.dataframe(
-    forecast_display,
-    use_container_width=True,
-    hide_index=True
+    display_data,
+    use_container_width=True
 )
 
 
 # ============================================================
-# 10. MODEL PERFORMANCE
+# 11. TOP 10 DISTRICTS
+# ============================================================
+
+st.subheader("Top 10 Districts by Predicted Cases")
+
+top_10 = display_data.head(10).sort_values(
+    "Predicted Cases",
+    ascending=True
+)
+
+st.bar_chart(
+    top_10.set_index("District")["Predicted Cases"],
+    horizontal=True
+)
+
+
+# ============================================================
+# 12. DOWNLOAD PREDICTIONS
 # ============================================================
 
 st.divider()
-st.subheader("Dengue Forecasting Model Information")
 
-metric1, metric2, metric3 = st.columns(3)
+st.subheader("Download Prediction Results")
 
-metric1.metric(
-    "Selected Model",
-    manifest["selected_model"]
+csv_data = predictions.to_csv(index=False).encode("utf-8")
+
+st.download_button(
+    label="Download District Predictions (CSV)",
+    data=csv_data,
+    file_name="riskweave_dengue_predictions.csv",
+    mime="text/csv"
 )
 
-metric2.metric(
-    "Test MAE",
-    f"{manifest['test_MAE']:.2f}"
-)
 
-metric3.metric(
-    "Test RMSE",
-    f"{manifest['test_RMSE']:.2f}"
-)
+# ============================================================
+# 13. MODEL INFORMATION
+# ============================================================
 
-st.write(
-    f"**Selected feature set:** "
-    f"{manifest['selected_feature_set']}"
-)
+with st.expander("Model Information"):
 
-st.write(
-    f"**Number of predictors:** "
-    f"{manifest['number_of_predictors']}"
-)
+    st.write(
+        "**Model:** Histogram Gradient Boosting Regressor"
+    )
 
-st.write(
-    f"**Training observations:** "
-    f"{manifest['training_rows']:,}"
-)
+    st.write(
+        "**Model artifact:** "
+        "riskweave_daily_weather_experiment_model.joblib"
+    )
 
-st.write(
-    f"**Validation observations:** "
-    f"{manifest['validation_rows']:,}"
-)
+    st.write(
+        "**Input features:** 15"
+    )
 
-st.write(
-    f"**Test observations:** "
-    f"{manifest['test_rows']:,}"
-)
+    st.write(
+        "**Prediction coverage:** 25 Sri Lankan districts"
+    )
 
-st.info(
-    "Weather variables were evaluated through an ablation experiment. "
-    "The final selected dengue forecasting model uses historical "
-    "dengue and seasonal predictors without weather variables."
-)
+    st.write(
+        "**Training data:** Historical dengue and weather data "
+        "through December 2025"
+    )
+
+    st.write(
+        "**Historical test MAE:** Approximately 12.86 cases"
+    )
+
+    st.write(
+        "**Historical test RMSE:** Approximately 30.69 cases"
+    )
+
+    st.caption(
+        "These are historical experiment metrics, not guaranteed "
+        "current forecasting accuracy."
+    )
+
+
+# ============================================================
+# 14. FOOTER
+# ============================================================
+
+st.divider()
 
 st.caption(
-    "MAE and RMSE are historical chronological test-set metrics. "
-    "They do not represent current operational forecasting accuracy."
+    "RiskWeave | Climate-informed Dengue Risk Forecasting "
+    "and Inspection Planning System | Sri Lanka"
 )

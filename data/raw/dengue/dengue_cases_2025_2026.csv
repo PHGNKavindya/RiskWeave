@@ -1,0 +1,2471 @@
+﻿year,week,district,weekly_cases,cumulative_cases,source_pdf
+2025,1,Ampara,4,4,Historical raw dataset
+2025,1,Anuradhapura,12,12,Historical raw dataset
+2025,1,Badulla,19,19,Historical raw dataset
+2025,1,Batticaloa,47,47,Historical raw dataset
+2025,1,Colombo,231,231,Historical raw dataset
+2025,1,Galle,25,25,Historical raw dataset
+2025,1,Gampaha,131,131,Historical raw dataset
+2025,1,Hambantota,21,21,Historical raw dataset
+2025,1,Jaffna,76,76,Historical raw dataset
+2025,1,Kalmunai,11,11,Historical raw dataset
+2025,1,Kalutara,34,34,Historical raw dataset
+2025,1,Kandy,76,76,Historical raw dataset
+2025,1,Kegalle,44,44,Historical raw dataset
+2025,1,Kilinochchi,5,5,Historical raw dataset
+2025,1,Kurunegala,26,26,Historical raw dataset
+2025,1,Mannar,12,12,Historical raw dataset
+2025,1,Matale,34,34,Historical raw dataset
+2025,1,Matara,26,26,Historical raw dataset
+2025,1,Monaragala,13,13,Historical raw dataset
+2025,1,Mullaitivu,4,4,Historical raw dataset
+2025,1,Nuwara Eliya,10,10,Historical raw dataset
+2025,1,Polonnaruwa,6,6,Historical raw dataset
+2025,1,Puttalam,23,23,Historical raw dataset
+2025,1,Ratnapura,47,47,Historical raw dataset
+2025,1,Trincomalee,30,30,Historical raw dataset
+2025,1,Vavuniya,2,2,Historical raw dataset
+2025,2,Ampara,4,8,Historical raw dataset
+2025,2,Anuradhapura,27,39,Historical raw dataset
+2025,2,Badulla,5,24,Historical raw dataset
+2025,2,Batticaloa,62,109,Historical raw dataset
+2025,2,Colombo,200,431,Historical raw dataset
+2025,2,Galle,30,55,Historical raw dataset
+2025,2,Gampaha,186,317,Historical raw dataset
+2025,2,Hambantota,36,57,Historical raw dataset
+2025,2,Jaffna,58,134,Historical raw dataset
+2025,2,Kalmunai,54,65,Historical raw dataset
+2025,2,Kalutara,65,99,Historical raw dataset
+2025,2,Kandy,66,142,Historical raw dataset
+2025,2,Kegalle,64,108,Historical raw dataset
+2025,2,Kilinochchi,5,10,Historical raw dataset
+2025,2,Kurunegala,26,52,Historical raw dataset
+2025,2,Mannar,11,23,Historical raw dataset
+2025,2,Matale,52,86,Historical raw dataset
+2025,2,Matara,28,54,Historical raw dataset
+2025,2,Monaragala,25,38,Historical raw dataset
+2025,2,Mullaitivu,3,7,Historical raw dataset
+2025,2,Nuwara Eliya,5,15,Historical raw dataset
+2025,2,Polonnaruwa,14,20,Historical raw dataset
+2025,2,Puttalam,30,53,Historical raw dataset
+2025,2,Ratnapura,30,77,Historical raw dataset
+2025,2,Trincomalee,28,58,Historical raw dataset
+2025,2,Vavuniya,4,6,Historical raw dataset
+2025,3,Ampara,6,14,Historical raw dataset
+2025,3,Anuradhapura,20,59,Historical raw dataset
+2025,3,Badulla,17,41,Historical raw dataset
+2025,3,Batticaloa,55,164,Historical raw dataset
+2025,3,Colombo,245,676,Historical raw dataset
+2025,3,Galle,82,137,Historical raw dataset
+2025,3,Gampaha,191,508,Historical raw dataset
+2025,3,Hambantota,35,92,Historical raw dataset
+2025,3,Jaffna,52,186,Historical raw dataset
+2025,3,Kalmunai,14,79,Historical raw dataset
+2025,3,Kalutara,24,123,Historical raw dataset
+2025,3,Kandy,65,207,Historical raw dataset
+2025,3,Kegalle,40,148,Historical raw dataset
+2025,3,Kilinochchi,8,18,Historical raw dataset
+2025,3,Kurunegala,39,91,Historical raw dataset
+2025,3,Mannar,15,38,Historical raw dataset
+2025,3,Matale,39,125,Historical raw dataset
+2025,3,Matara,23,77,Historical raw dataset
+2025,3,Monaragala,26,64,Historical raw dataset
+2025,3,Mullaitivu,1,8,Historical raw dataset
+2025,3,Nuwara Eliya,8,23,Historical raw dataset
+2025,3,Polonnaruwa,6,26,Historical raw dataset
+2025,3,Puttalam,45,98,Historical raw dataset
+2025,3,Ratnapura,56,133,Historical raw dataset
+2025,3,Trincomalee,34,92,Historical raw dataset
+2025,3,Vavuniya,2,8,Historical raw dataset
+2025,4,Ampara,7,21,Historical raw dataset
+2025,4,Anuradhapura,29,88,Historical raw dataset
+2025,4,Badulla,28,69,Historical raw dataset
+2025,4,Batticaloa,65,229,Historical raw dataset
+2025,4,Colombo,247,923,Historical raw dataset
+2025,4,Galle,51,188,Historical raw dataset
+2025,4,Gampaha,157,665,Historical raw dataset
+2025,4,Hambantota,32,124,Historical raw dataset
+2025,4,Jaffna,37,223,Historical raw dataset
+2025,4,Kalmunai,20,99,Historical raw dataset
+2025,4,Kalutara,51,174,Historical raw dataset
+2025,4,Kandy,77,284,Historical raw dataset
+2025,4,Kegalle,34,182,Historical raw dataset
+2025,4,Kilinochchi,3,21,Historical raw dataset
+2025,4,Kurunegala,30,121,Historical raw dataset
+2025,4,Mannar,12,50,Historical raw dataset
+2025,4,Matale,44,169,Historical raw dataset
+2025,4,Matara,45,122,Historical raw dataset
+2025,4,Monaragala,23,87,Historical raw dataset
+2025,4,Mullaitivu,1,9,Historical raw dataset
+2025,4,Nuwara Eliya,1,24,Historical raw dataset
+2025,4,Polonnaruwa,7,33,Historical raw dataset
+2025,4,Puttalam,17,115,Historical raw dataset
+2025,4,Ratnapura,46,179,Historical raw dataset
+2025,4,Trincomalee,34,126,Historical raw dataset
+2025,4,Vavuniya,2,10,Historical raw dataset
+2025,5,Ampara,3,24,Historical raw dataset
+2025,5,Anuradhapura,16,104,Historical raw dataset
+2025,5,Badulla,27,96,Historical raw dataset
+2025,5,Batticaloa,64,293,Historical raw dataset
+2025,5,Colombo,284,1207,Historical raw dataset
+2025,5,Galle,48,236,Historical raw dataset
+2025,5,Gampaha,184,849,Historical raw dataset
+2025,5,Hambantota,24,148,Historical raw dataset
+2025,5,Jaffna,57,280,Historical raw dataset
+2025,5,Kalmunai,13,112,Historical raw dataset
+2025,5,Kalutara,38,212,Historical raw dataset
+2025,5,Kandy,62,346,Historical raw dataset
+2025,5,Kegalle,26,208,Historical raw dataset
+2025,5,Kilinochchi,6,27,Historical raw dataset
+2025,5,Kurunegala,34,155,Historical raw dataset
+2025,5,Mannar,7,57,Historical raw dataset
+2025,5,Matale,39,208,Historical raw dataset
+2025,5,Matara,32,154,Historical raw dataset
+2025,5,Monaragala,24,111,Historical raw dataset
+2025,5,Mullaitivu,4,13,Historical raw dataset
+2025,5,Nuwara Eliya,10,34,Historical raw dataset
+2025,5,Polonnaruwa,3,36,Historical raw dataset
+2025,5,Puttalam,16,131,Historical raw dataset
+2025,5,Ratnapura,70,249,Historical raw dataset
+2025,5,Trincomalee,23,149,Historical raw dataset
+2025,5,Vavuniya,2,12,Historical raw dataset
+2025,6,Ampara,4,28,Historical raw dataset
+2025,6,Anuradhapura,22,126,Historical raw dataset
+2025,6,Badulla,26,122,Historical raw dataset
+2025,6,Batticaloa,53,346,Historical raw dataset
+2025,6,Colombo,225,1432,Historical raw dataset
+2025,6,Galle,53,289,Historical raw dataset
+2025,6,Gampaha,162,1011,Historical raw dataset
+2025,6,Hambantota,22,170,Historical raw dataset
+2025,6,Jaffna,39,319,Historical raw dataset
+2025,6,Kalmunai,9,121,Historical raw dataset
+2025,6,Kalutara,29,241,Historical raw dataset
+2025,6,Kandy,80,426,Historical raw dataset
+2025,6,Kegalle,24,232,Historical raw dataset
+2025,6,Kilinochchi,3,30,Historical raw dataset
+2025,6,Kurunegala,18,173,Historical raw dataset
+2025,6,Mannar,12,69,Historical raw dataset
+2025,6,Matale,45,253,Historical raw dataset
+2025,6,Matara,59,213,Historical raw dataset
+2025,6,Monaragala,20,131,Historical raw dataset
+2025,6,Mullaitivu,1,14,Historical raw dataset
+2025,6,Nuwara Eliya,6,40,Historical raw dataset
+2025,6,Polonnaruwa,8,44,Historical raw dataset
+2025,6,Puttalam,22,153,Historical raw dataset
+2025,6,Ratnapura,58,307,Historical raw dataset
+2025,6,Trincomalee,22,171,Historical raw dataset
+2025,6,Vavuniya,3,15,Historical raw dataset
+2025,7,Ampara,3,31,Historical raw dataset
+2025,7,Anuradhapura,39,165,Historical raw dataset
+2025,7,Badulla,17,139,Historical raw dataset
+2025,7,Batticaloa,60,406,Historical raw dataset
+2025,7,Colombo,252,1684,Historical raw dataset
+2025,7,Galle,44,333,Historical raw dataset
+2025,7,Gampaha,131,1142,Historical raw dataset
+2025,7,Hambantota,15,185,Historical raw dataset
+2025,7,Jaffna,35,354,Historical raw dataset
+2025,7,Kalmunai,14,135,Historical raw dataset
+2025,7,Kalutara,29,270,Historical raw dataset
+2025,7,Kandy,50,476,Historical raw dataset
+2025,7,Kegalle,29,261,Historical raw dataset
+2025,7,Kilinochchi,2,32,Historical raw dataset
+2025,7,Kurunegala,27,200,Historical raw dataset
+2025,7,Mannar,3,72,Historical raw dataset
+2025,7,Matale,38,291,Historical raw dataset
+2025,7,Matara,34,247,Historical raw dataset
+2025,7,Monaragala,6,137,Historical raw dataset
+2025,7,Mullaitivu,2,16,Historical raw dataset
+2025,7,Nuwara Eliya,4,44,Historical raw dataset
+2025,7,Polonnaruwa,10,54,Historical raw dataset
+2025,7,Puttalam,16,169,Historical raw dataset
+2025,7,Ratnapura,47,354,Historical raw dataset
+2025,7,Trincomalee,28,199,Historical raw dataset
+2025,7,Vavuniya,2,17,Historical raw dataset
+2025,8,Ampara,3,34,Historical raw dataset
+2025,8,Anuradhapura,39,204,Historical raw dataset
+2025,8,Badulla,17,156,Historical raw dataset
+2025,8,Batticaloa,60,466,Historical raw dataset
+2025,8,Colombo,252,1936,Historical raw dataset
+2025,8,Galle,44,377,Historical raw dataset
+2025,8,Gampaha,131,1273,Historical raw dataset
+2025,8,Hambantota,15,200,Historical raw dataset
+2025,8,Jaffna,35,389,Historical raw dataset
+2025,8,Kalmunai,14,149,Historical raw dataset
+2025,8,Kalutara,29,299,Historical raw dataset
+2025,8,Kandy,50,526,Historical raw dataset
+2025,8,Kegalle,29,290,Historical raw dataset
+2025,8,Kilinochchi,2,34,Historical raw dataset
+2025,8,Kurunegala,27,227,Historical raw dataset
+2025,8,Mannar,3,75,Historical raw dataset
+2025,8,Matale,38,329,Historical raw dataset
+2025,8,Matara,34,281,Historical raw dataset
+2025,8,Monaragala,6,143,Historical raw dataset
+2025,8,Mullaitivu,2,18,Historical raw dataset
+2025,8,Nuwara Eliya,4,48,Historical raw dataset
+2025,8,Polonnaruwa,10,64,Historical raw dataset
+2025,8,Puttalam,16,185,Historical raw dataset
+2025,8,Ratnapura,47,401,Historical raw dataset
+2025,8,Trincomalee,28,227,Historical raw dataset
+2025,8,Vavuniya,2,19,Historical raw dataset
+2025,9,Ampara,5,39,Historical raw dataset
+2025,9,Anuradhapura,24,228,Historical raw dataset
+2025,9,Badulla,8,164,Historical raw dataset
+2025,9,Batticaloa,81,547,Historical raw dataset
+2025,9,Colombo,217,2153,Historical raw dataset
+2025,9,Galle,43,420,Historical raw dataset
+2025,9,Gampaha,132,1405,Historical raw dataset
+2025,9,Hambantota,10,210,Historical raw dataset
+2025,9,Jaffna,30,419,Historical raw dataset
+2025,9,Kalmunai,10,159,Historical raw dataset
+2025,9,Kalutara,44,343,Historical raw dataset
+2025,9,Kandy,63,589,Historical raw dataset
+2025,9,Kegalle,35,325,Historical raw dataset
+2025,9,Kilinochchi,2,36,Historical raw dataset
+2025,9,Kurunegala,20,247,Historical raw dataset
+2025,9,Mannar,4,79,Historical raw dataset
+2025,9,Matale,40,369,Historical raw dataset
+2025,9,Matara,35,316,Historical raw dataset
+2025,9,Monaragala,15,158,Historical raw dataset
+2025,9,Mullaitivu,0,18,Historical raw dataset
+2025,9,Nuwara Eliya,6,54,Historical raw dataset
+2025,9,Polonnaruwa,9,73,Historical raw dataset
+2025,9,Puttalam,24,209,Historical raw dataset
+2025,9,Ratnapura,50,451,Historical raw dataset
+2025,9,Trincomalee,29,256,Historical raw dataset
+2025,9,Vavuniya,0,19,Historical raw dataset
+2025,10,Ampara,4,43,Historical raw dataset
+2025,10,Anuradhapura,18,246,Historical raw dataset
+2025,10,Badulla,11,175,Historical raw dataset
+2025,10,Batticaloa,59,606,Historical raw dataset
+2025,10,Colombo,219,2372,Historical raw dataset
+2025,10,Galle,21,441,Historical raw dataset
+2025,10,Gampaha,119,1524,Historical raw dataset
+2025,10,Hambantota,12,222,Historical raw dataset
+2025,10,Jaffna,28,447,Historical raw dataset
+2025,10,Kalmunai,7,166,Historical raw dataset
+2025,10,Kalutara,31,374,Historical raw dataset
+2025,10,Kandy,58,647,Historical raw dataset
+2025,10,Kegalle,22,347,Historical raw dataset
+2025,10,Kilinochchi,1,37,Historical raw dataset
+2025,10,Kurunegala,25,272,Historical raw dataset
+2025,10,Mannar,3,82,Historical raw dataset
+2025,10,Matale,28,397,Historical raw dataset
+2025,10,Matara,24,340,Historical raw dataset
+2025,10,Monaragala,10,168,Historical raw dataset
+2025,10,Mullaitivu,1,19,Historical raw dataset
+2025,10,Nuwara Eliya,2,56,Historical raw dataset
+2025,10,Polonnaruwa,6,79,Historical raw dataset
+2025,10,Puttalam,23,232,Historical raw dataset
+2025,10,Ratnapura,47,498,Historical raw dataset
+2025,10,Trincomalee,25,281,Historical raw dataset
+2025,10,Vavuniya,5,24,Historical raw dataset
+2025,11,Ampara,0,43,Historical raw dataset
+2025,11,Anuradhapura,25,271,Historical raw dataset
+2025,11,Badulla,3,178,Historical raw dataset
+2025,11,Batticaloa,56,662,Historical raw dataset
+2025,11,Colombo,262,2634,Historical raw dataset
+2025,11,Galle,40,481,Historical raw dataset
+2025,11,Gampaha,142,1666,Historical raw dataset
+2025,11,Hambantota,17,239,Historical raw dataset
+2025,11,Jaffna,15,462,Historical raw dataset
+2025,11,Kalmunai,16,182,Historical raw dataset
+2025,11,Kalutara,43,417,Historical raw dataset
+2025,11,Kandy,49,696,Historical raw dataset
+2025,11,Kegalle,43,390,Historical raw dataset
+2025,11,Kilinochchi,3,40,Historical raw dataset
+2025,11,Kurunegala,17,289,Historical raw dataset
+2025,11,Mannar,0,82,Historical raw dataset
+2025,11,Matale,39,436,Historical raw dataset
+2025,11,Matara,50,390,Historical raw dataset
+2025,11,Monaragala,17,185,Historical raw dataset
+2025,11,Mullaitivu,1,20,Historical raw dataset
+2025,11,Nuwara Eliya,2,58,Historical raw dataset
+2025,11,Polonnaruwa,18,97,Historical raw dataset
+2025,11,Puttalam,24,256,Historical raw dataset
+2025,11,Ratnapura,13,511,Historical raw dataset
+2025,11,Trincomalee,17,298,Historical raw dataset
+2025,11,Vavuniya,0,24,Historical raw dataset
+2025,12,Ampara,3,46,Historical raw dataset
+2025,12,Anuradhapura,12,283,Historical raw dataset
+2025,12,Badulla,17,195,Historical raw dataset
+2025,12,Batticaloa,31,693,Historical raw dataset
+2025,12,Colombo,214,2848,Historical raw dataset
+2025,12,Galle,24,505,Historical raw dataset
+2025,12,Gampaha,132,1798,Historical raw dataset
+2025,12,Hambantota,14,253,Historical raw dataset
+2025,12,Jaffna,23,485,Historical raw dataset
+2025,12,Kalmunai,8,190,Historical raw dataset
+2025,12,Kalutara,37,454,Historical raw dataset
+2025,12,Kandy,59,755,Historical raw dataset
+2025,12,Kegalle,20,410,Historical raw dataset
+2025,12,Kilinochchi,6,46,Historical raw dataset
+2025,12,Kurunegala,23,312,Historical raw dataset
+2025,12,Mannar,2,84,Historical raw dataset
+2025,12,Matale,22,458,Historical raw dataset
+2025,12,Matara,32,422,Historical raw dataset
+2025,12,Monaragala,23,208,Historical raw dataset
+2025,12,Mullaitivu,3,23,Historical raw dataset
+2025,12,Nuwara Eliya,1,59,Historical raw dataset
+2025,12,Polonnaruwa,3,100,Historical raw dataset
+2025,12,Puttalam,15,271,Historical raw dataset
+2025,12,Ratnapura,46,557,Historical raw dataset
+2025,12,Trincomalee,25,323,Historical raw dataset
+2025,12,Vavuniya,1,25,Historical raw dataset
+2025,13,Ampara,3,49,Historical raw dataset
+2025,13,Anuradhapura,8,291,Historical raw dataset
+2025,13,Badulla,6,201,Historical raw dataset
+2025,13,Batticaloa,28,721,Historical raw dataset
+2025,13,Colombo,242,3090,Historical raw dataset
+2025,13,Galle,35,540,Historical raw dataset
+2025,13,Gampaha,125,1923,Historical raw dataset
+2025,13,Hambantota,18,271,Historical raw dataset
+2025,13,Jaffna,25,510,Historical raw dataset
+2025,13,Kalmunai,6,196,Historical raw dataset
+2025,13,Kalutara,35,489,Historical raw dataset
+2025,13,Kandy,59,814,Historical raw dataset
+2025,13,Kegalle,32,442,Historical raw dataset
+2025,13,Kilinochchi,0,46,Historical raw dataset
+2025,13,Kurunegala,21,333,Historical raw dataset
+2025,13,Mannar,2,86,Historical raw dataset
+2025,13,Matale,20,478,Historical raw dataset
+2025,13,Matara,30,452,Historical raw dataset
+2025,13,Monaragala,24,232,Historical raw dataset
+2025,13,Mullaitivu,0,23,Historical raw dataset
+2025,13,Nuwara Eliya,6,65,Historical raw dataset
+2025,13,Polonnaruwa,6,106,Historical raw dataset
+2025,13,Puttalam,10,281,Historical raw dataset
+2025,13,Ratnapura,56,613,Historical raw dataset
+2025,13,Trincomalee,23,346,Historical raw dataset
+2025,13,Vavuniya,1,26,Historical raw dataset
+2025,14,Ampara,2,51,Historical raw dataset
+2025,14,Anuradhapura,9,300,Historical raw dataset
+2025,14,Badulla,12,213,Historical raw dataset
+2025,14,Batticaloa,28,749,Historical raw dataset
+2025,14,Colombo,239,3329,Historical raw dataset
+2025,14,Galle,31,571,Historical raw dataset
+2025,14,Gampaha,135,2058,Historical raw dataset
+2025,14,Hambantota,12,283,Historical raw dataset
+2025,14,Jaffna,24,534,Historical raw dataset
+2025,14,Kalmunai,10,206,Historical raw dataset
+2025,14,Kalutara,30,519,Historical raw dataset
+2025,14,Kandy,56,870,Historical raw dataset
+2025,14,Kegalle,24,466,Historical raw dataset
+2025,14,Kilinochchi,2,48,Historical raw dataset
+2025,14,Kurunegala,19,352,Historical raw dataset
+2025,14,Mannar,4,90,Historical raw dataset
+2025,14,Matale,32,510,Historical raw dataset
+2025,14,Matara,44,496,Historical raw dataset
+2025,14,Monaragala,21,253,Historical raw dataset
+2025,14,Mullaitivu,0,23,Historical raw dataset
+2025,14,Nuwara Eliya,4,69,Historical raw dataset
+2025,14,Polonnaruwa,4,110,Historical raw dataset
+2025,14,Puttalam,14,295,Historical raw dataset
+2025,14,Ratnapura,45,658,Historical raw dataset
+2025,14,Trincomalee,28,374,Historical raw dataset
+2025,14,Vavuniya,1,27,Historical raw dataset
+2025,15,Ampara,5,56,Historical raw dataset
+2025,15,Anuradhapura,6,306,Historical raw dataset
+2025,15,Badulla,9,222,Historical raw dataset
+2025,15,Batticaloa,46,795,Historical raw dataset
+2025,15,Colombo,204,3533,Historical raw dataset
+2025,15,Galle,34,605,Historical raw dataset
+2025,15,Gampaha,135,2193,Historical raw dataset
+2025,15,Hambantota,13,296,Historical raw dataset
+2025,15,Jaffna,15,549,Historical raw dataset
+2025,15,Kalmunai,10,216,Historical raw dataset
+2025,15,Kalutara,39,558,Historical raw dataset
+2025,15,Kandy,65,935,Historical raw dataset
+2025,15,Kegalle,20,486,Historical raw dataset
+2025,15,Kilinochchi,0,48,Historical raw dataset
+2025,15,Kurunegala,19,371,Historical raw dataset
+2025,15,Mannar,2,92,Historical raw dataset
+2025,15,Matale,21,531,Historical raw dataset
+2025,15,Matara,38,534,Historical raw dataset
+2025,15,Monaragala,15,268,Historical raw dataset
+2025,15,Mullaitivu,2,25,Historical raw dataset
+2025,15,Nuwara Eliya,3,72,Historical raw dataset
+2025,15,Polonnaruwa,5,115,Historical raw dataset
+2025,15,Puttalam,11,306,Historical raw dataset
+2025,15,Ratnapura,54,712,Historical raw dataset
+2025,15,Trincomalee,36,410,Historical raw dataset
+2025,15,Vavuniya,3,30,Historical raw dataset
+2025,16,Ampara,7,63,Historical raw dataset
+2025,16,Anuradhapura,3,309,Historical raw dataset
+2025,16,Badulla,18,240,Historical raw dataset
+2025,16,Batticaloa,70,865,Historical raw dataset
+2025,16,Colombo,277,3810,Historical raw dataset
+2025,16,Galle,29,634,Historical raw dataset
+2025,16,Gampaha,137,2330,Historical raw dataset
+2025,16,Hambantota,10,306,Historical raw dataset
+2025,16,Jaffna,11,560,Historical raw dataset
+2025,16,Kalmunai,15,231,Historical raw dataset
+2025,16,Kalutara,36,594,Historical raw dataset
+2025,16,Kandy,50,985,Historical raw dataset
+2025,16,Kegalle,29,515,Historical raw dataset
+2025,16,Kilinochchi,1,49,Historical raw dataset
+2025,16,Kurunegala,17,388,Historical raw dataset
+2025,16,Mannar,1,93,Historical raw dataset
+2025,16,Matale,30,561,Historical raw dataset
+2025,16,Matara,32,566,Historical raw dataset
+2025,16,Monaragala,29,297,Historical raw dataset
+2025,16,Mullaitivu,2,27,Historical raw dataset
+2025,16,Nuwara Eliya,1,73,Historical raw dataset
+2025,16,Polonnaruwa,6,121,Historical raw dataset
+2025,16,Puttalam,8,314,Historical raw dataset
+2025,16,Ratnapura,146,858,Historical raw dataset
+2025,16,Trincomalee,33,443,Historical raw dataset
+2025,16,Vavuniya,0,30,Historical raw dataset
+2025,17,Ampara,6,69,Historical raw dataset
+2025,17,Anuradhapura,4,313,Historical raw dataset
+2025,17,Badulla,11,251,Historical raw dataset
+2025,17,Batticaloa,62,927,Historical raw dataset
+2025,17,Colombo,230,4040,Historical raw dataset
+2025,17,Galle,23,657,Historical raw dataset
+2025,17,Gampaha,171,2501,Historical raw dataset
+2025,17,Hambantota,12,318,Historical raw dataset
+2025,17,Jaffna,18,578,Historical raw dataset
+2025,17,Kalmunai,7,238,Historical raw dataset
+2025,17,Kalutara,42,636,Historical raw dataset
+2025,17,Kandy,53,1038,Historical raw dataset
+2025,17,Kegalle,13,528,Historical raw dataset
+2025,17,Kilinochchi,1,50,Historical raw dataset
+2025,17,Kurunegala,13,401,Historical raw dataset
+2025,17,Mannar,2,95,Historical raw dataset
+2025,17,Matale,28,589,Historical raw dataset
+2025,17,Matara,35,601,Historical raw dataset
+2025,17,Monaragala,27,324,Historical raw dataset
+2025,17,Mullaitivu,1,28,Historical raw dataset
+2025,17,Nuwara Eliya,3,76,Historical raw dataset
+2025,17,Polonnaruwa,5,126,Historical raw dataset
+2025,17,Puttalam,7,321,Historical raw dataset
+2025,17,Ratnapura,146,1004,Historical raw dataset
+2025,17,Trincomalee,44,487,Historical raw dataset
+2025,17,Vavuniya,5,35,Historical raw dataset
+2025,18,Ampara,7,76,Historical raw dataset
+2025,18,Anuradhapura,8,321,Historical raw dataset
+2025,18,Badulla,19,270,Historical raw dataset
+2025,18,Batticaloa,94,1021,Historical raw dataset
+2025,18,Colombo,306,4346,Historical raw dataset
+2025,18,Galle,55,712,Historical raw dataset
+2025,18,Gampaha,166,2667,Historical raw dataset
+2025,18,Hambantota,23,341,Historical raw dataset
+2025,18,Jaffna,44,622,Historical raw dataset
+2025,18,Kalmunai,8,246,Historical raw dataset
+2025,18,Kalutara,64,700,Historical raw dataset
+2025,18,Kandy,73,1111,Historical raw dataset
+2025,18,Kegalle,35,563,Historical raw dataset
+2025,18,Kilinochchi,7,57,Historical raw dataset
+2025,18,Kurunegala,53,454,Historical raw dataset
+2025,18,Mannar,1,96,Historical raw dataset
+2025,18,Matale,42,631,Historical raw dataset
+2025,18,Matara,38,639,Historical raw dataset
+2025,18,Monaragala,12,336,Historical raw dataset
+2025,18,Mullaitivu,0,28,Historical raw dataset
+2025,18,Nuwara Eliya,6,82,Historical raw dataset
+2025,18,Polonnaruwa,8,134,Historical raw dataset
+2025,18,Puttalam,10,331,Historical raw dataset
+2025,18,Ratnapura,319,1323,Historical raw dataset
+2025,18,Trincomalee,46,533,Historical raw dataset
+2025,18,Vavuniya,1,36,Historical raw dataset
+2025,19,Ampara,12,88,Historical raw dataset
+2025,19,Anuradhapura,10,331,Historical raw dataset
+2025,19,Badulla,12,282,Historical raw dataset
+2025,19,Batticaloa,84,1105,Historical raw dataset
+2025,19,Colombo,276,4622,Historical raw dataset
+2025,19,Galle,29,741,Historical raw dataset
+2025,19,Gampaha,158,2825,Historical raw dataset
+2025,19,Hambantota,24,365,Historical raw dataset
+2025,19,Jaffna,20,642,Historical raw dataset
+2025,19,Kalmunai,12,258,Historical raw dataset
+2025,19,Kalutara,59,759,Historical raw dataset
+2025,19,Kandy,60,1171,Historical raw dataset
+2025,19,Kegalle,38,601,Historical raw dataset
+2025,19,Kilinochchi,1,58,Historical raw dataset
+2025,19,Kurunegala,34,488,Historical raw dataset
+2025,19,Mannar,6,102,Historical raw dataset
+2025,19,Matale,28,659,Historical raw dataset
+2025,19,Matara,38,677,Historical raw dataset
+2025,19,Monaragala,22,358,Historical raw dataset
+2025,19,Mullaitivu,2,30,Historical raw dataset
+2025,19,Nuwara Eliya,6,88,Historical raw dataset
+2025,19,Polonnaruwa,10,144,Historical raw dataset
+2025,19,Puttalam,9,340,Historical raw dataset
+2025,19,Ratnapura,273,1596,Historical raw dataset
+2025,19,Trincomalee,64,597,Historical raw dataset
+2025,19,Vavuniya,3,39,Historical raw dataset
+2025,20,Ampara,4,92,Historical raw dataset
+2025,20,Anuradhapura,11,342,Historical raw dataset
+2025,20,Badulla,7,289,Historical raw dataset
+2025,20,Batticaloa,59,1164,Historical raw dataset
+2025,20,Colombo,310,4932,Historical raw dataset
+2025,20,Galle,32,773,Historical raw dataset
+2025,20,Gampaha,194,3019,Historical raw dataset
+2025,20,Hambantota,16,381,Historical raw dataset
+2025,20,Jaffna,18,660,Historical raw dataset
+2025,20,Kalmunai,13,271,Historical raw dataset
+2025,20,Kalutara,63,822,Historical raw dataset
+2025,20,Kandy,77,1248,Historical raw dataset
+2025,20,Kegalle,43,644,Historical raw dataset
+2025,20,Kilinochchi,1,59,Historical raw dataset
+2025,20,Kurunegala,30,518,Historical raw dataset
+2025,20,Mannar,1,103,Historical raw dataset
+2025,20,Matale,23,682,Historical raw dataset
+2025,20,Matara,17,694,Historical raw dataset
+2025,20,Monaragala,10,368,Historical raw dataset
+2025,20,Mullaitivu,1,31,Historical raw dataset
+2025,20,Nuwara Eliya,7,95,Historical raw dataset
+2025,20,Polonnaruwa,10,154,Historical raw dataset
+2025,20,Puttalam,12,352,Historical raw dataset
+2025,20,Ratnapura,242,1838,Historical raw dataset
+2025,20,Trincomalee,55,652,Historical raw dataset
+2025,20,Vavuniya,0,39,Historical raw dataset
+2025,21,Ampara,6,98,Historical raw dataset
+2025,21,Anuradhapura,11,353,Historical raw dataset
+2025,21,Badulla,7,296,Historical raw dataset
+2025,21,Batticaloa,58,1222,Historical raw dataset
+2025,21,Colombo,359,5291,Historical raw dataset
+2025,21,Galle,44,817,Historical raw dataset
+2025,21,Gampaha,224,3243,Historical raw dataset
+2025,21,Hambantota,20,401,Historical raw dataset
+2025,21,Jaffna,27,687,Historical raw dataset
+2025,21,Kalmunai,10,281,Historical raw dataset
+2025,21,Kalutara,35,857,Historical raw dataset
+2025,21,Kandy,98,1346,Historical raw dataset
+2025,21,Kegalle,45,689,Historical raw dataset
+2025,21,Kilinochchi,4,63,Historical raw dataset
+2025,21,Kurunegala,44,562,Historical raw dataset
+2025,21,Mannar,3,106,Historical raw dataset
+2025,21,Matale,16,698,Historical raw dataset
+2025,21,Matara,27,721,Historical raw dataset
+2025,21,Monaragala,17,385,Historical raw dataset
+2025,21,Mullaitivu,2,33,Historical raw dataset
+2025,21,Nuwara Eliya,9,104,Historical raw dataset
+2025,21,Polonnaruwa,7,161,Historical raw dataset
+2025,21,Puttalam,8,360,Historical raw dataset
+2025,21,Ratnapura,251,2089,Historical raw dataset
+2025,21,Trincomalee,45,697,Historical raw dataset
+2025,21,Vavuniya,2,41,Historical raw dataset
+2025,22,Ampara,6,104,Historical raw dataset
+2025,22,Anuradhapura,13,366,Historical raw dataset
+2025,22,Badulla,25,321,Historical raw dataset
+2025,22,Batticaloa,53,1275,Historical raw dataset
+2025,22,Colombo,336,5627,Historical raw dataset
+2025,22,Galle,56,873,Historical raw dataset
+2025,22,Gampaha,208,3451,Historical raw dataset
+2025,22,Hambantota,20,421,Historical raw dataset
+2025,22,Jaffna,35,722,Historical raw dataset
+2025,22,Kalmunai,8,289,Historical raw dataset
+2025,22,Kalutara,92,949,Historical raw dataset
+2025,22,Kandy,126,1472,Historical raw dataset
+2025,22,Kegalle,43,732,Historical raw dataset
+2025,22,Kilinochchi,2,65,Historical raw dataset
+2025,22,Kurunegala,47,609,Historical raw dataset
+2025,22,Mannar,4,110,Historical raw dataset
+2025,22,Matale,20,718,Historical raw dataset
+2025,22,Matara,21,742,Historical raw dataset
+2025,22,Monaragala,15,400,Historical raw dataset
+2025,22,Mullaitivu,1,34,Historical raw dataset
+2025,22,Nuwara Eliya,4,108,Historical raw dataset
+2025,22,Polonnaruwa,6,167,Historical raw dataset
+2025,22,Puttalam,13,373,Historical raw dataset
+2025,22,Ratnapura,203,2292,Historical raw dataset
+2025,22,Trincomalee,43,740,Historical raw dataset
+2025,22,Vavuniya,2,43,Historical raw dataset
+2025,23,Ampara,10,114,Historical raw dataset
+2025,23,Anuradhapura,11,377,Historical raw dataset
+2025,23,Badulla,26,347,Historical raw dataset
+2025,23,Batticaloa,52,1327,Historical raw dataset
+2025,23,Colombo,302,5929,Historical raw dataset
+2025,23,Galle,44,917,Historical raw dataset
+2025,23,Gampaha,197,3648,Historical raw dataset
+2025,23,Hambantota,8,429,Historical raw dataset
+2025,23,Jaffna,20,742,Historical raw dataset
+2025,23,Kalmunai,4,293,Historical raw dataset
+2025,23,Kalutara,71,1020,Historical raw dataset
+2025,23,Kandy,105,1577,Historical raw dataset
+2025,23,Kegalle,61,793,Historical raw dataset
+2025,23,Kilinochchi,2,67,Historical raw dataset
+2025,23,Kurunegala,60,669,Historical raw dataset
+2025,23,Mannar,2,112,Historical raw dataset
+2025,23,Matale,20,738,Historical raw dataset
+2025,23,Matara,26,768,Historical raw dataset
+2025,23,Monaragala,26,426,Historical raw dataset
+2025,23,Mullaitivu,1,35,Historical raw dataset
+2025,23,Nuwara Eliya,7,115,Historical raw dataset
+2025,23,Polonnaruwa,12,179,Historical raw dataset
+2025,23,Puttalam,11,384,Historical raw dataset
+2025,23,Ratnapura,197,2489,Historical raw dataset
+2025,23,Trincomalee,39,779,Historical raw dataset
+2025,23,Vavuniya,1,44,Historical raw dataset
+2025,24,Ampara,14,128,Historical raw dataset
+2025,24,Anuradhapura,10,387,Historical raw dataset
+2025,24,Badulla,24,371,Historical raw dataset
+2025,24,Batticaloa,59,1386,Historical raw dataset
+2025,24,Colombo,245,6174,Historical raw dataset
+2025,24,Galle,49,966,Historical raw dataset
+2025,24,Gampaha,228,3876,Historical raw dataset
+2025,24,Hambantota,24,453,Historical raw dataset
+2025,24,Jaffna,26,768,Historical raw dataset
+2025,24,Kalmunai,14,307,Historical raw dataset
+2025,24,Kalutara,68,1088,Historical raw dataset
+2025,24,Kandy,126,1703,Historical raw dataset
+2025,24,Kegalle,54,847,Historical raw dataset
+2025,24,Kilinochchi,1,68,Historical raw dataset
+2025,24,Kurunegala,43,712,Historical raw dataset
+2025,24,Mannar,3,115,Historical raw dataset
+2025,24,Matale,24,762,Historical raw dataset
+2025,24,Matara,34,802,Historical raw dataset
+2025,24,Monaragala,29,455,Historical raw dataset
+2025,24,Mullaitivu,4,39,Historical raw dataset
+2025,24,Nuwara Eliya,9,124,Historical raw dataset
+2025,24,Polonnaruwa,15,194,Historical raw dataset
+2025,24,Puttalam,17,401,Historical raw dataset
+2025,24,Ratnapura,172,2661,Historical raw dataset
+2025,24,Trincomalee,40,819,Historical raw dataset
+2025,24,Vavuniya,5,49,Historical raw dataset
+2025,25,Ampara,7,135,Historical raw dataset
+2025,25,Anuradhapura,7,394,Historical raw dataset
+2025,25,Badulla,24,395,Historical raw dataset
+2025,25,Batticaloa,30,1416,Historical raw dataset
+2025,25,Colombo,279,6453,Historical raw dataset
+2025,25,Galle,44,1010,Historical raw dataset
+2025,25,Gampaha,207,4083,Historical raw dataset
+2025,25,Hambantota,15,468,Historical raw dataset
+2025,25,Jaffna,25,793,Historical raw dataset
+2025,25,Kalmunai,4,311,Historical raw dataset
+2025,25,Kalutara,74,1162,Historical raw dataset
+2025,25,Kandy,118,1821,Historical raw dataset
+2025,25,Kegalle,46,893,Historical raw dataset
+2025,25,Kilinochchi,2,70,Historical raw dataset
+2025,25,Kurunegala,68,780,Historical raw dataset
+2025,25,Mannar,2,117,Historical raw dataset
+2025,25,Matale,17,779,Historical raw dataset
+2025,25,Matara,70,872,Historical raw dataset
+2025,25,Monaragala,26,481,Historical raw dataset
+2025,25,Mullaitivu,2,41,Historical raw dataset
+2025,25,Nuwara Eliya,17,141,Historical raw dataset
+2025,25,Polonnaruwa,12,206,Historical raw dataset
+2025,25,Puttalam,10,411,Historical raw dataset
+2025,25,Ratnapura,145,2806,Historical raw dataset
+2025,25,Trincomalee,16,835,Historical raw dataset
+2025,25,Vavuniya,2,51,Historical raw dataset
+2025,26,Ampara,6,141,Historical raw dataset
+2025,26,Anuradhapura,8,402,Historical raw dataset
+2025,26,Badulla,31,426,Historical raw dataset
+2025,26,Batticaloa,40,1456,Historical raw dataset
+2025,26,Colombo,316,6769,Historical raw dataset
+2025,26,Galle,73,1083,Historical raw dataset
+2025,26,Gampaha,217,4300,Historical raw dataset
+2025,26,Hambantota,22,490,Historical raw dataset
+2025,26,Jaffna,24,817,Historical raw dataset
+2025,26,Kalmunai,6,317,Historical raw dataset
+2025,26,Kalutara,62,1224,Historical raw dataset
+2025,26,Kandy,192,2013,Historical raw dataset
+2025,26,Kegalle,48,941,Historical raw dataset
+2025,26,Kilinochchi,0,70,Historical raw dataset
+2025,26,Kurunegala,77,857,Historical raw dataset
+2025,26,Mannar,4,121,Historical raw dataset
+2025,26,Matale,24,803,Historical raw dataset
+2025,26,Matara,39,911,Historical raw dataset
+2025,26,Monaragala,24,505,Historical raw dataset
+2025,26,Mullaitivu,1,42,Historical raw dataset
+2025,26,Nuwara Eliya,20,161,Historical raw dataset
+2025,26,Polonnaruwa,21,227,Historical raw dataset
+2025,26,Puttalam,10,421,Historical raw dataset
+2025,26,Ratnapura,118,2924,Historical raw dataset
+2025,26,Trincomalee,16,851,Historical raw dataset
+2025,26,Vavuniya,4,55,Historical raw dataset
+2025,27,Ampara,8,149,Historical raw dataset
+2025,27,Anuradhapura,17,419,Historical raw dataset
+2025,27,Badulla,17,443,Historical raw dataset
+2025,27,Batticaloa,16,1472,Historical raw dataset
+2025,27,Colombo,276,7045,Historical raw dataset
+2025,27,Galle,79,1162,Historical raw dataset
+2025,27,Gampaha,167,4467,Historical raw dataset
+2025,27,Hambantota,21,511,Historical raw dataset
+2025,27,Jaffna,12,829,Historical raw dataset
+2025,27,Kalmunai,4,321,Historical raw dataset
+2025,27,Kalutara,92,1316,Historical raw dataset
+2025,27,Kandy,161,2174,Historical raw dataset
+2025,27,Kegalle,35,976,Historical raw dataset
+2025,27,Kilinochchi,1,71,Historical raw dataset
+2025,27,Kurunegala,70,927,Historical raw dataset
+2025,27,Mannar,0,121,Historical raw dataset
+2025,27,Matale,23,826,Historical raw dataset
+2025,27,Matara,58,969,Historical raw dataset
+2025,27,Monaragala,27,532,Historical raw dataset
+2025,27,Mullaitivu,3,45,Historical raw dataset
+2025,27,Nuwara Eliya,6,167,Historical raw dataset
+2025,27,Polonnaruwa,10,237,Historical raw dataset
+2025,27,Puttalam,7,428,Historical raw dataset
+2025,27,Ratnapura,120,3044,Historical raw dataset
+2025,27,Trincomalee,12,863,Historical raw dataset
+2025,27,Vavuniya,3,58,Historical raw dataset
+2025,28,Ampara,11,160,Historical raw dataset
+2025,28,Anuradhapura,8,427,Historical raw dataset
+2025,28,Badulla,17,460,Historical raw dataset
+2025,28,Batticaloa,20,1492,Historical raw dataset
+2025,28,Colombo,285,7330,Historical raw dataset
+2025,28,Galle,47,1209,Historical raw dataset
+2025,28,Gampaha,181,4648,Historical raw dataset
+2025,28,Hambantota,24,535,Historical raw dataset
+2025,28,Jaffna,17,846,Historical raw dataset
+2025,28,Kalmunai,11,332,Historical raw dataset
+2025,28,Kalutara,57,1373,Historical raw dataset
+2025,28,Kandy,174,2348,Historical raw dataset
+2025,28,Kegalle,39,1015,Historical raw dataset
+2025,28,Kilinochchi,2,73,Historical raw dataset
+2025,28,Kurunegala,51,978,Historical raw dataset
+2025,28,Mannar,2,123,Historical raw dataset
+2025,28,Matale,14,840,Historical raw dataset
+2025,28,Matara,39,1008,Historical raw dataset
+2025,28,Monaragala,12,544,Historical raw dataset
+2025,28,Mullaitivu,2,47,Historical raw dataset
+2025,28,Nuwara Eliya,8,175,Historical raw dataset
+2025,28,Polonnaruwa,14,251,Historical raw dataset
+2025,28,Puttalam,12,440,Historical raw dataset
+2025,28,Ratnapura,104,3148,Historical raw dataset
+2025,28,Trincomalee,8,871,Historical raw dataset
+2025,28,Vavuniya,3,61,Historical raw dataset
+2025,29,Ampara,7,167,Historical raw dataset
+2025,29,Anuradhapura,8,435,Historical raw dataset
+2025,29,Badulla,16,476,Historical raw dataset
+2025,29,Batticaloa,13,1505,Historical raw dataset
+2025,29,Colombo,222,7552,Historical raw dataset
+2025,29,Galle,56,1265,Historical raw dataset
+2025,29,Gampaha,154,4802,Historical raw dataset
+2025,29,Hambantota,31,566,Historical raw dataset
+2025,29,Jaffna,26,872,Historical raw dataset
+2025,29,Kalmunai,9,341,Historical raw dataset
+2025,29,Kalutara,66,1439,Historical raw dataset
+2025,29,Kandy,141,2489,Historical raw dataset
+2025,29,Kegalle,30,1045,Historical raw dataset
+2025,29,Kilinochchi,0,73,Historical raw dataset
+2025,29,Kurunegala,50,1028,Historical raw dataset
+2025,29,Mannar,1,124,Historical raw dataset
+2025,29,Matale,12,852,Historical raw dataset
+2025,29,Matara,28,1036,Historical raw dataset
+2025,29,Monaragala,13,557,Historical raw dataset
+2025,29,Mullaitivu,0,47,Historical raw dataset
+2025,29,Nuwara Eliya,10,185,Historical raw dataset
+2025,29,Polonnaruwa,11,262,Historical raw dataset
+2025,29,Puttalam,7,447,Historical raw dataset
+2025,29,Ratnapura,97,3245,Historical raw dataset
+2025,29,Trincomalee,11,882,Historical raw dataset
+2025,29,Vavuniya,2,63,Historical raw dataset
+2025,30,Ampara,12,179,Historical raw dataset
+2025,30,Anuradhapura,12,447,Historical raw dataset
+2025,30,Badulla,37,513,Historical raw dataset
+2025,30,Batticaloa,19,1524,Historical raw dataset
+2025,30,Colombo,226,7778,Historical raw dataset
+2025,30,Galle,43,1308,Historical raw dataset
+2025,30,Gampaha,193,4995,Historical raw dataset
+2025,30,Hambantota,46,612,Historical raw dataset
+2025,30,Jaffna,31,903,Historical raw dataset
+2025,30,Kalmunai,5,346,Historical raw dataset
+2025,30,Kalutara,80,1519,Historical raw dataset
+2025,30,Kandy,184,2673,Historical raw dataset
+2025,30,Kegalle,41,1086,Historical raw dataset
+2025,30,Kilinochchi,3,76,Historical raw dataset
+2025,30,Kurunegala,49,1077,Historical raw dataset
+2025,30,Mannar,2,126,Historical raw dataset
+2025,30,Matale,19,871,Historical raw dataset
+2025,30,Matara,41,1077,Historical raw dataset
+2025,30,Monaragala,19,576,Historical raw dataset
+2025,30,Mullaitivu,0,47,Historical raw dataset
+2025,30,Nuwara Eliya,24,209,Historical raw dataset
+2025,30,Polonnaruwa,14,276,Historical raw dataset
+2025,30,Puttalam,12,459,Historical raw dataset
+2025,30,Ratnapura,93,3338,Historical raw dataset
+2025,30,Trincomalee,11,893,Historical raw dataset
+2025,30,Vavuniya,3,66,Historical raw dataset
+2025,31,Ampara,5,184,Historical raw dataset
+2025,31,Anuradhapura,11,458,Historical raw dataset
+2025,31,Badulla,20,533,Historical raw dataset
+2025,31,Batticaloa,6,1530,Historical raw dataset
+2025,31,Colombo,237,8015,Historical raw dataset
+2025,31,Galle,66,1374,Historical raw dataset
+2025,31,Gampaha,175,5170,Historical raw dataset
+2025,31,Hambantota,31,643,Historical raw dataset
+2025,31,Jaffna,19,922,Historical raw dataset
+2025,31,Kalmunai,3,349,Historical raw dataset
+2025,31,Kalutara,53,1572,Historical raw dataset
+2025,31,Kandy,168,2841,Historical raw dataset
+2025,31,Kegalle,33,1119,Historical raw dataset
+2025,31,Kilinochchi,1,77,Historical raw dataset
+2025,31,Kurunegala,84,1161,Historical raw dataset
+2025,31,Mannar,4,130,Historical raw dataset
+2025,31,Matale,27,898,Historical raw dataset
+2025,31,Matara,42,1119,Historical raw dataset
+2025,31,Monaragala,17,593,Historical raw dataset
+2025,31,Mullaitivu,0,47,Historical raw dataset
+2025,31,Nuwara Eliya,18,227,Historical raw dataset
+2025,31,Polonnaruwa,15,291,Historical raw dataset
+2025,31,Puttalam,12,471,Historical raw dataset
+2025,31,Ratnapura,99,3437,Historical raw dataset
+2025,31,Trincomalee,7,900,Historical raw dataset
+2025,31,Vavuniya,0,66,Historical raw dataset
+2025,32,Ampara,6,190,Historical raw dataset
+2025,32,Anuradhapura,3,461,Historical raw dataset
+2025,32,Badulla,16,549,Historical raw dataset
+2025,32,Batticaloa,6,1536,Historical raw dataset
+2025,32,Colombo,246,8261,Historical raw dataset
+2025,32,Galle,44,1418,Historical raw dataset
+2025,32,Gampaha,148,5318,Historical raw dataset
+2025,32,Hambantota,24,667,Historical raw dataset
+2025,32,Jaffna,15,937,Historical raw dataset
+2025,32,Kalmunai,5,354,Historical raw dataset
+2025,32,Kalutara,30,1602,Historical raw dataset
+2025,32,Kandy,107,2948,Historical raw dataset
+2025,32,Kegalle,29,1148,Historical raw dataset
+2025,32,Kilinochchi,0,77,Historical raw dataset
+2025,32,Kurunegala,39,1200,Historical raw dataset
+2025,32,Mannar,2,132,Historical raw dataset
+2025,32,Matale,19,917,Historical raw dataset
+2025,32,Matara,30,1149,Historical raw dataset
+2025,32,Monaragala,17,610,Historical raw dataset
+2025,32,Mullaitivu,0,47,Historical raw dataset
+2025,32,Nuwara Eliya,9,236,Historical raw dataset
+2025,32,Polonnaruwa,8,299,Historical raw dataset
+2025,32,Puttalam,15,486,Historical raw dataset
+2025,32,Ratnapura,91,3528,Historical raw dataset
+2025,32,Trincomalee,9,909,Historical raw dataset
+2025,32,Vavuniya,1,67,Historical raw dataset
+2025,33,Ampara,0,190,Historical raw dataset
+2025,33,Anuradhapura,6,467,Historical raw dataset
+2025,33,Badulla,13,562,Historical raw dataset
+2025,33,Batticaloa,12,1548,Historical raw dataset
+2025,33,Colombo,156,8417,Historical raw dataset
+2025,33,Galle,37,1455,Historical raw dataset
+2025,33,Gampaha,96,5414,Historical raw dataset
+2025,33,Hambantota,17,684,Historical raw dataset
+2025,33,Jaffna,9,946,Historical raw dataset
+2025,33,Kalmunai,3,357,Historical raw dataset
+2025,33,Kalutara,47,1649,Historical raw dataset
+2025,33,Kandy,145,3093,Historical raw dataset
+2025,33,Kegalle,31,1179,Historical raw dataset
+2025,33,Kilinochchi,0,77,Historical raw dataset
+2025,33,Kurunegala,37,1237,Historical raw dataset
+2025,33,Mannar,3,135,Historical raw dataset
+2025,33,Matale,17,934,Historical raw dataset
+2025,33,Matara,20,1169,Historical raw dataset
+2025,33,Monaragala,11,621,Historical raw dataset
+2025,33,Mullaitivu,0,47,Historical raw dataset
+2025,33,Nuwara Eliya,10,246,Historical raw dataset
+2025,33,Polonnaruwa,2,301,Historical raw dataset
+2025,33,Puttalam,17,503,Historical raw dataset
+2025,33,Ratnapura,64,3592,Historical raw dataset
+2025,33,Trincomalee,4,913,Historical raw dataset
+2025,33,Vavuniya,0,67,Historical raw dataset
+2025,34,Ampara,0,190,Historical raw dataset
+2025,34,Anuradhapura,11,478,Historical raw dataset
+2025,34,Badulla,12,574,Historical raw dataset
+2025,34,Batticaloa,5,1553,Historical raw dataset
+2025,34,Colombo,87,8504,Historical raw dataset
+2025,34,Galle,48,1503,Historical raw dataset
+2025,34,Gampaha,91,5505,Historical raw dataset
+2025,34,Hambantota,15,699,Historical raw dataset
+2025,34,Jaffna,20,966,Historical raw dataset
+2025,34,Kalmunai,6,363,Historical raw dataset
+2025,34,Kalutara,56,1705,Historical raw dataset
+2025,34,Kandy,80,3173,Historical raw dataset
+2025,34,Kegalle,19,1198,Historical raw dataset
+2025,34,Kilinochchi,2,79,Historical raw dataset
+2025,34,Kurunegala,23,1260,Historical raw dataset
+2025,34,Mannar,1,136,Historical raw dataset
+2025,34,Matale,13,947,Historical raw dataset
+2025,34,Matara,35,1204,Historical raw dataset
+2025,34,Monaragala,17,638,Historical raw dataset
+2025,34,Mullaitivu,0,47,Historical raw dataset
+2025,34,Nuwara Eliya,3,249,Historical raw dataset
+2025,34,Polonnaruwa,3,304,Historical raw dataset
+2025,34,Puttalam,11,514,Historical raw dataset
+2025,34,Ratnapura,79,3671,Historical raw dataset
+2025,34,Trincomalee,2,915,Historical raw dataset
+2025,34,Vavuniya,2,69,Historical raw dataset
+2025,35,Ampara,6,196,Historical raw dataset
+2025,35,Anuradhapura,6,484,Historical raw dataset
+2025,35,Badulla,14,588,Historical raw dataset
+2025,35,Batticaloa,6,1559,Historical raw dataset
+2025,35,Colombo,137,8641,Historical raw dataset
+2025,35,Galle,27,1530,Historical raw dataset
+2025,35,Gampaha,108,5613,Historical raw dataset
+2025,35,Hambantota,7,706,Historical raw dataset
+2025,35,Jaffna,6,972,Historical raw dataset
+2025,35,Kalmunai,1,364,Historical raw dataset
+2025,35,Kalutara,39,1744,Historical raw dataset
+2025,35,Kandy,92,3265,Historical raw dataset
+2025,35,Kegalle,24,1222,Historical raw dataset
+2025,35,Kilinochchi,0,79,Historical raw dataset
+2025,35,Kurunegala,24,1284,Historical raw dataset
+2025,35,Mannar,1,137,Historical raw dataset
+2025,35,Matale,17,964,Historical raw dataset
+2025,35,Matara,26,1230,Historical raw dataset
+2025,35,Monaragala,8,646,Historical raw dataset
+2025,35,Mullaitivu,0,47,Historical raw dataset
+2025,35,Nuwara Eliya,8,257,Historical raw dataset
+2025,35,Polonnaruwa,5,309,Historical raw dataset
+2025,35,Puttalam,4,518,Historical raw dataset
+2025,35,Ratnapura,62,3733,Historical raw dataset
+2025,35,Trincomalee,4,919,Historical raw dataset
+2025,35,Vavuniya,3,72,Historical raw dataset
+2025,36,Ampara,3,199,Historical raw dataset
+2025,36,Anuradhapura,9,493,Historical raw dataset
+2025,36,Badulla,18,606,Historical raw dataset
+2025,36,Batticaloa,9,1568,Historical raw dataset
+2025,36,Colombo,104,8745,Historical raw dataset
+2025,36,Galle,37,1567,Historical raw dataset
+2025,36,Gampaha,63,5676,Historical raw dataset
+2025,36,Hambantota,18,724,Historical raw dataset
+2025,36,Jaffna,12,984,Historical raw dataset
+2025,36,Kalmunai,4,368,Historical raw dataset
+2025,36,Kalutara,40,1784,Historical raw dataset
+2025,36,Kandy,94,3359,Historical raw dataset
+2025,36,Kegalle,27,1249,Historical raw dataset
+2025,36,Kilinochchi,0,79,Historical raw dataset
+2025,36,Kurunegala,24,1308,Historical raw dataset
+2025,36,Mannar,2,139,Historical raw dataset
+2025,36,Matale,11,975,Historical raw dataset
+2025,36,Matara,26,1256,Historical raw dataset
+2025,36,Monaragala,16,662,Historical raw dataset
+2025,36,Mullaitivu,1,48,Historical raw dataset
+2025,36,Nuwara Eliya,5,262,Historical raw dataset
+2025,36,Polonnaruwa,2,311,Historical raw dataset
+2025,36,Puttalam,9,527,Historical raw dataset
+2025,36,Ratnapura,60,3793,Historical raw dataset
+2025,36,Trincomalee,4,923,Historical raw dataset
+2025,36,Vavuniya,0,72,Historical raw dataset
+2025,37,Ampara,2,201,Historical raw dataset
+2025,37,Anuradhapura,2,495,Historical raw dataset
+2025,37,Badulla,8,614,Historical raw dataset
+2025,37,Batticaloa,8,1576,Historical raw dataset
+2025,37,Colombo,103,8848,Historical raw dataset
+2025,37,Galle,33,1600,Historical raw dataset
+2025,37,Gampaha,58,5734,Historical raw dataset
+2025,37,Hambantota,9,733,Historical raw dataset
+2025,37,Jaffna,22,1006,Historical raw dataset
+2025,37,Kalmunai,4,372,Historical raw dataset
+2025,37,Kalutara,34,1818,Historical raw dataset
+2025,37,Kandy,87,3446,Historical raw dataset
+2025,37,Kegalle,19,1268,Historical raw dataset
+2025,37,Kilinochchi,2,81,Historical raw dataset
+2025,37,Kurunegala,8,1316,Historical raw dataset
+2025,37,Mannar,2,141,Historical raw dataset
+2025,37,Matale,31,1006,Historical raw dataset
+2025,37,Matara,16,1272,Historical raw dataset
+2025,37,Monaragala,3,665,Historical raw dataset
+2025,37,Mullaitivu,0,48,Historical raw dataset
+2025,37,Nuwara Eliya,7,269,Historical raw dataset
+2025,37,Polonnaruwa,4,315,Historical raw dataset
+2025,37,Puttalam,5,532,Historical raw dataset
+2025,37,Ratnapura,59,3852,Historical raw dataset
+2025,37,Trincomalee,3,926,Historical raw dataset
+2025,37,Vavuniya,0,72,Historical raw dataset
+2025,38,Ampara,4,205,Historical raw dataset
+2025,38,Anuradhapura,6,501,Historical raw dataset
+2025,38,Badulla,11,625,Historical raw dataset
+2025,38,Batticaloa,8,1584,Historical raw dataset
+2025,38,Colombo,117,8965,Historical raw dataset
+2025,38,Galle,44,1644,Historical raw dataset
+2025,38,Gampaha,92,5826,Historical raw dataset
+2025,38,Hambantota,9,742,Historical raw dataset
+2025,38,Jaffna,14,1020,Historical raw dataset
+2025,38,Kalmunai,13,385,Historical raw dataset
+2025,38,Kalutara,32,1850,Historical raw dataset
+2025,38,Kandy,60,3506,Historical raw dataset
+2025,38,Kegalle,67,1335,Historical raw dataset
+2025,38,Kilinochchi,1,82,Historical raw dataset
+2025,38,Kurunegala,19,1335,Historical raw dataset
+2025,38,Mannar,2,143,Historical raw dataset
+2025,38,Matale,22,1028,Historical raw dataset
+2025,38,Matara,18,1290,Historical raw dataset
+2025,38,Monaragala,16,681,Historical raw dataset
+2025,38,Mullaitivu,2,50,Historical raw dataset
+2025,38,Nuwara Eliya,5,274,Historical raw dataset
+2025,38,Polonnaruwa,2,317,Historical raw dataset
+2025,38,Puttalam,10,542,Historical raw dataset
+2025,38,Ratnapura,15,3867,Historical raw dataset
+2025,38,Trincomalee,5,931,Historical raw dataset
+2025,38,Vavuniya,2,74,Historical raw dataset
+2025,39,Ampara,6,211,Historical raw dataset
+2025,39,Anuradhapura,3,504,Historical raw dataset
+2025,39,Badulla,19,644,Historical raw dataset
+2025,39,Batticaloa,9,1593,Historical raw dataset
+2025,39,Colombo,120,9085,Historical raw dataset
+2025,39,Galle,29,1673,Historical raw dataset
+2025,39,Gampaha,93,5919,Historical raw dataset
+2025,39,Hambantota,7,749,Historical raw dataset
+2025,39,Jaffna,5,1025,Historical raw dataset
+2025,39,Kalmunai,9,394,Historical raw dataset
+2025,39,Kalutara,27,1877,Historical raw dataset
+2025,39,Kandy,79,3585,Historical raw dataset
+2025,39,Kegalle,20,1355,Historical raw dataset
+2025,39,Kilinochchi,1,83,Historical raw dataset
+2025,39,Kurunegala,15,1350,Historical raw dataset
+2025,39,Mannar,3,146,Historical raw dataset
+2025,39,Matale,34,1062,Historical raw dataset
+2025,39,Matara,12,1302,Historical raw dataset
+2025,39,Monaragala,10,691,Historical raw dataset
+2025,39,Mullaitivu,2,52,Historical raw dataset
+2025,39,Nuwara Eliya,6,280,Historical raw dataset
+2025,39,Polonnaruwa,2,319,Historical raw dataset
+2025,39,Puttalam,6,548,Historical raw dataset
+2025,39,Ratnapura,65,3932,Historical raw dataset
+2025,39,Trincomalee,2,933,Historical raw dataset
+2025,39,Vavuniya,1,75,Historical raw dataset
+2025,40,Ampara,3,214,Historical raw dataset
+2025,40,Anuradhapura,2,506,Historical raw dataset
+2025,40,Badulla,8,652,Historical raw dataset
+2025,40,Batticaloa,9,1602,Historical raw dataset
+2025,40,Colombo,155,9240,Historical raw dataset
+2025,40,Galle,35,1708,Historical raw dataset
+2025,40,Gampaha,78,5997,Historical raw dataset
+2025,40,Hambantota,19,768,Historical raw dataset
+2025,40,Jaffna,14,1039,Historical raw dataset
+2025,40,Kalmunai,1,395,Historical raw dataset
+2025,40,Kalutara,43,1920,Historical raw dataset
+2025,40,Kandy,37,3622,Historical raw dataset
+2025,40,Kegalle,18,1373,Historical raw dataset
+2025,40,Kilinochchi,0,83,Historical raw dataset
+2025,40,Kurunegala,19,1369,Historical raw dataset
+2025,40,Mannar,2,148,Historical raw dataset
+2025,40,Matale,24,1086,Historical raw dataset
+2025,40,Matara,12,1314,Historical raw dataset
+2025,40,Monaragala,8,699,Historical raw dataset
+2025,40,Mullaitivu,0,52,Historical raw dataset
+2025,40,Nuwara Eliya,6,286,Historical raw dataset
+2025,40,Polonnaruwa,3,322,Historical raw dataset
+2025,40,Puttalam,4,552,Historical raw dataset
+2025,40,Ratnapura,63,3995,Historical raw dataset
+2025,40,Trincomalee,6,939,Historical raw dataset
+2025,40,Vavuniya,0,75,Historical raw dataset
+2025,41,Ampara,0,214,Historical raw dataset
+2025,41,Anuradhapura,0,506,Historical raw dataset
+2025,41,Badulla,13,665,Historical raw dataset
+2025,41,Batticaloa,14,1616,Historical raw dataset
+2025,41,Colombo,129,9369,Historical raw dataset
+2025,41,Galle,30,1738,Historical raw dataset
+2025,41,Gampaha,56,6053,Historical raw dataset
+2025,41,Hambantota,15,783,Historical raw dataset
+2025,41,Jaffna,18,1057,Historical raw dataset
+2025,41,Kalmunai,6,401,Historical raw dataset
+2025,41,Kalutara,32,1952,Historical raw dataset
+2025,41,Kandy,39,3661,Historical raw dataset
+2025,41,Kegalle,19,1392,Historical raw dataset
+2025,41,Kilinochchi,3,86,Historical raw dataset
+2025,41,Kurunegala,8,1377,Historical raw dataset
+2025,41,Mannar,0,148,Historical raw dataset
+2025,41,Matale,19,1105,Historical raw dataset
+2025,41,Matara,12,1326,Historical raw dataset
+2025,41,Monaragala,9,708,Historical raw dataset
+2025,41,Mullaitivu,1,53,Historical raw dataset
+2025,41,Nuwara Eliya,10,296,Historical raw dataset
+2025,41,Polonnaruwa,7,329,Historical raw dataset
+2025,41,Puttalam,5,557,Historical raw dataset
+2025,41,Ratnapura,70,4065,Historical raw dataset
+2025,41,Trincomalee,8,947,Historical raw dataset
+2025,41,Vavuniya,0,75,Historical raw dataset
+2025,42,Ampara,3,217,Historical raw dataset
+2025,42,Anuradhapura,7,513,Historical raw dataset
+2025,42,Badulla,4,669,Historical raw dataset
+2025,42,Batticaloa,16,1632,Historical raw dataset
+2025,42,Colombo,130,9499,Historical raw dataset
+2025,42,Galle,34,1772,Historical raw dataset
+2025,42,Gampaha,82,6135,Historical raw dataset
+2025,42,Hambantota,10,793,Historical raw dataset
+2025,42,Jaffna,19,1076,Historical raw dataset
+2025,42,Kalmunai,6,407,Historical raw dataset
+2025,42,Kalutara,35,1987,Historical raw dataset
+2025,42,Kandy,44,3705,Historical raw dataset
+2025,42,Kegalle,18,1410,Historical raw dataset
+2025,42,Kilinochchi,4,90,Historical raw dataset
+2025,42,Kurunegala,15,1392,Historical raw dataset
+2025,42,Mannar,1,149,Historical raw dataset
+2025,42,Matale,9,1114,Historical raw dataset
+2025,42,Matara,20,1346,Historical raw dataset
+2025,42,Monaragala,4,712,Historical raw dataset
+2025,42,Mullaitivu,0,53,Historical raw dataset
+2025,42,Nuwara Eliya,10,306,Historical raw dataset
+2025,42,Polonnaruwa,6,335,Historical raw dataset
+2025,42,Puttalam,5,562,Historical raw dataset
+2025,42,Ratnapura,41,4106,Historical raw dataset
+2025,42,Trincomalee,1,948,Historical raw dataset
+2025,42,Vavuniya,4,79,Historical raw dataset
+2025,43,Ampara,3,220,Historical raw dataset
+2025,43,Anuradhapura,9,522,Historical raw dataset
+2025,43,Badulla,8,677,Historical raw dataset
+2025,43,Batticaloa,17,1649,Historical raw dataset
+2025,43,Colombo,157,9656,Historical raw dataset
+2025,43,Galle,40,1812,Historical raw dataset
+2025,43,Gampaha,83,6218,Historical raw dataset
+2025,43,Hambantota,10,803,Historical raw dataset
+2025,43,Jaffna,26,1102,Historical raw dataset
+2025,43,Kalmunai,11,418,Historical raw dataset
+2025,43,Kalutara,24,2011,Historical raw dataset
+2025,43,Kandy,44,3749,Historical raw dataset
+2025,43,Kegalle,11,1421,Historical raw dataset
+2025,43,Kilinochchi,2,92,Historical raw dataset
+2025,43,Kurunegala,24,1416,Historical raw dataset
+2025,43,Mannar,3,152,Historical raw dataset
+2025,43,Matale,15,1129,Historical raw dataset
+2025,43,Matara,22,1368,Historical raw dataset
+2025,43,Monaragala,11,723,Historical raw dataset
+2025,43,Mullaitivu,0,53,Historical raw dataset
+2025,43,Nuwara Eliya,5,311,Historical raw dataset
+2025,43,Polonnaruwa,4,339,Historical raw dataset
+2025,43,Puttalam,12,574,Historical raw dataset
+2025,43,Ratnapura,42,4148,Historical raw dataset
+2025,43,Trincomalee,5,953,Historical raw dataset
+2025,43,Vavuniya,2,81,Historical raw dataset
+2025,44,Ampara,0,220,Historical raw dataset
+2025,44,Anuradhapura,4,526,Historical raw dataset
+2025,44,Badulla,11,688,Historical raw dataset
+2025,44,Batticaloa,13,1662,Historical raw dataset
+2025,44,Colombo,214,9870,Historical raw dataset
+2025,44,Galle,29,1841,Historical raw dataset
+2025,44,Gampaha,95,6313,Historical raw dataset
+2025,44,Hambantota,6,809,Historical raw dataset
+2025,44,Jaffna,26,1128,Historical raw dataset
+2025,44,Kalmunai,9,427,Historical raw dataset
+2025,44,Kalutara,35,2046,Historical raw dataset
+2025,44,Kandy,52,3801,Historical raw dataset
+2025,44,Kegalle,17,1438,Historical raw dataset
+2025,44,Kilinochchi,2,94,Historical raw dataset
+2025,44,Kurunegala,17,1433,Historical raw dataset
+2025,44,Mannar,5,157,Historical raw dataset
+2025,44,Matale,24,1153,Historical raw dataset
+2025,44,Matara,10,1378,Historical raw dataset
+2025,44,Monaragala,17,740,Historical raw dataset
+2025,44,Mullaitivu,0,53,Historical raw dataset
+2025,44,Nuwara Eliya,2,313,Historical raw dataset
+2025,44,Polonnaruwa,3,342,Historical raw dataset
+2025,44,Puttalam,5,579,Historical raw dataset
+2025,44,Ratnapura,36,4184,Historical raw dataset
+2025,44,Trincomalee,7,960,Historical raw dataset
+2025,44,Vavuniya,0,81,Historical raw dataset
+2025,45,Ampara,5,225,Historical raw dataset
+2025,45,Anuradhapura,9,535,Historical raw dataset
+2025,45,Badulla,7,695,Historical raw dataset
+2025,45,Batticaloa,19,1681,Historical raw dataset
+2025,45,Colombo,153,10023,Historical raw dataset
+2025,45,Galle,30,1871,Historical raw dataset
+2025,45,Gampaha,112,6425,Historical raw dataset
+2025,45,Hambantota,14,823,Historical raw dataset
+2025,45,Jaffna,55,1183,Historical raw dataset
+2025,45,Kalmunai,10,437,Historical raw dataset
+2025,45,Kalutara,32,2078,Historical raw dataset
+2025,45,Kandy,58,3859,Historical raw dataset
+2025,45,Kegalle,19,1457,Historical raw dataset
+2025,45,Kilinochchi,2,96,Historical raw dataset
+2025,45,Kurunegala,15,1448,Historical raw dataset
+2025,45,Mannar,7,164,Historical raw dataset
+2025,45,Matale,22,1175,Historical raw dataset
+2025,45,Matara,23,1401,Historical raw dataset
+2025,45,Monaragala,16,756,Historical raw dataset
+2025,45,Mullaitivu,1,54,Historical raw dataset
+2025,45,Nuwara Eliya,5,318,Historical raw dataset
+2025,45,Polonnaruwa,3,345,Historical raw dataset
+2025,45,Puttalam,11,590,Historical raw dataset
+2025,45,Ratnapura,57,4241,Historical raw dataset
+2025,45,Trincomalee,15,975,Historical raw dataset
+2025,45,Vavuniya,1,82,Historical raw dataset
+2025,46,Ampara,7,232,Historical raw dataset
+2025,46,Anuradhapura,3,538,Historical raw dataset
+2025,46,Badulla,14,709,Historical raw dataset
+2025,46,Batticaloa,29,1710,Historical raw dataset
+2025,46,Colombo,184,10207,Historical raw dataset
+2025,46,Galle,27,1898,Historical raw dataset
+2025,46,Gampaha,128,6553,Historical raw dataset
+2025,46,Hambantota,18,841,Historical raw dataset
+2025,46,Jaffna,54,1237,Historical raw dataset
+2025,46,Kalmunai,3,440,Historical raw dataset
+2025,46,Kalutara,27,2105,Historical raw dataset
+2025,46,Kandy,56,3915,Historical raw dataset
+2025,46,Kegalle,17,1474,Historical raw dataset
+2025,46,Kilinochchi,6,102,Historical raw dataset
+2025,46,Kurunegala,13,1461,Historical raw dataset
+2025,46,Mannar,6,170,Historical raw dataset
+2025,46,Matale,12,1187,Historical raw dataset
+2025,46,Matara,17,1418,Historical raw dataset
+2025,46,Monaragala,7,763,Historical raw dataset
+2025,46,Mullaitivu,0,54,Historical raw dataset
+2025,46,Nuwara Eliya,5,323,Historical raw dataset
+2025,46,Polonnaruwa,3,348,Historical raw dataset
+2025,46,Puttalam,23,613,Historical raw dataset
+2025,46,Ratnapura,47,4288,Historical raw dataset
+2025,46,Trincomalee,12,987,Historical raw dataset
+2025,46,Vavuniya,1,83,Historical raw dataset
+2025,47,Ampara,5,237,Historical raw dataset
+2025,47,Anuradhapura,8,546,Historical raw dataset
+2025,47,Badulla,17,726,Historical raw dataset
+2025,47,Batticaloa,21,1731,Historical raw dataset
+2025,47,Colombo,266,10473,Historical raw dataset
+2025,47,Galle,36,1934,Historical raw dataset
+2025,47,Gampaha,131,6684,Historical raw dataset
+2025,47,Hambantota,14,855,Historical raw dataset
+2025,47,Jaffna,54,1291,Historical raw dataset
+2025,47,Kalmunai,12,452,Historical raw dataset
+2025,47,Kalutara,35,2140,Historical raw dataset
+2025,47,Kandy,71,3986,Historical raw dataset
+2025,47,Kegalle,18,1492,Historical raw dataset
+2025,47,Kilinochchi,5,107,Historical raw dataset
+2025,47,Kurunegala,20,1481,Historical raw dataset
+2025,47,Mannar,12,182,Historical raw dataset
+2025,47,Matale,22,1209,Historical raw dataset
+2025,47,Matara,36,1454,Historical raw dataset
+2025,47,Monaragala,10,773,Historical raw dataset
+2025,47,Mullaitivu,2,56,Historical raw dataset
+2025,47,Nuwara Eliya,5,328,Historical raw dataset
+2025,47,Polonnaruwa,15,363,Historical raw dataset
+2025,47,Puttalam,20,633,Historical raw dataset
+2025,47,Ratnapura,43,4331,Historical raw dataset
+2025,47,Trincomalee,11,998,Historical raw dataset
+2025,47,Vavuniya,2,85,Historical raw dataset
+2025,48,Ampara,10,247,Historical raw dataset
+2025,48,Anuradhapura,10,556,Historical raw dataset
+2025,48,Badulla,18,744,Historical raw dataset
+2025,48,Batticaloa,21,1752,Historical raw dataset
+2025,48,Colombo,226,10699,Historical raw dataset
+2025,48,Galle,48,1982,Historical raw dataset
+2025,48,Gampaha,159,6843,Historical raw dataset
+2025,48,Hambantota,15,870,Historical raw dataset
+2025,48,Jaffna,57,1348,Historical raw dataset
+2025,48,Kalmunai,14,466,Historical raw dataset
+2025,48,Kalutara,34,2174,Historical raw dataset
+2025,48,Kandy,88,4074,Historical raw dataset
+2025,48,Kegalle,34,1526,Historical raw dataset
+2025,48,Kilinochchi,3,110,Historical raw dataset
+2025,48,Kurunegala,23,1504,Historical raw dataset
+2025,48,Mannar,5,187,Historical raw dataset
+2025,48,Matale,20,1229,Historical raw dataset
+2025,48,Matara,22,1476,Historical raw dataset
+2025,48,Monaragala,15,788,Historical raw dataset
+2025,48,Mullaitivu,4,60,Historical raw dataset
+2025,48,Nuwara Eliya,8,336,Historical raw dataset
+2025,48,Polonnaruwa,15,378,Historical raw dataset
+2025,48,Puttalam,18,651,Historical raw dataset
+2025,48,Ratnapura,54,4385,Historical raw dataset
+2025,48,Trincomalee,19,1017,Historical raw dataset
+2025,48,Vavuniya,0,85,Historical raw dataset
+2025,49,Ampara,7,254,Historical raw dataset
+2025,49,Anuradhapura,8,564,Historical raw dataset
+2025,49,Badulla,14,758,Historical raw dataset
+2025,49,Batticaloa,10,1762,Historical raw dataset
+2025,49,Colombo,286,10985,Historical raw dataset
+2025,49,Galle,68,2050,Historical raw dataset
+2025,49,Gampaha,138,6981,Historical raw dataset
+2025,49,Hambantota,13,883,Historical raw dataset
+2025,49,Jaffna,49,1397,Historical raw dataset
+2025,49,Kalmunai,4,470,Historical raw dataset
+2025,49,Kalutara,57,2231,Historical raw dataset
+2025,49,Kandy,60,4134,Historical raw dataset
+2025,49,Kegalle,30,1556,Historical raw dataset
+2025,49,Kilinochchi,1,111,Historical raw dataset
+2025,49,Kurunegala,21,1525,Historical raw dataset
+2025,49,Mannar,5,192,Historical raw dataset
+2025,49,Matale,15,1244,Historical raw dataset
+2025,49,Matara,37,1513,Historical raw dataset
+2025,49,Monaragala,15,803,Historical raw dataset
+2025,49,Mullaitivu,2,62,Historical raw dataset
+2025,49,Nuwara Eliya,8,344,Historical raw dataset
+2025,49,Polonnaruwa,8,386,Historical raw dataset
+2025,49,Puttalam,10,661,Historical raw dataset
+2025,49,Ratnapura,54,4439,Historical raw dataset
+2025,49,Trincomalee,16,1033,Historical raw dataset
+2025,49,Vavuniya,0,85,Historical raw dataset
+2025,50,Ampara,3,257,Historical raw dataset
+2025,50,Anuradhapura,11,575,Historical raw dataset
+2025,50,Badulla,10,768,Historical raw dataset
+2025,50,Batticaloa,16,1778,Historical raw dataset
+2025,50,Colombo,272,11257,Historical raw dataset
+2025,50,Galle,68,2118,Historical raw dataset
+2025,50,Gampaha,186,7167,Historical raw dataset
+2025,50,Hambantota,24,907,Historical raw dataset
+2025,50,Jaffna,58,1455,Historical raw dataset
+2025,50,Kalmunai,4,474,Historical raw dataset
+2025,50,Kalutara,63,2294,Historical raw dataset
+2025,50,Kandy,50,4184,Historical raw dataset
+2025,50,Kegalle,18,1574,Historical raw dataset
+2025,50,Kilinochchi,4,115,Historical raw dataset
+2025,50,Kurunegala,19,1544,Historical raw dataset
+2025,50,Mannar,0,192,Historical raw dataset
+2025,50,Matale,21,1265,Historical raw dataset
+2025,50,Matara,45,1558,Historical raw dataset
+2025,50,Monaragala,10,813,Historical raw dataset
+2025,50,Mullaitivu,0,62,Historical raw dataset
+2025,50,Nuwara Eliya,1,345,Historical raw dataset
+2025,50,Polonnaruwa,5,391,Historical raw dataset
+2025,50,Puttalam,13,674,Historical raw dataset
+2025,50,Ratnapura,64,4503,Historical raw dataset
+2025,50,Trincomalee,8,1041,Historical raw dataset
+2025,50,Vavuniya,1,86,Historical raw dataset
+2025,51,Ampara,12,269,Historical raw dataset
+2025,51,Anuradhapura,12,587,Historical raw dataset
+2025,51,Badulla,18,786,Historical raw dataset
+2025,51,Batticaloa,14,1792,Historical raw dataset
+2025,51,Colombo,318,11575,Historical raw dataset
+2025,51,Galle,81,2199,Historical raw dataset
+2025,51,Gampaha,202,7369,Historical raw dataset
+2025,51,Hambantota,28,935,Historical raw dataset
+2025,51,Jaffna,78,1533,Historical raw dataset
+2025,51,Kalmunai,10,484,Historical raw dataset
+2025,51,Kalutara,53,2347,Historical raw dataset
+2025,51,Kandy,82,4266,Historical raw dataset
+2025,51,Kegalle,36,1610,Historical raw dataset
+2025,51,Kilinochchi,10,125,Historical raw dataset
+2025,51,Kurunegala,24,1568,Historical raw dataset
+2025,51,Mannar,5,197,Historical raw dataset
+2025,51,Matale,25,1290,Historical raw dataset
+2025,51,Matara,67,1625,Historical raw dataset
+2025,51,Monaragala,14,827,Historical raw dataset
+2025,51,Mullaitivu,2,64,Historical raw dataset
+2025,51,Nuwara Eliya,3,348,Historical raw dataset
+2025,51,Polonnaruwa,6,397,Historical raw dataset
+2025,51,Puttalam,30,704,Historical raw dataset
+2025,51,Ratnapura,43,4546,Historical raw dataset
+2025,51,Trincomalee,26,1067,Historical raw dataset
+2025,51,Vavuniya,2,88,Historical raw dataset
+2025,52,Ampara,10,279,Historical raw dataset
+2025,52,Anuradhapura,13,600,Historical raw dataset
+2025,52,Badulla,25,811,Historical raw dataset
+2025,52,Batticaloa,20,1812,Historical raw dataset
+2025,52,Colombo,340,11915,Historical raw dataset
+2025,52,Galle,82,2281,Historical raw dataset
+2025,52,Gampaha,214,7583,Historical raw dataset
+2025,52,Hambantota,42,977,Historical raw dataset
+2025,52,Jaffna,76,1609,Historical raw dataset
+2025,52,Kalmunai,8,492,Historical raw dataset
+2025,52,Kalutara,85,2432,Historical raw dataset
+2025,52,Kandy,85,4351,Historical raw dataset
+2025,52,Kegalle,37,1647,Historical raw dataset
+2025,52,Kilinochchi,5,130,Historical raw dataset
+2025,52,Kurunegala,32,1600,Historical raw dataset
+2025,52,Mannar,0,197,Historical raw dataset
+2025,52,Matale,16,1306,Historical raw dataset
+2025,52,Matara,44,1669,Historical raw dataset
+2025,52,Monaragala,24,851,Historical raw dataset
+2025,52,Mullaitivu,3,67,Historical raw dataset
+2025,52,Nuwara Eliya,7,355,Historical raw dataset
+2025,52,Polonnaruwa,14,411,Historical raw dataset
+2025,52,Puttalam,22,726,Historical raw dataset
+2025,52,Ratnapura,60,4606,Historical raw dataset
+2025,52,Trincomalee,9,1076,Historical raw dataset
+2025,52,Vavuniya,3,91,Historical raw dataset
+2026,1,Ampara,12,12,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Anuradhapura,21,21,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Badulla,23,23,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Batticaloa,16,16,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Colombo,523,523,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Galle,72,72,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Gampaha,312,312,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Hambantota,25,25,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Jaffna,54,54,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Kalmunai,25,25,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Kalutara,119,119,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Kandy,91,91,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Kegalle,35,35,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Kilinochchi,5,5,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Kurunegala,48,48,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Mannar,4,4,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Matale,40,40,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Matara,90,90,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Monaragala,32,32,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Mullaitivu,0,0,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Nuwara Eliya,6,6,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Polonnaruwa,6,6,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Puttalam,27,27,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Ratnapura,87,87,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Trincomalee,16,16,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,1,Vavuniya,0,0,Weekly-Dengue-Update-2026-Week-01.pdf
+2026,2,Ampara,22,34,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Anuradhapura,10,31,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Badulla,26,49,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Batticaloa,25,39,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Colombo,634,1159,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Galle,126,198,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Gampaha,279,586,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Hambantota,43,68,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Jaffna,35,87,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Kalmunai,22,46,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Kalutara,96,211,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Kandy,95,182,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Kegalle,44,80,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Kilinochchi,2,7,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Kurunegala,53,101,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Mannar,0,4,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Matale,25,65,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Matara,132,221,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Monaragala,24,57,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Mullaitivu,3,3,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Nuwara Eliya,5,14,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Polonnaruwa,10,16,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Puttalam,41,69,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Ratnapura,72,158,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Trincomalee,25,41,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,2,Vavuniya,4,4,Weekly-Dengue-Update-2026-Week-02.pdf
+2026,3,Ampara,7,40,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Anuradhapura,15,34,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Badulla,30,65,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Batticaloa,38,70,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Colombo,617,1574,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Galle,141,319,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Gampaha,249,699,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Hambantota,116,173,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Jaffna,31,95,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Kalmunai,27,64,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Kalutara,106,264,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Kandy,61,211,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Kegalle,43,105,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Kilinochchi,2,7,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Kurunegala,31,109,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Mannar,1,5,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Matale,27,76,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Matara,138,336,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Monaragala,19,62,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Mullaitivu,2,5,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Nuwara Eliya,8,17,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Polonnaruwa,7,21,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Puttalam,32,88,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Ratnapura,96,219,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Trincomalee,22,60,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,3,Vavuniya,5,9,Weekly-Dengue-Update-2026-Week-03.pdf
+2026,4,Ampara,20,60,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Anuradhapura,18,52,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Badulla,21,86,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Batticaloa,43,113,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Colombo,547,2122,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Galle,103,419,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Gampaha,271,969,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Hambantota,88,261,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Jaffna,56,151,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Kalmunai,38,102,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Kalutara,75,336,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Kandy,75,286,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Kegalle,55,161,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Kilinochchi,1,8,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Kurunegala,30,143,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Mannar,2,7,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Matale,30,106,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Matara,124,457,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Monaragala,26,89,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Mullaitivu,2,7,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Nuwara Eliya,7,24,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Polonnaruwa,16,37,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Puttalam,20,109,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Ratnapura,102,319,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Trincomalee,17,77,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,4,Vavuniya,5,14,Weekly-Dengue-Update-2026-Week-04.pdf
+2026,5,Ampara,7,67,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Anuradhapura,15,67,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Badulla,19,105,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Batticaloa,59,171,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Colombo,422,2534,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Galle,111,532,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Gampaha,202,1177,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Hambantota,49,303,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Jaffna,34,184,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Kalmunai,36,138,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Kalutara,80,417,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Kandy,53,338,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Kegalle,35,197,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Kilinochchi,7,15,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Kurunegala,46,188,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Mannar,5,12,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Matale,34,139,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Matara,145,602,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Monaragala,26,115,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Mullaitivu,3,10,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Nuwara Eliya,6,31,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Polonnaruwa,10,47,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Puttalam,17,126,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Ratnapura,73,391,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Trincomalee,13,90,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,5,Vavuniya,4,18,Weekly-Dengue-Update-2026-Week-05.pdf
+2026,6,Ampara,20,87,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Anuradhapura,7,74,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Badulla,12,117,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Batticaloa,71,244,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Colombo,402,2932,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Galle,114,646,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Gampaha,276,1448,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Hambantota,44,348,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Jaffna,38,220,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Kalmunai,32,170,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Kalutara,60,477,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Kandy,51,389,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Kegalle,25,220,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Kilinochchi,3,18,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Kurunegala,40,227,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Mannar,0,12,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Matale,22,162,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Matara,112,717,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Monaragala,15,130,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Mullaitivu,0,10,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Nuwara Eliya,3,35,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Polonnaruwa,12,59,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Puttalam,32,159,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Ratnapura,63,453,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Trincomalee,12,102,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,6,Vavuniya,5,23,Weekly-Dengue-Update-2026-Week-06.pdf
+2026,7,Ampara,13,100,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Anuradhapura,24,97,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Badulla,27,144,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Batticaloa,54,298,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Colombo,429,3362,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Galle,108,749,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Gampaha,236,1679,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Hambantota,42,390,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Jaffna,33,252,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Kalmunai,23,193,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Kalutara,75,554,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Kandy,59,448,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Kegalle,46,266,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Kilinochchi,2,20,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Kurunegala,36,267,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Mannar,2,14,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Matale,27,188,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Matara,132,846,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Monaragala,13,144,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Mullaitivu,0,10,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Nuwara Eliya,3,38,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Polonnaruwa,9,68,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Puttalam,21,180,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Ratnapura,96,549,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Trincomalee,21,123,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,7,Vavuniya,2,25,Weekly-Dengue-Update-2026-Week-07.pdf
+2026,8,Ampara,17,117,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Anuradhapura,10,107,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Badulla,19,169,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Batticaloa,50,348,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Colombo,415,3766,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Galle,115,862,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Gampaha,234,1916,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Hambantota,50,441,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Jaffna,21,273,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Kalmunai,25,218,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Kalutara,82,632,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Kandy,51,497,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Kegalle,42,308,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Kilinochchi,2,22,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Kurunegala,41,307,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Mannar,1,15,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Matale,23,212,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Matara,101,947,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Monaragala,12,154,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Mullaitivu,3,13,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Nuwara Eliya,4,42,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Polonnaruwa,9,77,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Puttalam,33,213,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Ratnapura,109,668,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Trincomalee,14,137,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,8,Vavuniya,6,31,Weekly-Dengue-Update-2026-Week-08.pdf
+2026,9,Ampara,5,123,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Anuradhapura,12,119,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Badulla,14,183,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Batticaloa,44,392,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Colombo,359,4121,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Galle,75,936,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Gampaha,225,2138,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Hambantota,37,495,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Jaffna,35,308,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Kalmunai,24,241,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Kalutara,59,690,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Kandy,49,545,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Kegalle,27,341,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Kilinochchi,0,22,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Kurunegala,36,344,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Mannar,2,17,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Matale,15,227,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Matara,80,1017,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Monaragala,18,172,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Mullaitivu,0,13,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Nuwara Eliya,4,46,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Polonnaruwa,9,86,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Puttalam,32,245,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Ratnapura,89,751,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Trincomalee,12,149,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,9,Vavuniya,3,34,Weekly-Dengue-Update-2026-Week-09.pdf
+2026,10,Ampara,10,133,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Anuradhapura,4,123,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Badulla,19,203,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Batticaloa,55,446,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Colombo,370,4487,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Galle,114,1057,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Gampaha,249,2388,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Hambantota,38,536,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Jaffna,13,321,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Kalmunai,27,268,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Kalutara,83,771,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Kandy,40,581,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Kegalle,44,387,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Kilinochchi,2,24,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Kurunegala,33,379,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Mannar,2,19,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Matale,20,247,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Matara,95,1108,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Monaragala,21,192,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Mullaitivu,1,14,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Nuwara Eliya,9,59,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Polonnaruwa,9,95,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Puttalam,37,282,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Ratnapura,69,814,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Trincomalee,11,160,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,10,Vavuniya,3,37,Weekly-Dengue-Update-2026-Week-10.pdf
+2026,11,Ampara,9,142,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Anuradhapura,21,144,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Badulla,20,224,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Batticaloa,57,503,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Colombo,302,4778,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Galle,81,1139,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Gampaha,191,2578,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Hambantota,41,578,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Jaffna,21,342,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Kalmunai,25,293,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Kalutara,74,845,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Kandy,49,629,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Kegalle,31,417,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Kilinochchi,2,26,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Kurunegala,51,432,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Mannar,0,19,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Matale,20,267,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Matara,109,1216,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Monaragala,22,214,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Mullaitivu,1,15,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Nuwara Eliya,5,64,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Polonnaruwa,7,102,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Puttalam,29,310,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Ratnapura,78,899,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Trincomalee,17,177,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,11,Vavuniya,0,37,Weekly-Dengue-Update-2026-Week-11.pdf
+2026,12,Ampara,4,146,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Anuradhapura,12,156,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Badulla,10,234,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Batticaloa,50,551,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Colombo,390,5159,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Galle,105,1244,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Gampaha,227,2804,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Hambantota,27,605,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Jaffna,23,365,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Kalmunai,26,319,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Kalutara,107,958,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Kandy,48,677,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Kegalle,40,457,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Kilinochchi,0,26,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Kurunegala,25,458,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Mannar,0,19,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Matale,16,283,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Matara,97,1313,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Monaragala,7,221,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Mullaitivu,0,15,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Nuwara Eliya,2,66,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Polonnaruwa,16,118,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Puttalam,29,340,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Ratnapura,73,973,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Trincomalee,13,190,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,12,Vavuniya,1,38,Weekly-Dengue-Update-2026-Week-12.pdf
+2026,13,Ampara,7,154,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Anuradhapura,10,166,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Badulla,20,255,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Batticaloa,51,602,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Colombo,351,5511,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Galle,108,1353,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Gampaha,199,2999,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Hambantota,37,645,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Jaffna,37,402,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Kalmunai,32,349,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Kalutara,123,1079,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Kandy,63,738,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Kegalle,35,491,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Kilinochchi,4,30,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Kurunegala,33,491,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Mannar,0,19,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Matale,19,303,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Matara,107,1418,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Monaragala,18,245,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Mullaitivu,1,16,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Nuwara Eliya,4,70,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Polonnaruwa,12,130,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Puttalam,20,360,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Ratnapura,104,1074,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Trincomalee,32,222,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,13,Vavuniya,3,41,Weekly-Dengue-Update-2026-Week-13.pdf
+2026,14,Ampara,10,164,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Anuradhapura,12,178,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Badulla,18,273,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Batticaloa,42,644,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Colombo,312,5821,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Galle,81,1437,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Gampaha,188,3183,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Hambantota,29,674,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Jaffna,17,419,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Kalmunai,36,385,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Kalutara,122,1201,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Kandy,46,783,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Kegalle,40,530,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Kilinochchi,1,31,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Kurunegala,43,537,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Mannar,5,24,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Matale,15,318,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Matara,108,1526,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Monaragala,33,276,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Mullaitivu,0,16,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Nuwara Eliya,1,73,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Polonnaruwa,14,144,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Puttalam,22,381,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Ratnapura,107,1182,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Trincomalee,19,241,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,14,Vavuniya,1,42,Weekly-Dengue-Update-2026-Week-14.pdf
+2026,15,Ampara,8,173,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Anuradhapura,7,185,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Badulla,15,288,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Batticaloa,35,679,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Colombo,326,6148,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Galle,78,1513,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Gampaha,225,3407,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Hambantota,34,708,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Jaffna,10,426,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Kalmunai,26,410,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Kalutara,124,1323,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Kandy,36,817,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Kegalle,37,567,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Kilinochchi,1,32,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Kurunegala,27,565,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Mannar,3,27,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Matale,9,329,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Matara,77,1603,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Monaragala,26,306,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Mullaitivu,1,17,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Nuwara Eliya,2,75,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Polonnaruwa,12,156,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Puttalam,24,404,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Ratnapura,87,1269,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Trincomalee,20,261,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,15,Vavuniya,0,42,Weekly-Dengue-Update-2026-Week-15.pdf
+2026,16,Ampara,7,180,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Anuradhapura,9,194,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Badulla,15,305,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Batticaloa,27,707,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Colombo,285,6427,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Galle,72,1586,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Gampaha,205,3614,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Hambantota,32,743,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Jaffna,26,453,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Kalmunai,36,445,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Kalutara,98,1420,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Kandy,69,884,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Kegalle,33,603,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Kilinochchi,0,32,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Kurunegala,40,606,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Mannar,1,28,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Matale,7,336,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Matara,67,1667,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Monaragala,11,317,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Mullaitivu,0,17,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Nuwara Eliya,4,80,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Polonnaruwa,11,167,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Puttalam,20,423,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Ratnapura,114,1380,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Trincomalee,24,285,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,16,Vavuniya,1,43,Weekly-Dengue-Update-2026-Week-16.pdf
+2026,17,Ampara,7,187,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Anuradhapura,4,198,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Badulla,14,320,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Batticaloa,39,745,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Colombo,370,6801,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Galle,91,1677,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Gampaha,274,3885,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Hambantota,24,767,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Jaffna,30,477,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Kalmunai,40,481,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Kalutara,125,1544,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Kandy,47,930,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Kegalle,42,644,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Kilinochchi,2,34,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Kurunegala,28,637,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Mannar,4,32,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Matale,11,346,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Matara,85,1751,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Monaragala,15,334,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Mullaitivu,2,19,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Nuwara Eliya,3,83,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Polonnaruwa,10,177,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Puttalam,20,442,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Ratnapura,142,1518,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Trincomalee,23,308,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,17,Vavuniya,1,44,Weekly-Dengue-Update-2026-Week-17.pdf
+2026,18,Ampara,8,195,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Anuradhapura,11,208,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Badulla,11,331,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Batticaloa,28,773,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Colombo,374,7178,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Galle,74,1751,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Gampaha,281,4163,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Hambantota,16,784,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Jaffna,20,495,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Kalmunai,34,498,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Kalutara,126,1670,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Kandy,81,1012,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Kegalle,52,695,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Kilinochchi,1,35,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Kurunegala,47,684,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Mannar,2,34,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Matale,6,352,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Matara,92,1842,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Monaragala,25,359,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Mullaitivu,2,21,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Nuwara Eliya,9,91,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Polonnaruwa,14,191,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Puttalam,25,468,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Ratnapura,133,1650,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Trincomalee,12,320,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,18,Vavuniya,2,46,Weekly-Dengue-Update-2026-Week-18.pdf
+2026,19,Ampara,4,199,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Anuradhapura,15,223,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Badulla,14,344,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Batticaloa,47,819,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Colombo,379,7522,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Galle,69,1818,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Gampaha,285,4467,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Hambantota,46,835,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Jaffna,19,513,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Kalmunai,36,534,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Kalutara,129,1811,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Kandy,91,1096,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Kegalle,59,753,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Kilinochchi,1,36,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Kurunegala,56,742,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Mannar,0,34,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Matale,9,361,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Matara,91,1928,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Monaragala,27,386,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Mullaitivu,0,21,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Nuwara Eliya,5,98,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Polonnaruwa,12,203,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Puttalam,31,498,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Ratnapura,159,1812,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Trincomalee,35,356,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,19,Vavuniya,4,50,Weekly-Dengue-Update-2026-Week-19.pdf
+2026,20,Ampara,12,211,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Anuradhapura,10,233,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Badulla,17,360,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Batticaloa,45,863,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Colombo,353,7868,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Galle,107,1926,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Gampaha,342,4813,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Hambantota,43,879,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Jaffna,21,534,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Kalmunai,25,559,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Kalutara,130,1941,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Kandy,133,1228,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Kegalle,66,819,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Kilinochchi,0,36,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Kurunegala,44,786,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Mannar,4,38,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Matale,18,379,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Matara,94,2022,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Monaragala,15,404,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Mullaitivu,0,21,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Nuwara Eliya,9,107,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Polonnaruwa,17,220,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Puttalam,24,522,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Ratnapura,201,2013,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Trincomalee,17,372,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,20,Vavuniya,7,57,Weekly-Dengue-Update-2026-Week-20.pdf
+2026,21,Ampara,4,215,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Anuradhapura,10,243,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Badulla,25,384,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Batticaloa,48,911,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Colombo,512,8366,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Galle,133,2057,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Gampaha,419,5228,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Hambantota,48,929,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Jaffna,16,550,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Kalmunai,33,592,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Kalutara,186,2146,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Kandy,188,1410,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Kegalle,64,883,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Kilinochchi,5,41,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Kurunegala,32,819,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Mannar,2,40,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Matale,11,391,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Matara,165,2186,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Monaragala,11,415,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Mullaitivu,2,23,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Nuwara Eliya,16,127,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Polonnaruwa,18,237,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Puttalam,27,549,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Ratnapura,232,2240,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Trincomalee,19,389,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,21,Vavuniya,1,58,Weekly-Dengue-Update-2026-Week-21.pdf
+2026,22,Ampara,7,222,weekly-dengue-update-2026-week-22.pdf
+2026,22,Anuradhapura,13,256,weekly-dengue-update-2026-week-22.pdf
+2026,22,Badulla,20,406,weekly-dengue-update-2026-week-22.pdf
+2026,22,Batticaloa,46,957,weekly-dengue-update-2026-week-22.pdf
+2026,22,Colombo,550,8903,weekly-dengue-update-2026-week-22.pdf
+2026,22,Galle,142,2198,weekly-dengue-update-2026-week-22.pdf
+2026,22,Gampaha,531,5755,weekly-dengue-update-2026-week-22.pdf
+2026,22,Hambantota,69,998,weekly-dengue-update-2026-week-22.pdf
+2026,22,Jaffna,14,564,weekly-dengue-update-2026-week-22.pdf
+2026,22,Kalmunai,13,605,weekly-dengue-update-2026-week-22.pdf
+2026,22,Kalutara,265,2419,weekly-dengue-update-2026-week-22.pdf
+2026,22,Kandy,173,1581,weekly-dengue-update-2026-week-22.pdf
+2026,22,Kegalle,68,950,weekly-dengue-update-2026-week-22.pdf
+2026,22,Kilinochchi,2,43,weekly-dengue-update-2026-week-22.pdf
+2026,22,Kurunegala,68,888,weekly-dengue-update-2026-week-22.pdf
+2026,22,Mannar,1,41,weekly-dengue-update-2026-week-22.pdf
+2026,22,Matale,22,413,weekly-dengue-update-2026-week-22.pdf
+2026,22,Matara,194,2379,weekly-dengue-update-2026-week-22.pdf
+2026,22,Monaragala,18,433,weekly-dengue-update-2026-week-22.pdf
+2026,22,Mullaitivu,3,26,weekly-dengue-update-2026-week-22.pdf
+2026,22,Nuwara Eliya,7,135,weekly-dengue-update-2026-week-22.pdf
+2026,22,Polonnaruwa,12,249,weekly-dengue-update-2026-week-22.pdf
+2026,22,Puttalam,15,564,weekly-dengue-update-2026-week-22.pdf
+2026,22,Ratnapura,160,2397,weekly-dengue-update-2026-week-22.pdf
+2026,22,Trincomalee,23,411,weekly-dengue-update-2026-week-22.pdf
+2026,22,Vavuniya,9,67,weekly-dengue-update-2026-week-22.pdf
+2026,23,Ampara,21,243,weekly-dengue-update-2026-week-23.pdf
+2026,23,Anuradhapura,19,273,weekly-dengue-update-2026-week-23.pdf
+2026,23,Badulla,44,453,weekly-dengue-update-2026-week-23.pdf
+2026,23,Batticaloa,51,1008,weekly-dengue-update-2026-week-23.pdf
+2026,23,Colombo,731,9635,weekly-dengue-update-2026-week-23.pdf
+2026,23,Galle,127,2322,weekly-dengue-update-2026-week-23.pdf
+2026,23,Gampaha,652,6407,weekly-dengue-update-2026-week-23.pdf
+2026,23,Hambantota,95,1097,weekly-dengue-update-2026-week-23.pdf
+2026,23,Jaffna,20,582,weekly-dengue-update-2026-week-23.pdf
+2026,23,Kalmunai,17,622,weekly-dengue-update-2026-week-23.pdf
+2026,23,Kalutara,321,2741,weekly-dengue-update-2026-week-23.pdf
+2026,23,Kandy,291,1869,weekly-dengue-update-2026-week-23.pdf
+2026,23,Kegalle,94,1043,weekly-dengue-update-2026-week-23.pdf
+2026,23,Kilinochchi,4,47,weekly-dengue-update-2026-week-23.pdf
+2026,23,Kurunegala,72,959,weekly-dengue-update-2026-week-23.pdf
+2026,23,Mannar,2,43,weekly-dengue-update-2026-week-23.pdf
+2026,23,Matale,46,459,weekly-dengue-update-2026-week-23.pdf
+2026,23,Matara,221,2596,weekly-dengue-update-2026-week-23.pdf
+2026,23,Monaragala,34,462,weekly-dengue-update-2026-week-23.pdf
+2026,23,Mullaitivu,4,30,weekly-dengue-update-2026-week-23.pdf
+2026,23,Nuwara Eliya,18,154,weekly-dengue-update-2026-week-23.pdf
+2026,23,Polonnaruwa,27,276,weekly-dengue-update-2026-week-23.pdf
+2026,23,Puttalam,58,624,weekly-dengue-update-2026-week-23.pdf
+2026,23,Ratnapura,260,2659,weekly-dengue-update-2026-week-23.pdf
+2026,23,Trincomalee,33,444,weekly-dengue-update-2026-week-23.pdf
+2026,23,Vavuniya,3,70,weekly-dengue-update-2026-week-23.pdf
+2026,24,Ampara,29,272,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Anuradhapura,24,298,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Badulla,56,505,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Batticaloa,49,1057,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Colombo,1208,10847,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Galle,275,2597,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Gampaha,1039,7442,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Hambantota,102,1200,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Jaffna,24,605,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Kalmunai,19,641,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Kalutara,424,3164,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Kandy,376,2239,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Kegalle,106,1145,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Kilinochchi,0,47,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Kurunegala,135,1095,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Mannar,4,47,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Matale,29,485,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Matara,468,3061,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Monaragala,31,493,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Mullaitivu,3,33,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Nuwara Eliya,23,178,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Polonnaruwa,39,315,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Puttalam,83,708,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Ratnapura,247,2902,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Trincomalee,26,470,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,24,Vavuniya,5,75,Weekly-Dengue-Update-2026-Week-24.pdf
+2026,25,Ampara,24,300,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Anuradhapura,51,349,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Badulla,56,551,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Batticaloa,46,1102,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Colombo,1296,12129,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Galle,250,2849,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Gampaha,1257,8697,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Hambantota,184,1386,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Jaffna,23,628,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Kalmunai,31,671,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Kalutara,452,3622,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Kandy,440,2678,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Kegalle,131,1277,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Kilinochchi,3,50,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Kurunegala,95,1190,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Mannar,0,47,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Matale,48,532,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Matara,379,3436,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Monaragala,89,592,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Mullaitivu,0,33,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Nuwara Eliya,50,227,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Polonnaruwa,43,358,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Puttalam,133,842,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Ratnapura,159,3059,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Trincomalee,22,492,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,25,Vavuniya,5,80,Weekly-Dengue-Update-2026-Week-25.pdf
+2026,26,Ampara,55,347,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Anuradhapura,95,436,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Badulla,97,640,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Batticaloa,46,1141,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Colombo,1174,12993,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Galle,247,3042,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Gampaha,1750,10260,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Hambantota,144,1512,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Jaffna,26,625,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Kalmunai,43,696,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Kalutara,463,4025,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Kandy,486,3105,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Kegalle,192,1454,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Kilinochchi,5,52,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Kurunegala,184,1346,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Mannar,7,50,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Matale,42,551,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Matara,364,3736,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Monaragala,88,660,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Mullaitivu,1,34,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Nuwara Eliya,50,273,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Polonnaruwa,58,412,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Puttalam,171,978,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Ratnapura,193,3197,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Trincomalee,24,503,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,26,Vavuniya,4,84,Weekly-Dengue-Update-2026-Week-26.pdf
+2026,27,Ampara,55,415,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Anuradhapura,87,531,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Badulla,128,772,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Batticaloa,70,1216,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Colombo,1676,14995,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Galle,407,3501,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Gampaha,1867,12280,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Hambantota,220,1754,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Jaffna,55,707,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Kalmunai,71,783,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Kalutara,688,4772,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Kandy,639,3795,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Kegalle,186,1658,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Kilinochchi,2,57,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Kurunegala,258,1633,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Mannar,10,64,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Matale,79,656,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Matara,627,4422,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Monaragala,96,776,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Mullaitivu,0,34,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Nuwara Eliya,88,365,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Polonnaruwa,66,482,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Puttalam,155,1148,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Ratnapura,329,3584,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Trincomalee,47,563,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,27,Vavuniya,10,94,Weekly-Dengue-Update-2026-Week-27.pdf
+2026,28,Ampara,56,471,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Anuradhapura,70,601,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Badulla,172,948,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Batticaloa,63,1279,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Colombo,1628,16606,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Galle,438,3947,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Gampaha,1843,14110,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Hambantota,180,1934,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Jaffna,49,756,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Kalmunai,45,828,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Kalutara,617,5399,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Kandy,665,4454,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Kegalle,185,1844,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Kilinochchi,11,68,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Kurunegala,212,1833,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Mannar,7,71,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Matale,65,722,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Matara,462,4884,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Monaragala,97,869,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Mullaitivu,5,39,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Nuwara Eliya,61,429,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Polonnaruwa,85,567,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Puttalam,192,1340,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Ratnapura,380,3962,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Trincomalee,22,585,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,28,Vavuniya,23,117,Weekly-Dengue-Update-2026-Week-28.pdf
+2026,29,Ampara,70,541,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Anuradhapura,128,728,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Badulla,114,1062,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Batticaloa,47,1324,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Colombo,1535,18172,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Galle,322,4270,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Gampaha,1814,15910,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Hambantota,176,2117,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Jaffna,55,812,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Kalmunai,51,879,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Kalutara,524,5920,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Kandy,660,5108,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Kegalle,225,2067,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Kilinochchi,6,74,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Kurunegala,256,2090,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Mannar,14,85,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Matale,77,800,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Matara,454,5327,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Monaragala,93,962,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Mullaitivu,7,46,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Nuwara Eliya,95,521,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Polonnaruwa,48,615,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Puttalam,231,1572,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Ratnapura,344,4291,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Trincomalee,28,613,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,29,Vavuniya,11,128,Weekly-Dengue-Update-2026-Week-29.pdf
+2026,30,Ampara,30,572,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Anuradhapura,64,764,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Badulla,148,1205,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Batticaloa,44,1368,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Colombo,1452,19621,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Galle,266,4534,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Gampaha,1503,17394,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Hambantota,123,2246,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Jaffna,23,834,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Kalmunai,38,917,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Kalutara,442,6370,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Kandy,526,5627,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Kegalle,174,2239,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Kilinochchi,5,79,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Kurunegala,200,2299,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Mannar,4,89,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Matale,35,837,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Matara,320,5638,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Monaragala,67,1034,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Mullaitivu,2,48,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Nuwara Eliya,74,598,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Polonnaruwa,49,664,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Puttalam,153,1722,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Ratnapura,256,4551,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Trincomalee,8,621,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,30,Vavuniya,8,136,Weekly-Dengue-Update-2026-Week-30.pdf
+2026,31,Ampara,27,599,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Anuradhapura,64,828,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Badulla,101,1306,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Batticaloa,49,1415,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Colombo,1004,20606,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Galle,246,4783,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Gampaha,931,18322,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Hambantota,96,2342,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Jaffna,44,876,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Kalmunai,32,949,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Kalutara,372,6745,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Kandy,390,6032,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Kegalle,171,2411,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Kilinochchi,2,81,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Kurunegala,142,2439,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Mannar,4,90,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Matale,47,884,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Matara,208,5846,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Monaragala,65,1098,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Mullaitivu,6,54,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Nuwara Eliya,49,650,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Polonnaruwa,33,697,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Puttalam,119,1838,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Ratnapura,159,4705,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Trincomalee,20,641,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,31,Vavuniya,10,146,Weekly-Dengue-Update-2026-Week-31-1.pdf
+2026,32,Ampara,14,613,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Anuradhapura,36,863,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Badulla,54,1357,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Batticaloa,37,1451,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Colombo,747,21378,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Galle,157,4937,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Gampaha,759,19068,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Hambantota,71,2415,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Jaffna,46,921,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Kalmunai,35,984,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Kalutara,257,7001,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Kandy,332,6360,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Kegalle,118,2525,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Kilinochchi,2,83,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Kurunegala,86,2532,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Mannar,1,91,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Matale,43,928,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Matara,109,5952,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Monaragala,28,1124,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Mullaitivu,14,68,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Nuwara Eliya,33,676,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Polonnaruwa,13,710,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Puttalam,94,1934,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Ratnapura,152,4859,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Trincomalee,13,653,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,32,Vavuniya,6,152,Weekly-Dengue-Update-2026-Week-32.pdf
+2026,33,Ampara,19,631,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Anuradhapura,37,895,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Badulla,69,1430,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Batticaloa,33,1483,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Colombo,623,21987,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Galle,121,5066,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Gampaha,606,19671,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Hambantota,51,2466,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Jaffna,9,927,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Kalmunai,59,1043,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Kalutara,167,7168,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Kandy,273,6636,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Kegalle,109,2636,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Kilinochchi,8,91,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Kurunegala,68,2602,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Mannar,1,92,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Matale,30,958,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Matara,92,6039,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Monaragala,25,1149,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Mullaitivu,3,71,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Nuwara Eliya,31,707,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Polonnaruwa,19,729,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Puttalam,65,1999,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Ratnapura,86,4946,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Trincomalee,15,668,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,33,Vavuniya,9,161,Weekly-Dengue-Update-2026-Week-33.pdf
+2026,34,Ampara,11,644,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Anuradhapura,42,937,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Badulla,41,1466,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Batticaloa,24,1506,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Colombo,442,22436,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Galle,92,5161,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Gampaha,369,20036,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Hambantota,44,2510,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Jaffna,16,943,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Kalmunai,29,1072,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Kalutara,136,7298,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Kandy,188,6817,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Kegalle,83,2712,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Kilinochchi,1,92,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Kurunegala,49,2652,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Mannar,2,94,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Matale,15,977,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Matara,57,6092,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Monaragala,25,1176,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Mullaitivu,2,73,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Nuwara Eliya,18,725,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Polonnaruwa,15,744,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Puttalam,34,2033,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Ratnapura,58,5001,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Trincomalee,8,676,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,34,Vavuniya,1,162,Weekly-Dengue-Update-2026-Week-34.pdf
+2026,35,Ampara,23,667,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Anuradhapura,15,952,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Badulla,25,1492,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Batticaloa,17,1523,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Colombo,295,22725,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Galle,54,5214,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Gampaha,271,20307,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Hambantota,15,2532,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Jaffna,17,960,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Kalmunai,31,1103,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Kalutara,94,7393,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Kandy,152,6962,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Kegalle,65,2777,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Kilinochchi,0,92,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Kurunegala,38,2690,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Mannar,1,95,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Matale,11,988,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Matara,43,6129,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Monaragala,17,1193,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Mullaitivu,0,73,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Nuwara Eliya,10,741,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Polonnaruwa,4,748,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Puttalam,38,2071,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Ratnapura,54,5060,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Trincomalee,3,679,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,35,Vavuniya,3,165,Weekly-Dengue-Update-2026-Week-35.pdf
+2026,36,Ampara,11,681,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Anuradhapura,30,982,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Badulla,23,1517,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Batticaloa,21,1544,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Colombo,222,22944,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Galle,47,5261,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Gampaha,224,20527,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Hambantota,21,2553,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Jaffna,19,979,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Kalmunai,33,1135,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Kalutara,72,7465,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Kandy,159,7119,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Kegalle,58,2833,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Kilinochchi,0,92,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Kurunegala,29,2723,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Mannar,0,95,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Matale,10,997,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Matara,41,6170,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Monaragala,11,1206,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Mullaitivu,0,73,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Nuwara Eliya,17,758,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Polonnaruwa,8,756,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Puttalam,37,2108,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Ratnapura,55,5115,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Trincomalee,5,684,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,36,Vavuniya,0,165,Weekly-Dengue-Update-2026-Week-36.pdf
+2026,37,Ampara,10,692,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Anuradhapura,11,993,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Badulla,25,1542,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Batticaloa,13,1557,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Colombo,207,23161,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Galle,69,5329,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Gampaha,218,20741,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Hambantota,22,2575,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Jaffna,22,1001,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Kalmunai,31,1165,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Kalutara,73,7537,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Kandy,174,7289,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Kegalle,69,2901,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Kilinochchi,3,95,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Kurunegala,38,2760,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Mannar,0,95,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Matale,12,1010,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Matara,38,6207,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Monaragala,11,1217,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Mullaitivu,1,74,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Nuwara Eliya,14,773,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Polonnaruwa,12,768,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Puttalam,33,2141,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Ratnapura,44,5159,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Trincomalee,5,689,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,37,Vavuniya,1,166,Weekly-Dengue-Update-2026-Week-37.pdf
+2026,38,Ampara,12,704,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Anuradhapura,28,1021,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Badulla,27,1570,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Batticaloa,22,1579,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Colombo,268,23414,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Galle,66,5395,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Gampaha,231,20975,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Hambantota,35,2616,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Jaffna,23,1024,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Kalmunai,43,1208,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Kalutara,74,7616,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Kandy,176,7462,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Kegalle,71,2973,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Kilinochchi,2,97,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Kurunegala,19,2780,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Mannar,0,95,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Matale,30,1041,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Matara,36,6242,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Monaragala,19,1236,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Mullaitivu,3,77,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Nuwara Eliya,17,791,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Polonnaruwa,11,779,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Puttalam,21,2162,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Ratnapura,36,5195,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Trincomalee,5,694,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,38,Vavuniya,1,167,Weekly-Dengue-Update-2026-Week-38-2.pdf
+2026,39,Ampara,6,710,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Anuradhapura,30,1051,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Badulla,18,1582,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Batticaloa,16,1595,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Colombo,231,23641,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Galle,72,5468,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Gampaha,262,21236,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Hambantota,23,2639,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Jaffna,23,1047,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Kalmunai,32,1240,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Kalutara,71,7687,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Kandy,162,7624,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Kegalle,68,3041,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Kilinochchi,3,100,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Kurunegala,27,2807,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Mannar,0,95,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Matale,29,1070,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Matara,41,6283,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Monaragala,18,1263,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Mullaitivu,1,78,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Nuwara Eliya,14,805,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Polonnaruwa,10,789,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Puttalam,25,2187,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Ratnapura,30,5225,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Trincomalee,4,698,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,39,Vavuniya,0,167,Weekly-Dengue-Update-2026-Week-39-3.pdf
+2026,40,Ampara,10,720,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Anuradhapura,25,1076,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Badulla,16,1599,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Batticaloa,25,1620,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Colombo,251,23892,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Galle,70,5537,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Gampaha,215,21447,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Hambantota,28,2668,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Jaffna,33,1080,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Kalmunai,52,1292,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Kalutara,70,7757,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Kandy,156,7779,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Kegalle,47,3090,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Kilinochchi,0,100,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Kurunegala,43,2852,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Mannar,1,96,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Matale,52,1123,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Matara,39,6322,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Monaragala,14,1277,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Mullaitivu,1,79,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Nuwara Eliya,17,822,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Polonnaruwa,8,797,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Puttalam,10,2197,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Ratnapura,54,5278,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Trincomalee,3,701,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,40,Vavuniya,0,167,Weekly-Dengue-Update-2026-Week-40.pdf
+2026,41,Ampara,18,739,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Anuradhapura,9,1085,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Badulla,31,1631,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Batticaloa,21,1641,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Colombo,247,24131,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Galle,50,5597,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Gampaha,227,21673,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Hambantota,31,2702,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Jaffna,20,1100,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Kalmunai,45,1337,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Kalutara,69,7826,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Kandy,186,7964,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Kegalle,39,3131,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Kilinochchi,3,103,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Kurunegala,34,2886,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Mannar,5,101,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Matale,42,1164,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Matara,33,6351,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Monaragala,17,1292,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Mullaitivu,2,81,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Nuwara Eliya,22,845,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Polonnaruwa,6,803,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Puttalam,18,2215,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Ratnapura,39,5315,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Trincomalee,8,709,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,41,Vavuniya,1,168,Weekly-Dengue-Update-2026-Week-41.pdf
+2026,42,Ampara,6,745,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Anuradhapura,20,1105,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Badulla,20,1651,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Batticaloa,21,1662,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Colombo,233,24354,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Galle,70,5667,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Gampaha,175,21847,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Hambantota,30,2731,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Jaffna,24,1124,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Kalmunai,45,1382,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Kalutara,64,7898,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Kandy,184,8147,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Kegalle,34,3165,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Kilinochchi,1,104,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Kurunegala,31,2917,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Mannar,1,102,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Matale,31,1198,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Matara,38,6387,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Monaragala,10,1302,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Mullaitivu,1,82,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Nuwara Eliya,15,861,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Polonnaruwa,9,812,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Puttalam,17,2232,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Ratnapura,31,5348,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Trincomalee,1,710,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,42,Vavuniya,1,169,Weekly-Dengue-Update-2026-Week-42.pdf
+2026,43,Ampara,6,749,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Anuradhapura,17,1122,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Badulla,33,1682,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Batticaloa,27,1687,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Colombo,300,24675,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Galle,73,5735,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Gampaha,208,22050,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Hambantota,46,2777,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Jaffna,20,1144,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Kalmunai,50,1432,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Kalutara,72,7965,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Kandy,230,8379,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Kegalle,59,3221,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Kilinochchi,5,109,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Kurunegala,23,2941,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Mannar,4,106,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Matale,55,1254,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Matara,33,6418,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Monaragala,17,1319,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Mullaitivu,16,98,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Nuwara Eliya,19,880,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Polonnaruwa,12,824,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Puttalam,16,2247,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Ratnapura,47,5395,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Trincomalee,7,717,Weekly-Dengue-Update-2026-Week-43.pdf
+2026,43,Vavuniya,3,172,Weekly-Dengue-Update-2026-Week-43.pdf

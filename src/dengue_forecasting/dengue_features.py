@@ -8,25 +8,13 @@ import pandas as pd
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 DENGUE_FILE = (
-    PROJECT_ROOT
-    / "data"
-    / "processed"
+    PROJECT_ROOT / "data" / "processed"
     / "dengue_weekly_25_districts.csv"
 )
 
-WEATHER_FILE = (
-    PROJECT_ROOT
-    / "data"
-    / "raw"
-    / "weather_live"
-    / "yesterday_completed_weather.csv"
-)
-
-MODEL_FILE = (
-    PROJECT_ROOT
-    / "outputs"
-    / "forecasting"
-    / "riskweave_daily_weather_experiment_model.joblib"
+WEATHER_FEATURE_FILE = (
+    PROJECT_ROOT / "data" / "processed"
+    / "daily_derived_weather_period_features.csv"
 )
 
 OUTPUT_DIR = PROJECT_ROOT / "outputs" / "dengue_forecasting"
@@ -50,273 +38,139 @@ FEATURE_COLUMNS = [
 ]
 
 
-def load_dengue_data():
-    """Load historical weekly dengue counts."""
+def load_data():
 
     if not DENGUE_FILE.exists():
-        raise FileNotFoundError(
-            f"Dengue dataset not found: {DENGUE_FILE}"
-        )
+        raise FileNotFoundError(DENGUE_FILE)
+
+    if not WEATHER_FEATURE_FILE.exists():
+        raise FileNotFoundError(WEATHER_FEATURE_FILE)
 
     dengue = pd.read_csv(DENGUE_FILE)
+    weather = pd.read_csv(WEATHER_FEATURE_FILE)
 
-    required = {
-        "district_key",
-        "week_start",
-        "dengue_cases",
-    }
+    dengue["week_start"] = pd.to_datetime(dengue["week_start"])
+    weather["week_start"] = pd.to_datetime(weather["week_start"])
 
-    missing = required - set(dengue.columns)
+    if "week_end" in dengue.columns:
+        dengue["week_end"] = pd.to_datetime(dengue["week_end"])
 
-    if missing:
-        raise ValueError(
-            f"Dengue dataset is missing columns: {sorted(missing)}"
-        )
+    return dengue, weather
 
-    dengue["week_start"] = pd.to_datetime(
-        dengue["week_start"], errors="coerce"
-    )
 
-    dengue["dengue_cases"] = pd.to_numeric(
-        dengue["dengue_cases"], errors="coerce"
-    )
-
-    dengue = dengue.dropna(
-        subset=["district_key", "week_start", "dengue_cases"]
-    )
+def create_dengue_features(dengue):
 
     dengue = dengue.sort_values(
         ["district_key", "week_start"]
-    ).reset_index(drop=True)
+    ).copy()
+
+    grouped = dengue.groupby("district_key", sort=False)["dengue_cases"]
+
+    dengue["dengue_current_period"] = dengue["dengue_cases"]
+
+    for lag in [1, 2, 3, 4, 51, 52]:
+        dengue[f"dengue_lag_{lag}"] = grouped.shift(lag)
+
+    dengue["dengue_rolling_mean_4"] = (
+        dengue.groupby("district_key", sort=False)["dengue_cases"]
+        .transform(
+            lambda s: s.rolling(window=4, min_periods=2).mean()
+        )
+    )
+
+    week_number = (
+        dengue["week_start"].dt.isocalendar().week.astype(int)
+    )
+
+    dengue["month"] = dengue["week_start"].dt.month
+
+    dengue["week_sin"] = np.sin(
+        2 * np.pi * week_number / 52.1775
+    )
+
+    dengue["week_cos"] = np.cos(
+        2 * np.pi * week_number / 52.1775
+    )
 
     return dengue
 
 
-def load_weather_data():
-    """Load the existing completed daily weather data."""
+def prepare_latest_features(dengue, weather):
 
-    if not WEATHER_FILE.exists():
-        raise FileNotFoundError(
-            f"Weather data not found: {WEATHER_FILE}"
-        )
+    required_weather = [
+        "district_key",
+        "week_start",
+        "rainy_day_proportion",
+        "daily_rainfall_max",
+        "daily_rainfall_std",
+    ]
 
-    weather = pd.read_csv(WEATHER_FILE)
-
-    required = {
-        "district",
-        "date",
-        "precipitation_sum",
-    }
-
-    missing = required - set(weather.columns)
+    missing = set(required_weather) - set(weather.columns)
 
     if missing:
         raise ValueError(
-            f"Weather dataset is missing columns: {sorted(missing)}"
+            f"Weather feature dataset is missing: {sorted(missing)}"
         )
 
-    weather["date"] = pd.to_datetime(
-        weather["date"], errors="coerce"
-    )
-
-    weather["precipitation_sum"] = pd.to_numeric(
-        weather["precipitation_sum"], errors="coerce"
-    )
-
-    weather = weather.dropna(
-        subset=["district", "date", "precipitation_sum"]
-    )
-
-    return weather
-
-
-def build_dengue_features(dengue, weather):
-    """
-    Build one prediction row per district.
-
-    Weather is aggregated over the latest completed dengue
-    reporting period. This preserves the timing used by the
-    daily-weather model.
-    """
+    dengue = create_dengue_features(dengue)
 
     latest_date = dengue["week_start"].max()
 
-    latest_period = dengue[
+    latest_dengue = dengue[
         dengue["week_start"] == latest_date
     ].copy()
 
-    # Do not combine current weather with old dengue observations.
-    weather_latest = weather["date"].max()
+    latest_weather = weather[
+        weather["week_start"] == latest_date
+    ][required_weather].copy()
 
-    weather_latest_day = weather[
-        weather["date"] == weather_latest
-    ]
+    features = latest_dengue.merge(
+        latest_weather,
+        on=["district_key", "week_start"],
+        how="left",
+        validate="one_to_one"
+    )
 
-    print(f"Latest dengue period start: {latest_date.date()}")
-    print(f"Latest available weather date: {weather_latest.date()}")
+    missing_features = features[FEATURE_COLUMNS].isna().sum()
 
-    # Use the latest dengue reporting period's actual dates.
-    latest_rows = dengue[
-        dengue["week_start"] == latest_date
-    ]
-
-    if "week_end" in latest_rows.columns:
-        latest_end = pd.to_datetime(
-            latest_rows["week_end"]
-        ).max()
-    else:
-        latest_end = latest_date + pd.Timedelta(days=6)
-
-    weather_period = weather[
-        (weather["date"] >= latest_date)
-        & (weather["date"] <= latest_end)
-    ].copy()
-
-    if weather_period.empty:
+    if missing_features.any():
         raise ValueError(
-            "No daily weather records match the latest dengue "
-            "reporting period. Update the dengue data or weather "
-            "history before forecasting."
+            "Missing model features:\n"
+            + missing_features[missing_features > 0].to_string()
         )
 
-    weather_features = (
-        weather_period.groupby("district")
-        .agg(
-            rainy_day_proportion=(
-                "precipitation_sum",
-                lambda x: (x > 0).sum() / len(x)
-            ),
-            daily_rainfall_max=(
-                "precipitation_sum", "max"
-            ),
-            daily_rainfall_std=(
-                "precipitation_sum", "std"
-            ),
-        )
-        .reset_index()
-    )
+    features = features[FEATURE_COLUMNS].copy()
 
-    weather_features = weather_features.rename(
-        columns={"district": "district_key"}
-    )
-
-    weather_features["daily_rainfall_std"] = (
-        weather_features["daily_rainfall_std"].fillna(0)
-    )
-
-    rows = []
-
-    for district in sorted(dengue["district_key"].unique()):
-
-        district_data = (
-            dengue[dengue["district_key"] == district]
-            .sort_values("week_start")
-            .reset_index(drop=True)
-        )
-
-        current = district_data[
-            district_data["week_start"] == latest_date
-        ]
-
-        if current.empty:
-            continue
-
-        # Use one observation for each reporting period.
-        current_index = current.index[-1]
-
-        if current_index < 52:
-            continue
-
-        cases = district_data["dengue_cases"]
-
-        row = {
-            "district_key": district,
-            "dengue_current_period": cases.iloc[current_index],
-            "dengue_lag_1": cases.iloc[current_index - 1],
-            "dengue_lag_2": cases.iloc[current_index - 2],
-            "dengue_lag_3": cases.iloc[current_index - 3],
-            "dengue_lag_4": cases.iloc[current_index - 4],
-            "dengue_lag_51": cases.iloc[current_index - 51],
-            "dengue_lag_52": cases.iloc[current_index - 52],
-            "dengue_rolling_mean_4": (
-                cases.iloc[current_index - 3:current_index + 1].mean()
-            ),
-            "month": latest_date.month,
-            "week_sin": np.sin(
-                2 * np.pi * latest_date.isocalendar().week / 52
-            ),
-            "week_cos": np.cos(
-                2 * np.pi * latest_date.isocalendar().week / 52
-            ),
-        }
-
-        rows.append(row)
-
-    features = pd.DataFrame(rows)
-
-    features = features.merge(
-        weather_features,
-        on="district_key",
-        how="left"
-    )
-
-    if features.empty:
-        raise ValueError(
-            "No districts have enough historical dengue records "
-            "to construct all model lag features."
-        )
-
-    missing_weather = features[
-        [
-            "rainy_day_proportion",
-            "daily_rainfall_max",
-            "daily_rainfall_std",
-        ]
-    ].isna().any(axis=1)
-
-    if missing_weather.any():
-        missing_districts = features.loc[
-            missing_weather, "district_key"
-        ].tolist()
-
-        raise ValueError(
-            "Weather features are missing for districts: "
-            f"{missing_districts}"
-        )
-
-    return features[FEATURE_COLUMNS]
+    return features, latest_date
 
 
 def main():
-    dengue = load_dengue_data()
-    weather = load_weather_data()
 
-    latest_dengue_date = dengue["week_start"].max()
-    age_days = (pd.Timestamp.today().normalize() - latest_dengue_date).days
+    dengue, weather = load_data()
 
-    print("\nDENGUE DATA CHECK")
-    print("-----------------")
-    print("Latest dengue period:", latest_dengue_date.date())
-    print("Days since period start:", age_days)
-
-    if age_days > 14:
-        raise ValueError(
-            "Dengue observations are too old for a current next-week "
-            "forecast. Update the weekly dengue case dataset first. "
-            f"Latest available period: {latest_dengue_date.date()}"
-        )
-
-    features = build_dengue_features(dengue, weather)
+    features, latest_date = prepare_latest_features(
+        dengue, weather
+    )
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     output_file = OUTPUT_DIR / "latest_dengue_features.csv"
+
     features.to_csv(output_file, index=False)
 
-    print("\nFeature preparation completed.")
+    print("\nDENGUE FEATURE PREPARATION")
+    print("--------------------------")
+    print("Latest dengue period:", latest_date.date())
     print("Districts prepared:", len(features))
-    print("Features prepared:", len(FEATURE_COLUMNS))
+    print("Model features:", len(FEATURE_COLUMNS))
     print("Saved:", output_file)
+
+    print("\nIMPORTANT:")
+    print(
+        "These features represent the latest historical dengue "
+        "reporting period. They are not automatically a current "
+        "November 2026 forecast input."
+    )
 
 
 if __name__ == "__main__":
