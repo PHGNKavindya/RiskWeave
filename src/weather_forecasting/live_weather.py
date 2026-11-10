@@ -689,11 +689,147 @@ def extract_yesterday_weather(live_df):
 # 9. VALIDATE FUTURE DASHBOARD DATA
 # ============================================================
 
+
 def validate_dashboard_forecasts(
     dashboard_df,
     tomorrow,
     seventh_day
 ):
+    """
+    Validate future forecast coverage and weather features
+    for all 25 districts.
+    """
+
+    if dashboard_df.empty:
+        raise ValueError(
+            "Dashboard forecast dataset is empty."
+        )
+
+    dashboard_df = dashboard_df.copy()
+
+    dashboard_df["date"] = pd.to_datetime(
+        dashboard_df["date"],
+        errors="coerce"
+    ).dt.normalize()
+
+    if dashboard_df["date"].isna().any():
+        raise ValueError(
+            "Invalid dates found in dashboard forecasts."
+        )
+
+    expected_dates = pd.date_range(
+        tomorrow,
+        seventh_day,
+        freq="D"
+    )
+
+    expected_districts = set(
+        load_district_coordinates()["district"]
+    )
+
+    actual_districts = set(
+        dashboard_df["district"].astype(str).str.strip()
+    )
+
+    if actual_districts != expected_districts:
+        raise ValueError(
+            "Dashboard forecast district coverage is incorrect. "
+            f"Expected {len(expected_districts)} districts, "
+            f"found {len(actual_districts)}."
+        )
+
+    if dashboard_df.duplicated(
+        subset=["district", "date"]
+    ).any():
+        raise ValueError(
+            "Duplicate district-date records in dashboard forecasts."
+        )
+
+    expected_pairs = {
+        (district, date)
+        for district in expected_districts
+        for date in expected_dates
+    }
+
+    actual_pairs = set(
+        zip(
+            dashboard_df["district"].astype(str).str.strip(),
+            dashboard_df["date"]
+        )
+    )
+
+    missing_pairs = expected_pairs - actual_pairs
+
+    unexpected_pairs = actual_pairs - expected_pairs
+
+    if missing_pairs or unexpected_pairs:
+        raise ValueError(
+            "Dashboard forecast date coverage is incomplete. "
+            f"Missing records: {len(missing_pairs)}. "
+            f"Unexpected records: {len(unexpected_pairs)}."
+        )
+
+    if len(dashboard_df) != 175:
+        raise ValueError(
+            f"Expected 175 dashboard records, "
+            f"found {len(dashboard_df)}."
+        )
+
+    # Validate all 13 ML weather features.
+    missing_columns = [
+        col for col in BASE_WEATHER_FEATURES
+        if col not in dashboard_df.columns
+    ]
+
+    if missing_columns:
+        raise ValueError(
+            f"Missing forecast ML features: {missing_columns}"
+        )
+
+    for col in BASE_WEATHER_FEATURES:
+        dashboard_df[col] = pd.to_numeric(
+            dashboard_df[col],
+            errors="coerce"
+        )
+
+    missing_values = (
+        dashboard_df[BASE_WEATHER_FEATURES]
+        .isna()
+        .sum()
+    )
+
+    missing_values = missing_values[
+        missing_values > 0
+    ]
+
+    if not missing_values.empty:
+        raise ValueError(
+            "Missing values in forecast ML features:\n"
+            f"{missing_values}"
+        )
+
+    # Check hourly coverage.
+    if "hourly_observation_count" not in dashboard_df.columns:
+        raise ValueError(
+            "Hourly observation count is missing."
+        )
+
+    if (
+        dashboard_df["hourly_observation_count"]
+        != EXPECTED_HOURLY_RECORDS
+    ).any():
+        raise ValueError(
+            "Incomplete hourly forecast observations. "
+            "Expected 24 hourly temperature observations per day."
+        )
+
+    print("\nDashboard forecast validation successful.")
+    print("Districts:", len(actual_districts))
+    print("Forecast dates:", len(expected_dates))
+    print("Validated records:", len(dashboard_df))
+
+    return dashboard_df
+
     """
     Validate seven future forecast days for 25 districts.
     """
