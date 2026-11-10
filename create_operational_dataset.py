@@ -41,8 +41,6 @@ OUTPUT_FILE = (
 
 EXPECTED_DISTRICTS = 25
 
-EXPECTED_RECORDS_PER_DISTRICT = 7261
-
 REQUIRED_FEATURES = [
     "precipitation_sum",
     "temperature_2m_mean",
@@ -61,7 +59,7 @@ REQUIRED_FEATURES = [
 
 
 # ============================================================
-# 1. LOAD DATASET
+# 1. LOAD AND VALIDATE WEATHER FILE
 # ============================================================
 
 def load_weather_file(file_path, source_name):
@@ -91,9 +89,16 @@ def load_weather_file(file_path, source_name):
 
     df["district"] = (
         df["district"]
-        .astype(str)
+        .astype("string")
         .str.strip()
     )
+
+    if df["district"].isna().any() or (
+        df["district"] == ""
+    ).any():
+        raise ValueError(
+            f"{source_name} contains missing district names."
+        )
 
     df["date"] = pd.to_datetime(
         df["date"],
@@ -103,11 +108,6 @@ def load_weather_file(file_path, source_name):
     if df["date"].isna().any():
         raise ValueError(
             f"{source_name} contains invalid dates."
-        )
-
-    if df["district"].isna().any():
-        raise ValueError(
-            f"{source_name} contains missing districts."
         )
 
     if df.duplicated(
@@ -141,15 +141,14 @@ def load_weather_file(file_path, source_name):
             f"{missing_values}"
         )
 
-    # Assign the source explicitly.
-    # This prevents source labels from being lost or confused.
+    # Assign source label explicitly.
     df["data_source"] = source_name
 
     return df
 
 
 # ============================================================
-# 2. LOAD ALL THREE DATASETS
+# 2. CREATE OPERATIONAL DATASET
 # ============================================================
 
 def create_operational_dataset():
@@ -157,6 +156,10 @@ def create_operational_dataset():
     print("\n" + "=" * 65)
     print("RISKWEAVE OPERATIONAL DATASET CREATION")
     print("=" * 65)
+
+    # --------------------------------------------------------
+    # Load ERA5 data
+    # --------------------------------------------------------
 
     print("\nLoading ERA5 dataset...")
 
@@ -166,6 +169,10 @@ def create_operational_dataset():
     )
 
     print("ERA5 records:", len(era5_df))
+
+    # --------------------------------------------------------
+    # Load historical API data
+    # --------------------------------------------------------
 
     print("\nLoading recent historical API dataset...")
 
@@ -179,6 +186,10 @@ def create_operational_dataset():
         len(historical_api_df)
     )
 
+    # --------------------------------------------------------
+    # Load yesterday's completed API observations
+    # --------------------------------------------------------
+
     print("\nLoading yesterday's forecast API dataset...")
 
     forecast_api_df = load_weather_file(
@@ -190,7 +201,6 @@ def create_operational_dataset():
         "Forecast API records:",
         len(forecast_api_df)
     )
-
 
     # ========================================================
     # 3. VALIDATE DISTRICT CONSISTENCY
@@ -225,9 +235,8 @@ def create_operational_dataset():
 
     print("\nDistrict consistency: PASSED")
 
-
     # ========================================================
-    # 4. VALIDATE DATE SEQUENCE
+    # 4. VALIDATE DATE SEQUENCE BETWEEN SOURCES
     # ========================================================
 
     era5_latest = era5_df["date"].max()
@@ -256,7 +265,6 @@ def create_operational_dataset():
     print("ERA5 to Historical API continuity: PASSED")
     print("Historical API to Forecast API continuity: PASSED")
 
-
     # ========================================================
     # 5. COMBINE DATASETS
     # ========================================================
@@ -277,10 +285,11 @@ def create_operational_dataset():
         combined_df["date"]
     ).dt.normalize()
 
-    combined_df = combined_df.sort_values(
-        ["district", "date"]
-    ).reset_index(drop=True)
-
+    combined_df = (
+        combined_df
+        .sort_values(["district", "date"])
+        .reset_index(drop=True)
+    )
 
     # ========================================================
     # 6. CHECK DUPLICATE DISTRICT-DATE RECORDS
@@ -299,49 +308,56 @@ def create_operational_dataset():
 
     print("Duplicate validation: PASSED")
 
-
     # ========================================================
     # 7. CHECK DAILY CONTINUITY
     # ========================================================
 
-    expected_start = pd.Timestamp("2006-12-23")
+    expected_start = era5_df["date"].min()
 
-    expected_end = pd.Timestamp("2026-11-08")
+    expected_end = max(
+        era5_df["date"].max(),
+        historical_api_df["date"].max(),
+        forecast_api_df["date"].max()
+    )
 
     expected_dates = pd.date_range(
-        expected_start,
-        expected_end,
+        start=expected_start,
+        end=expected_end,
         freq="D"
     )
 
     for district, group in combined_df.groupby("district"):
 
         actual_dates = pd.DatetimeIndex(
-            group["date"].sort_values()
+            group["date"].sort_values().unique()
         )
 
-        if not actual_dates.equals(expected_dates):
+        missing_dates = expected_dates.difference(
+            actual_dates
+        )
 
-            missing_dates = expected_dates.difference(
-                actual_dates
-            )
+        unexpected_dates = actual_dates.difference(
+            expected_dates
+        )
 
-            unexpected_dates = actual_dates.difference(
-                expected_dates
-            )
+        if (
+            len(missing_dates) > 0
+            or len(unexpected_dates) > 0
+        ):
 
             raise ValueError(
-                f"Date continuity failed for {district}.\n"
-                f"Missing dates: {missing_dates.tolist()[:10]}\n"
-                f"Unexpected dates: {unexpected_dates.tolist()[:10]}"
+                f"Daily continuity failed for district: {district}\n"
+                f"Missing dates: {missing_dates.tolist()}\n"
+                f"Unexpected dates: {unexpected_dates.tolist()}"
             )
 
     print("Daily continuity validation: PASSED")
 
-
     # ========================================================
     # 8. CHECK EXPECTED RECORD COUNTS
     # ========================================================
+
+    expected_records_per_district = len(expected_dates)
 
     district_counts = (
         combined_df.groupby("district")
@@ -349,7 +365,7 @@ def create_operational_dataset():
     )
 
     if not (
-        district_counts == EXPECTED_RECORDS_PER_DISTRICT
+        district_counts == expected_records_per_district
     ).all():
 
         raise ValueError(
@@ -359,7 +375,7 @@ def create_operational_dataset():
 
     expected_total = (
         EXPECTED_DISTRICTS
-        * EXPECTED_RECORDS_PER_DISTRICT
+        * expected_records_per_district
     )
 
     if len(combined_df) != expected_total:
@@ -371,6 +387,10 @@ def create_operational_dataset():
 
     print("Record count validation: PASSED")
 
+    print(
+        "Expected records per district:",
+        expected_records_per_district
+    )
 
     # ========================================================
     # 9. CHECK REQUIRED ML FEATURES
@@ -399,7 +419,6 @@ def create_operational_dataset():
             )
 
     print("Required ML feature validation: PASSED")
-
 
     # ========================================================
     # 10. FINAL DATASET SUMMARY
@@ -433,7 +452,6 @@ def create_operational_dataset():
         .value_counts()
         .to_string()
     )
-
 
     # ========================================================
     # 11. SAVE OPERATIONAL DATASET

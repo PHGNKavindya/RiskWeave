@@ -1,0 +1,78 @@
+
+name: RiskWeave Daily Weather Update
+
+on:
+  schedule:
+    # 20:30 UTC = 02:00 Sri Lanka time (next day)
+    - cron: "30 20 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: riskweave-daily-weather-update
+  cancel-in-progress: false
+
+jobs:
+  update-weather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout RiskWeave repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify required input files
+        run: |
+          test -f data/reference/district_coordinates.csv
+          test -f data/processed/weather_era5_combined_2006_2026.csv
+          test -f models/weather_forecasting/precipitation_sum_1day_model.joblib
+          test -f models/weather_forecasting/precipitation_sum_7day_model.joblib
+          test -f models/weather_forecasting/temperature_2m_mean_1day_model.joblib
+          test -f models/weather_forecasting/temperature_2m_mean_7day_model.joblib
+
+      - name: Collect and validate live weather
+        run: |
+          python -c "import sys; sys.path.insert(0, 'src'); from weather_forecasting.live_weather import update_live_weather; update_live_weather()"
+
+      - name: Create operational weather dataset
+        run: |
+          python create_operational_dataset.py
+
+      - name: Generate ML weather predictions
+        run: |
+          python run_operational_weather_predictions.py
+
+      - name: Verify prediction output
+        run: |
+          python -c "import pandas as pd; p='outputs/weather_forecasting/operational/latest_ml_weather_predictions.csv'; df=pd.read_csv(p); assert len(df)==100, f'Expected 100 predictions, got {len(df)}'; assert df['district'].nunique()==25; print('Prediction output validation passed:', len(df), 'records')"
+
+      - name: Commit updated weather outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/raw/weather_live/
+          git add data/processed/weather_operational_combined_2006_2026.csv
+          git add outputs/weather_forecasting/operational/latest_ml_weather_predictions.csv
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated daily weather update"
+            git push
+          else
+            echo "No weather data changes to commit."
+          fi
