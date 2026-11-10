@@ -255,7 +255,9 @@ results = pd.DataFrame({
     "target_week": target_week,
     "target_week_start": target_start.date().isoformat(),
     "target_week_end": target_end.date().isoformat(),
-    "predicted_dengue_cases": np.maximum(predictions, 0),
+    "predicted_dengue_cases": np.rint(
+        np.maximum(predictions, 0)
+    ).astype(int),
 })
 
 # -----------------------------------------------------
@@ -313,3 +315,4 @@ print(
 )
 
 print("\nRISKWEAVE PIPELINE FINISHED.")
+
