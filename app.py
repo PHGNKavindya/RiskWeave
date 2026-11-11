@@ -155,10 +155,11 @@ row2 = st.columns(2)
 with row2[0]:
     st.markdown("""
     <div class="module-card">
-        <h3>🌱 Environmental Analysis</h3>
-        <p>Identify unusual environmental patterns
-        and potential anomalies.</p>
-        <span class="status">● DEVELOPMENT</span>
+        <h3>🌱 Environmental Anomaly Detection</h3>
+        <p>Identify unusual rainfall, temperature and
+        relative humidity patterns using historical
+        district-level weather baselines.</p>
+        <span class="status">● COMPLETED</span>
     </div>
     """, unsafe_allow_html=True)
 
