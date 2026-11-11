@@ -1,0 +1,61 @@
+RiskWeave/
+│
+├── data/
+│   ├── raw/
+│   │   ├── district_boundaries.geojson
+│   │   ├── weather_daily_era5_2024-12-30_to_2026-11-01.csv
+│   │   └── open_meteo_json/
+│   │
+│   ├── reference/
+│   │   └── district_coordinates.csv
+│   │
+│   └── processed/
+│
+├── scripts/
+│   ├── calculate_district_coordinates.py
+│   └── collect_weather_data.py
+│
+├── notebooks/
+│   ├── 01_weather_data_validation.ipynb
+│   ├── 02_weather_weekly_aggregation.ipynb
+│   ├── 03_dengue_data_preprocessing.ipynb
+│   ├── 04_weather_dengue_integration.ipynb
+│   ├── 05_exploratory_data_analysis.ipynb
+│   ├── 06_feature_engineering.ipynb
+│   ├── 07_model_development.ipynb
+│   ├── 08_model_evaluation.ipynb
+│   ├── 09_model_explainability.ipynb
+│   └── 10_environmental_anomaly_detection.ipynb
+│
+└── requirements.txt
+
+
+
+RiskWeave/
+│
+├── app/
+│   ├── Home.py
+│   │
+│   └── pages/
+│       ├── 1_Dengue_Forecasting.py
+│       ├── 2_Risk_Mapping.py
+│       ├── 3_Anomaly_Detection.py
+│       ├── 4_Weather_Analysis.py
+│       ├── 5_Model_Explainability.py
+│       └── 6_Inspection_Planning.py
+│
+├── utils/
+│   ├── __init__.py
+│   ├── data_loader.py
+│   └── config.py
+│
+├── outputs/
+├── data/
+├── notebooks/
+│
+├── main.py
+├── requirements.txt
+└── README.md
+
+
+PS C:\Users\Nethmi\Documents\GitHub\RiskWeave> python -m streamlit run app.py
