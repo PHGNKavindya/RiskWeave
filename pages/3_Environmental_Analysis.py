@@ -220,3 +220,51 @@ st.caption(
     "calendar days. Multiple districts can have anomalies "
     "on the same date."
 )
+
+
+
+
+# MONTHLY ENVIRONMENTAL ANOMALY TRENDS
+
+
+st.divider()
+
+st.subheader("Monthly Environmental Anomaly Trends")
+
+import plotly.express as px
+
+# Prepare monthly data
+monthly_chart_df = monthly_df.copy()
+
+# Ensure months are sorted chronologically
+monthly_chart_df["month"] = pd.to_datetime(
+    monthly_chart_df["month"].astype(str),
+    format="%Y-%m"
+)
+
+monthly_chart_df = monthly_chart_df.sort_values("month")
+
+# Create line chart
+fig = px.line(
+    monthly_chart_df,
+    x="month",
+    y="days_with_anomalies",
+    markers=True,
+    title="Monthly District-Days with Environmental Anomalies",
+    labels={
+        "month": "Month",
+        "days_with_anomalies": "District-days with anomalies"
+    },
+    template="plotly_dark"
+)
+
+fig.update_layout(
+    xaxis_title="Month",
+    yaxis_title="District-days with anomalies",
+    hovermode="x unified"
+)
+
+st.plotly_chart(
+    fig,
+    use_container_width=True
+)
