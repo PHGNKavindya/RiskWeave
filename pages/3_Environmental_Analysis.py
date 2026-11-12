@@ -148,3 +148,75 @@ with st.expander("View monthly anomaly summary"):
         use_container_width=True,
         hide_index=True
     )
+
+
+
+
+# ENVIRONMENTAL ANOMALY STATISTICS
+
+st.divider()
+
+st.subheader("Environmental Anomaly Statistics")
+
+# Calculate anomaly counts from actual daily records
+total_observations = len(daily_df)
+
+district_days_with_anomalies = int(
+    daily_df["any_anomaly"].fillna(False).astype(bool).sum()
+)
+
+rainfall_anomalies = int(
+    daily_df["rainfall_anomaly"].fillna(False).astype(bool).sum()
+)
+
+temperature_anomalies = int(
+    daily_df["temperature_anomaly"].fillna(False).astype(bool).sum()
+)
+
+humidity_anomalies = int(
+    daily_df["humidity_anomaly"].fillna(False).astype(bool).sum()
+)
+
+anomaly_percentage = (
+    district_days_with_anomalies / total_observations * 100
+    if total_observations > 0 else 0
+)
+
+# Display metrics
+col1, col2, col3, col4, col5 = st.columns(5)
+
+with col1:
+    st.metric(
+        "District-days with anomalies",
+        f"{district_days_with_anomalies:,}"
+    )
+
+with col2:
+    st.metric(
+        "Rainfall anomalies",
+        f"{rainfall_anomalies:,}"
+    )
+
+with col3:
+    st.metric(
+        "Temperature anomalies",
+        f"{temperature_anomalies:,}"
+    )
+
+with col4:
+    st.metric(
+        "Humidity anomalies",
+        f"{humidity_anomalies:,}"
+    )
+
+with col5:
+    st.metric(
+        "Anomaly percentage",
+        f"{anomaly_percentage:.2f}%"
+    )
+
+st.caption(
+    "Counts represent district-day observations, not unique "
+    "calendar days. Multiple districts can have anomalies "
+    "on the same date."
+)
