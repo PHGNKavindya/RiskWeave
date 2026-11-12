@@ -234,13 +234,64 @@ st.subheader("Monthly Environmental Anomaly Trends")
 import plotly.express as px
 
 # Prepare monthly data
+import plotly.express as px
+
+st.divider()
+
+st.subheader("Monthly Environmental Anomaly Trends")
+
+# Prepare monthly data
 monthly_chart_df = monthly_df.copy()
 
-# Ensure months are sorted chronologically
-monthly_chart_df["month"] = pd.to_datetime(
-    monthly_chart_df["month"].astype(str),
-    format="%Y-%m"
+# Convert month numbers into dates for 2026
+monthly_chart_df["month"] = pd.to_numeric(
+    monthly_chart_df["month"],
+    errors="coerce"
 )
+
+monthly_chart_df = monthly_chart_df.dropna(
+    subset=["month"]
+).copy()
+
+monthly_chart_df["month"] = pd.to_datetime({
+    "year": 2026,
+    "month": monthly_chart_df["month"].astype(int),
+    "day": 1
+})
+
+monthly_chart_df = monthly_chart_df.sort_values("month")
+
+# Create monthly anomaly trend chart
+fig = px.line(
+    monthly_chart_df,
+    x="month",
+    y="days_with_anomalies",
+    markers=True,
+    title="Monthly District-Days with Environmental Anomalies",
+    labels={
+        "month": "Month",
+        "days_with_anomalies": "District-days with anomalies"
+    },
+    template="plotly_dark"
+)
+
+fig.update_layout(
+    xaxis_title="Month",
+    yaxis_title="District-days with anomalies",
+    hovermode="x unified"
+)
+
+st.plotly_chart(
+    fig,
+    use_container_width=True
+)
+
+# Ensure months are sorted chronologically
+monthly_chart_df["month"] = pd.to_datetime({
+    "year": 2026,
+    "month": monthly_chart_df["month"].astype(int),
+    "day": 1
+})
 
 monthly_chart_df = monthly_chart_df.sort_values("month")
 
