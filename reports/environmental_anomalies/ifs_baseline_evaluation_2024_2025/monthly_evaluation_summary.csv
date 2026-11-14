@@ -1,0 +1,4 @@
+variable,best_month,best_f1_score,weakest_month,weakest_f1_score
+precipitation_sum,November,63.10679611650486,October,6.349206349206341
+relative_humidity_2m_mean,November,56.52173913043478,December,9.375
+temperature_2m_mean,May,77.94117647058823,June,5.7971014492753605

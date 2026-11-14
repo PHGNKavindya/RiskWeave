@@ -1,0 +1,4 @@
+variable,best_district,best_f1_score,weakest_district,weakest_f1_score
+precipitation_sum,Trincomalee,50.0,Ratnapura,15.0
+relative_humidity_2m_mean,Batticaloa,50.84745762711865,Gampaha,15.38461538461538
+temperature_2m_mean,Mannar,56.074766355140184,Kalutara,33.33333333333333
