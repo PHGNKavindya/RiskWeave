@@ -90,6 +90,40 @@ def run_daily_update(local_date_key: str):
     }
 
 
+    # --------------------------------------------------------
+    # RUN ENVIRONMENTAL ANOMALY DETECTION
+    # --------------------------------------------------------
+
+    print("Running environmental anomaly detection...")
+
+    anomaly_command = [
+        sys.executable,
+        "-m",
+        "src.environmental_anomalies.anomaly_detection"
+    ]
+
+    result = subprocess.run(
+        anomaly_command,
+        cwd=PROJECT_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    if result.returncode != 0:
+
+        details = result.stderr or result.stdout
+
+        raise RuntimeError(
+            "Environmental anomaly detection failed.\n"
+            f"{details}"
+        )
+
+    print(result.stdout)
+
+    print("Environmental anomaly detection completed.")
+
+
 # ============================================================
 # CSV LOADING
 # ============================================================
