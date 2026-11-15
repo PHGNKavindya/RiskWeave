@@ -6,6 +6,7 @@ import sys
 import pandas as pd
 import streamlit as st
 
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SRC_DIR = PROJECT_ROOT / "src"
 
@@ -17,93 +18,100 @@ if str(SRC_DIR) not in sys.path:
 # PROJECT DATA PATHS
 # ============================================================
 
-LIVE_FILE = PROJECT_ROOT / "data/raw/weather_live/live_weather_forecasts.csv"
+LIVE_FILE = (
+    PROJECT_ROOT
+    / "data"
+    / "raw"
+    / "weather_live"
+    / "live_weather_forecasts.csv"
+)
 
 API_FORECAST_FILE = (
-    PROJECT_ROOT / "data/raw/weather_live/dashboard_weather_forecasts.csv"
+    PROJECT_ROOT
+    / "data"
+    / "raw"
+    / "weather_live"
+    / "dashboard_weather_forecasts.csv"
 )
 
 HISTORICAL_FILE = (
-    PROJECT_ROOT / "data/processed/weather_era5_combined_2006_2026.csv"
+    PROJECT_ROOT
+    / "data"
+    / "processed"
+    / "weather_era5_combined_2006_2026.csv"
 )
 
 OPERATIONAL_FILE = (
-    PROJECT_ROOT / "data/processed/weather_operational_combined_2006_2026.csv"
+    PROJECT_ROOT
+    / "data"
+    / "processed"
+    / "weather_operational_combined_2006_2026.csv"
 )
 
 ML_FILE = (
     PROJECT_ROOT
-    / "outputs/weather_forecasting/operational/latest_ml_weather_predictions.csv"
+    / "outputs"
+    / "weather_forecasting"
+    / "operational"
+    / "latest_ml_weather_predictions.csv"
 )
 
 
 # ============================================================
-# DAILY WEATHER UPDATE
+# DAILY WEATHER AND ENVIRONMENTAL UPDATE
 # ============================================================
 
 @st.cache_data(ttl=86400, show_spinner=False)
 def run_daily_update(local_date_key: str):
     """
-    Shared daily update for both forecasting pages.
+    Shared daily update workflow.
 
-    Streamlit caches this workflow across pages so switching
-    between rainfall and temperature does not repeat API calls
-    on the same local date.
+    Workflow:
+        1. Update live weather data.
+        2. Rebuild operational weather dataset.
+        3. Generate ML weather predictions.
+        4. Run environmental anomaly detection.
+
+    The workflow is cached for 24 hours to avoid repeating
+    API requests and processing when switching dashboard pages.
+
+    The manual update button clears this cache to force a
+    fresh update.
     """
 
     from weather_forecasting.live_weather import update_live_weather
 
+    print("=" * 65)
+    print("RISKWEAVE DAILY UPDATE STARTED")
+    print("=" * 65)
+
+    # --------------------------------------------------------
+    # STEP 1: UPDATE LIVE WEATHER
+    # --------------------------------------------------------
+
+    print("\nSTEP 1: Updating live weather data...")
+
     update_live_weather()
 
-    scripts = [
-        PROJECT_ROOT / "create_operational_dataset.py",
-        PROJECT_ROOT / "run_operational_weather_predictions.py",
-    ]
+    print("Live weather update completed.")
 
-    for script in scripts:
+    # --------------------------------------------------------
+    # STEP 2: REBUILD OPERATIONAL WEATHER DATASET
+    # --------------------------------------------------------
 
-        if not script.exists():
-            raise FileNotFoundError(
-                f"Required project script not found: {script}"
-            )
+    print("\nSTEP 2: Rebuilding operational weather dataset...")
 
-        result = subprocess.run(
-            [sys.executable, str(script)],
-            cwd=PROJECT_ROOT,
-            capture_output=True,
-            text=True,
-            check=False,
+    dataset_script = (
+        PROJECT_ROOT / "create_operational_dataset.py"
+    )
+
+    if not dataset_script.exists():
+        raise FileNotFoundError(
+            f"Operational dataset script not found: {dataset_script}"
         )
 
-        if result.returncode != 0:
-
-            details = result.stderr or result.stdout
-
-            raise RuntimeError(
-                f"{script.name} failed "
-                f"(exit code {result.returncode}).\n{details}"
-            )
-
-    return {
-        "updated": True,
-        "date": local_date_key,
-    }
-
-
-    # --------------------------------------------------------
-    # RUN ENVIRONMENTAL ANOMALY DETECTION
-    # --------------------------------------------------------
-
-    print("Running environmental anomaly detection...")
-
-    anomaly_command = [
-        sys.executable,
-        "-m",
-        "src.environmental_anomalies.anomaly_detection"
-    ]
-
     result = subprocess.run(
-        anomaly_command,
+        [sys.executable, str(dataset_script)],
         cwd=PROJECT_ROOT,
         capture_output=True,
         text=True,
@@ -111,7 +119,81 @@ def run_daily_update(local_date_key: str):
     )
 
     if result.returncode != 0:
+        details = result.stderr or result.stdout
 
+        raise RuntimeError(
+            "Operational dataset creation failed.\n"
+            f"{details}"
+        )
+
+    print(result.stdout)
+    print("Operational dataset created successfully.")
+
+    # --------------------------------------------------------
+    # STEP 3: GENERATE ML WEATHER PREDICTIONS
+    # --------------------------------------------------------
+
+    print("\nSTEP 3: Generating ML weather predictions...")
+
+    prediction_script = (
+        PROJECT_ROOT / "run_operational_weather_predictions.py"
+    )
+
+    if not prediction_script.exists():
+        raise FileNotFoundError(
+            f"Weather prediction script not found: {prediction_script}"
+        )
+
+    result = subprocess.run(
+        [sys.executable, str(prediction_script)],
+        cwd=PROJECT_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    if result.returncode != 0:
+        details = result.stderr or result.stdout
+
+        raise RuntimeError(
+            "Operational weather prediction failed.\n"
+            f"{details}"
+        )
+
+    print(result.stdout)
+    print("ML weather predictions completed.")
+
+    # --------------------------------------------------------
+    # STEP 4: RUN ENVIRONMENTAL ANOMALY DETECTION
+    # --------------------------------------------------------
+
+    print("\nSTEP 4: Running environmental anomaly detection...")
+
+    anomaly_script = (
+        PROJECT_ROOT
+        / "src"
+        / "environmental_anomalies"
+        / "anomaly_detection.py"
+    )
+
+    if not anomaly_script.exists():
+        raise FileNotFoundError(
+            f"Environmental anomaly script not found: {anomaly_script}"
+        )
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "src.environmental_anomalies.anomaly_detection",
+        ],
+        cwd=PROJECT_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    if result.returncode != 0:
         details = result.stderr or result.stdout
 
         raise RuntimeError(
@@ -120,8 +202,20 @@ def run_daily_update(local_date_key: str):
         )
 
     print(result.stdout)
-
     print("Environmental anomaly detection completed.")
+
+    # --------------------------------------------------------
+    # UPDATE COMPLETED
+    # --------------------------------------------------------
+
+    print("\n" + "=" * 65)
+    print("RISKWEAVE DAILY UPDATE COMPLETED SUCCESSFULLY")
+    print("=" * 65)
+
+    return {
+        "updated": True,
+        "date": local_date_key,
+    }
 
 
 # ============================================================
@@ -223,14 +317,15 @@ def show_update_status():
     try:
 
         with st.spinner(
-            "Checking and updating live weather for all 25 districts..."
+            "Updating live weather, ML predictions, "
+            "and environmental anomalies for all 25 districts..."
         ):
 
             run_daily_update(today.isoformat())
 
         st.success(
-            f"Weather data and ML predictions are up to date "
-            f"for {today:%d %B %Y}."
+            f"Weather data, ML predictions, and environmental "
+            f"anomalies are up to date for {today:%d %B %Y}."
         )
 
     except Exception as exc:
@@ -241,8 +336,7 @@ def show_update_status():
 
         st.info(
             "The dashboard will attempt to display the latest files "
-            "already saved. Check the terminal output and update scripts "
-            "if this error continues."
+            "already saved. Check the VS Code terminal for details."
         )
 
 
@@ -253,9 +347,13 @@ def show_manual_update_button():
         width="content",
     ):
 
+        # Clear the daily update cache to force a new update.
         run_daily_update.clear()
+
+        # Clear cached CSV data so updated files can be loaded.
         _read_csv_cached.clear()
 
+        # Rerun the dashboard.
         st.rerun()
 
 
@@ -308,7 +406,7 @@ def prepare_historical_data(
     - Removes invalid dates and missing values.
     - Sorts observations chronologically.
 
-    This function does not modify the original historical dataset.
+    This function does not modify the original dataset.
     """
 
     if historical.empty:
@@ -340,13 +438,15 @@ def prepare_historical_data(
     return view
 
 
-def create_monthly_summary(view, value_column, output_column):
+def create_monthly_summary(
+    view,
+    value_column,
+    output_column,
+):
     """
     Calculate monthly average weather values.
 
     Includes every available month in the selected dataset.
-    New historical records are automatically included after
-    the source dataset is refreshed.
     """
 
     if view.empty:
@@ -377,9 +477,7 @@ def create_recent_90_day_summary(
     """
     Calculate the recent 90-calendar-day trend.
 
-    The latest date is taken from the latest valid observation
-    in the selected dataset.
-
+    The latest date is taken from the latest valid observation.
     The period includes the latest observation date and the
     preceding 89 calendar days.
     """
@@ -410,7 +508,6 @@ def create_recent_90_day_summary(
     )
 
     return daily
-
 
 
 # ============================================================
@@ -449,7 +546,9 @@ def show_historical_rainfall(
     )
 
     if view.empty:
-        st.warning("No valid historical rainfall records are available.")
+        st.warning(
+            "No valid historical rainfall records are available."
+        )
         return
 
     monthly = create_monthly_summary(
@@ -459,6 +558,7 @@ def show_historical_rainfall(
     )
 
     if not monthly.empty:
+
         fig = px.line(
             monthly,
             x="date",
@@ -476,7 +576,10 @@ def show_historical_rainfall(
             yaxis_title="Average daily rainfall (mm)",
         )
 
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(
+            fig,
+            width="stretch",
+        )
 
     # Operational dataset: used for the latest 90-day chart.
     st.subheader("Recent 90-Day Rainfall Trend")
@@ -501,10 +604,14 @@ def show_historical_rainfall(
         return
 
     # Reuse the district selection made for the monthly chart.
-    selected_districts = view["district_key"].astype(str).unique()
+    selected_districts = (
+        view["district_key"].astype(str).unique()
+    )
 
     recent_view = recent_data[
-        recent_data["district_key"].astype(str).isin(selected_districts)
+        recent_data["district_key"].astype(str).isin(
+            selected_districts
+        )
     ].copy()
 
     recent_view = prepare_historical_data(
@@ -520,7 +627,9 @@ def show_historical_rainfall(
     )
 
     if daily.empty:
-        st.warning("Recent rainfall observations are unavailable.")
+        st.warning(
+            "Recent rainfall observations are unavailable."
+        )
         return
 
     st.caption(
@@ -546,7 +655,10 @@ def show_historical_rainfall(
         yaxis_title="Average rainfall (mm)",
     )
 
-    st.plotly_chart(recent_fig, width="stretch")
+    st.plotly_chart(
+        recent_fig,
+        width="stretch",
+    )
 
 
 # ============================================================
@@ -597,6 +709,7 @@ def show_historical_temperature(
     )
 
     if not monthly.empty:
+
         fig = px.line(
             monthly,
             x="date",
@@ -614,7 +727,10 @@ def show_historical_temperature(
             yaxis_title="Mean temperature (°C)",
         )
 
-        st.plotly_chart(fig, width="stretch")
+        st.plotly_chart(
+            fig,
+            width="stretch",
+        )
 
     # Operational dataset: used for the latest 90-day chart.
     st.subheader("Recent 90-Day Temperature Trend")
@@ -639,10 +755,14 @@ def show_historical_temperature(
         return
 
     # Reuse the district selection made for the monthly chart.
-    selected_districts = view["district_key"].astype(str).unique()
+    selected_districts = (
+        view["district_key"].astype(str).unique()
+    )
 
     recent_view = recent_data[
-        recent_data["district_key"].astype(str).isin(selected_districts)
+        recent_data["district_key"].astype(str).isin(
+            selected_districts
+        )
     ].copy()
 
     recent_view = prepare_historical_data(
@@ -658,7 +778,9 @@ def show_historical_temperature(
     )
 
     if daily.empty:
-        st.warning("Recent temperature observations are unavailable.")
+        st.warning(
+            "Recent temperature observations are unavailable."
+        )
         return
 
     st.caption(
@@ -684,5 +806,7 @@ def show_historical_temperature(
         yaxis_title="Mean temperature (°C)",
     )
 
-    st.plotly_chart(recent_fig, width="stretch")
-
+    st.plotly_chart(
+        recent_fig,
+        width="stretch",
+    )
