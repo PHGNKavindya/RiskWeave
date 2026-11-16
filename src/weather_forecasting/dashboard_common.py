@@ -335,8 +335,9 @@ def show_update_status():
         )
 
         st.info(
-            "The dashboard will attempt to display the latest files "
-            "already saved. Check the VS Code terminal for details."
+            "Use the existing 'Update Live Weather Now' button "
+            "to refresh weather data, ML predictions, "
+            "and environmental anomaly results."
         )
 
 
@@ -347,14 +348,35 @@ def show_manual_update_button():
         width="content",
     ):
 
-        # Clear the daily update cache to force a new update.
         run_daily_update.clear()
-
-        # Clear cached CSV data so updated files can be loaded.
         _read_csv_cached.clear()
 
-        # Rerun the dashboard.
-        st.rerun()
+        try:
+            with st.spinner(
+                "Updating live weather, rebuilding the operational "
+                "dataset, generating ML predictions, and detecting "
+                "environmental anomalies..."
+            ):
+
+                result = run_daily_update(
+                    get_today().isoformat()
+                )
+
+            _read_csv_cached.clear()
+
+            st.success(
+                "Weather, ML predictions, and environmental "
+                "anomalies updated successfully."
+            )
+
+            st.rerun()
+
+        except Exception as exc:
+
+            st.error(
+                f"RiskWeave update failed: {exc}"
+            )
+
 
 
 # ============================================================

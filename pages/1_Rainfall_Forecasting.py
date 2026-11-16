@@ -35,8 +35,8 @@ st.divider()
 
 today = get_today()
 
-show_update_status()
 show_manual_update_button()
+show_update_status()
 
 live, api_forecast, historical, operational, predictions = load_weather_data()
 
