@@ -31,6 +31,13 @@ DENGUE_FILE = (
     / "dengue_weekly_25_areas_2025_2026.csv"
 )
 
+WEATHER_FILE = (
+    PROJECT_ROOT
+    / "data"
+    / "processed"
+    / "weather_operational_combined_2006_2026.csv"
+)
+
 MODEL_FILE = (
     PROJECT_ROOT
     / "outputs"
@@ -172,7 +179,7 @@ st.divider()
 
 
 # ============================================================
-# 6. WEEKLY FORECASTING CONTROL
+# 6. WEEKLY FORECASTING AND MAP GENERATION
 # ============================================================
 
 st.subheader("Weekly Forecasting Control")
@@ -198,32 +205,43 @@ with col2:
         "↻ Refresh Dashboard",
         use_container_width=True
     ):
+
         st.cache_data.clear()
         st.rerun()
 
 
 if run_forecast:
 
+    # --------------------------------------------------------
+    # CHECK REQUIRED INPUT FILES
+    # --------------------------------------------------------
+
     required_files = [
         DENGUE_FILE,
         MODEL_FILE,
-        PROJECT_ROOT / "data" / "processed"
-        / "weather_operational_combined_2006_2026.csv",
+        WEATHER_FILE,
     ]
 
     missing_files = [
-        str(path) for path in required_files
+        str(path)
+        for path in required_files
         if not path.exists()
     ]
 
     if missing_files:
 
-        st.error("Some required project files are missing.")
+        st.error(
+            "Some required project files are missing."
+        )
 
         for file in missing_files:
             st.write(file)
 
     else:
+
+        # ----------------------------------------------------
+        # STEP 1: WEEKLY FORECASTING
+        # ----------------------------------------------------
 
         with st.spinner(
             "Running RiskWeave weekly forecasting pipeline..."
@@ -231,7 +249,7 @@ if run_forecast:
 
             try:
 
-                result = subprocess.run(
+                forecast_result = subprocess.run(
                     [
                         sys.executable,
                         "-m",
@@ -244,18 +262,17 @@ if run_forecast:
                 )
 
                 st.success(
-                    "Forecast pipeline completed successfully."
+                    "Weekly forecasting completed successfully."
                 )
 
-                with st.expander("Pipeline execution details"):
+                with st.expander(
+                    "Forecast pipeline execution details"
+                ):
 
                     st.code(
-                        result.stdout or "No output returned."
+                        forecast_result.stdout
+                        or "No output returned."
                     )
-
-                st.cache_data.clear()
-
-                st.rerun()
 
             except subprocess.CalledProcessError as error:
 
@@ -263,16 +280,115 @@ if run_forecast:
                     "The forecasting pipeline failed."
                 )
 
-                with st.expander("Error details", expanded=True):
+                with st.expander(
+                    "Forecast error details",
+                    expanded=True
+                ):
 
                     st.code(error.stdout or "")
                     st.code(error.stderr or "")
+
+                st.stop()
 
             except Exception as error:
 
                 st.error(
                     f"Unable to execute forecasting pipeline: {error}"
                 )
+
+                st.stop()
+
+        # ----------------------------------------------------
+        # STEP 2: CHECK PREDICTION OUTPUT
+        # ----------------------------------------------------
+
+        if not PREDICTION_FILE.exists():
+
+            st.error(
+                "Forecasting finished, but latest_predictions.csv "
+                "was not created."
+            )
+
+            st.stop()
+
+        # ----------------------------------------------------
+        # STEP 3: GENERATE UPDATED DENGUE MAP
+        # ----------------------------------------------------
+
+        with st.spinner(
+            "Generating updated Sri Lanka dengue prediction map..."
+        ):
+
+            try:
+
+                map_result = subprocess.run(
+                    [
+                        sys.executable,
+                        "-m",
+                        "src.dengue_forecasting.dengue_map"
+                    ],
+                    cwd=str(PROJECT_ROOT),
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
+
+                if not MAP_FILE.exists():
+
+                    raise FileNotFoundError(
+                        "Map generation command completed, "
+                        "but the HTML map file was not created."
+                    )
+
+                # Check map was generated after predictions.
+                if MAP_FILE.stat().st_mtime < PREDICTION_FILE.stat().st_mtime:
+
+                    raise RuntimeError(
+                        "The generated map is older than the "
+                        "latest prediction file."
+                    )
+
+                st.success(
+                    "Dengue prediction map generated successfully."
+                )
+
+                with st.expander(
+                    "Map generation execution details"
+                ):
+
+                    st.code(
+                        map_result.stdout
+                        or "No output returned."
+                    )
+
+            except subprocess.CalledProcessError as error:
+
+                st.warning(
+                    "Forecasting completed successfully, "
+                    "but map generation failed."
+                )
+
+                with st.expander(
+                    "Map generation error details",
+                    expanded=True
+                ):
+
+                    st.code(error.stdout or "")
+                    st.code(error.stderr or "")
+
+            except Exception as error:
+
+                st.warning(
+                    f"Forecasting completed, but map generation "
+                    f"could not be verified: {error}"
+                )
+
+        # ----------------------------------------------------
+        # STEP 4: REFRESH DASHBOARD
+        # ----------------------------------------------------
+
+        st.cache_data.clear()
+        st.rerun()
 
 
 st.divider()
@@ -319,7 +435,10 @@ try:
 
 except Exception as error:
 
-    st.error(f"Unable to load RiskWeave data: {error}")
+    st.error(
+        f"Unable to load RiskWeave data: {error}"
+    )
+
     st.stop()
 
 
@@ -402,6 +521,7 @@ target_end = pd.to_datetime(
     first_prediction["target_week_end"]
 )
 
+
 st.info(
     f"Forecast origin: {origin_year} Week {origin_week} | "
     f"Target: {target_year} Week {target_week} | "
@@ -409,16 +529,37 @@ st.info(
     f"to {target_end:%d %b %Y}"
 )
 
-# Check that every row belongs to the same forecast
+
+# Check every prediction belongs to the same forecast.
+
 if (
     predictions["target_year"].nunique() != 1
     or predictions["target_week"].nunique() != 1
 ):
-    st.error("Prediction file contains multiple target periods.")
+
+    st.error(
+        "Prediction file contains multiple target periods."
+    )
+
     st.stop()
 
 
-# Check whether target period has already ended
+if (
+    predictions["forecast_origin_year"].nunique() != 1
+    or predictions["forecast_origin_week"].nunique() != 1
+):
+
+    st.error(
+        "Prediction file contains multiple forecast origins."
+    )
+
+    st.stop()
+
+
+# ------------------------------------------------------------
+# CHECK FORECAST PERIOD STATUS
+# ------------------------------------------------------------
+
 today = pd.Timestamp.now().normalize()
 
 if target_end < today:
@@ -437,7 +578,10 @@ else:
     )
 
 
-# Display latest dengue data coverage
+# ------------------------------------------------------------
+# DISPLAY LATEST DENGUE DATA COVERAGE
+# ------------------------------------------------------------
+
 if dengue_data is not None:
 
     st.write(
@@ -446,7 +590,9 @@ if dengue_data is not None:
 
     if {"year", "week"}.issubset(dengue_data.columns):
 
-        latest_year = int(dengue_data["year"].max())
+        latest_year = int(
+            dengue_data["year"].max()
+        )
 
         latest_week = int(
             dengue_data.loc[
@@ -486,6 +632,7 @@ lowest_row = predictions.loc[
     predictions["predicted_dengue_cases"].idxmin()
 ]
 
+
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
@@ -507,7 +654,9 @@ with col3:
     st.metric(
         "Highest Prediction",
         f"{highest_row['predicted_dengue_cases']:.0f}",
-        help=str(highest_row["district_key"]).title()
+        help=str(
+            highest_row["district_key"]
+        ).title()
     )
 
 with col4:
@@ -525,21 +674,24 @@ st.divider()
 # 11. INTERACTIVE SRI LANKA MAP
 # ============================================================
 
-st.subheader("Sri Lanka Dengue Prediction Map")
+st.subheader(
+    "Sri Lanka Dengue Prediction Map"
+)
 
 st.write(
     "Explore predicted dengue cases across the 25 "
     "RiskWeave reporting areas."
 )
 
-# Only display a map if it was generated after the latest
-# prediction file. This prevents displaying an outdated map.
+
+# Only display a map generated after the latest predictions.
 
 map_is_current = (
     MAP_FILE.exists()
     and PREDICTION_FILE.exists()
     and MAP_FILE.stat().st_mtime >= PREDICTION_FILE.stat().st_mtime
 )
+
 
 if map_is_current:
 
@@ -559,6 +711,10 @@ if map_is_current:
             scrolling=True
         )
 
+        st.caption(
+            "Map generated from the latest prediction file."
+        )
+
     except Exception as error:
 
         st.error(
@@ -573,8 +729,8 @@ else:
     )
 
     st.caption(
-        "The map will appear after the map-generation module "
-        "is connected to latest_predictions.csv."
+        "Use the forecasting control above to regenerate "
+        "the map after creating new predictions."
     )
 
 
@@ -585,7 +741,9 @@ st.divider()
 # 12. DISTRICT PREDICTION TABLE
 # ============================================================
 
-st.subheader("District-level Dengue Predictions")
+st.subheader(
+    "District-level Dengue Predictions"
+)
 
 display_data = predictions.copy()
 
@@ -617,11 +775,16 @@ st.dataframe(
 )
 
 
+st.divider()
+
+
 # ============================================================
 # 13. TOP 10 DISTRICTS
 # ============================================================
 
-st.subheader("Top 10 Districts by Predicted Cases")
+st.subheader(
+    "Top 10 Districts by Predicted Cases"
+)
 
 top_10 = display_data.head(10).sort_values(
     "Predicted Cases",
@@ -641,9 +804,14 @@ st.divider()
 # 14. FORECAST HISTORY
 # ============================================================
 
-st.subheader("Historical Forecast Records")
+st.subheader(
+    "Historical Forecast Records"
+)
 
-if forecast_history is not None and not forecast_history.empty:
+if (
+    forecast_history is not None
+    and not forecast_history.empty
+):
 
     st.write(
         "Previously generated forecasts are retained "
@@ -693,7 +861,9 @@ st.divider()
 # 15. DOWNLOAD LATEST PREDICTIONS
 # ============================================================
 
-st.subheader("Download Latest Prediction Results")
+st.subheader(
+    "Download Latest Prediction Results"
+)
 
 csv_data = predictions.to_csv(
     index=False

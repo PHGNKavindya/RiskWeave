@@ -59,3 +59,17 @@ RiskWeave/
 
 
 PS C:\Users\Nethmi\Documents\GitHub\RiskWeave> python -m streamlit run app.py
+
+
+Step 2 — Update your dengue CSV
+Open:
+
+data/processed/dengue_weekly_25_areas_2025_2026.csv
+
+Step 3 — Validate the updated dengue dataset
+python -c "import pandas as pd; p='data/processed/dengue_weekly_25_areas_2025_2026.csv'; d=pd.read_csv(p); print('Latest period:'); print(d[['year','week']].drop_duplicates().sort_values(['year','week']).tail()); print('\nRecords per week:'); print(d.groupby(['year','week']).size().tail()); print('\nLatest weekly cases:'); print(d.sort_values(['year','week']).groupby(['year','week'])['weekly_cases'].sum().tail()); print('\nDuplicate records:',d.duplicated(['year','week','district_key']).sum())"
+
+Step 4 — Check the weather dataset
+python -c "import pandas as pd; p='data/processed/weather_operational_combined_2006_2026.csv'; d=pd.read_csv(p); d['date']=pd.to_datetime(d['date']); s=d[(d['date']>='2026-11-09')&(d['date']<='2026-11-15')]; print('Weather records:',len(s)); print('Districts:',s['district'].nunique()); print('\nDays per district:'); print(s.groupby('district')['date'].nunique().to_string()); print('\nMissing rainfall:',s['precipitation_sum'].isna().sum())"
+
+Step 5 — Run dengue forecasting
