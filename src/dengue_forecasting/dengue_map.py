@@ -565,13 +565,17 @@ if __name__ == "__main__":
     main()
 
 
+
 # ============================================================
 # 8. CREATE MAP FOR STREAMLIT HOMEPAGE
 # ============================================================
 
 def create_homepage_map():
 
-    # Reuse the existing project data-loading functions.
+    # --------------------------------------------------------
+    # LOAD EXISTING PREDICTIONS AND GEOGRAPHY
+    # --------------------------------------------------------
+
     predictions, districts = load_data()
 
     forecast_info = get_forecast_information(predictions)
@@ -580,6 +584,10 @@ def create_homepage_map():
         predictions,
         districts
     )
+
+    # --------------------------------------------------------
+    # CREATE PREDICTION COLOUR SCALE
+    # --------------------------------------------------------
 
     minimum = int(
         map_data["predicted_dengue_cases"].min()
@@ -592,7 +600,6 @@ def create_homepage_map():
     if minimum == maximum:
         maximum = minimum + 1
 
-    # Colour scale based on actual model predictions.
     colour_scale = cm.LinearColormap(
         colors=[
             "#123c57",
@@ -607,14 +614,75 @@ def create_homepage_map():
         caption="Predicted dengue cases"
     )
 
-    # Create dark-themed map.
+    # --------------------------------------------------------
+    # CREATE DARK NAVY MAP
+    # --------------------------------------------------------
+
     homepage_map = folium.Map(
         location=[7.85, 80.70],
         zoom_start=7,
-        tiles="OpenStreetMap",
-        control_scale=True,
-        prefer_canvas=True
+        tiles=None,
+        control_scale=False,
+        prefer_canvas=True,
+        zoom_control=True,
+        min_zoom=6,
+        max_zoom=10
     )
+
+    # Match map background to RiskWeave dashboard.
+
+    homepage_map.get_root().html.add_child(
+        folium.Element("""
+        <style>
+            html, body {
+                background: #07172B !important;
+            }
+
+            .leaflet-container {
+                background: #07172B !important;
+                outline: none;
+            }
+
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+
+            .leaflet-control-zoom a {
+                background: #0B2944 !important;
+                color: #48E0D4 !important;
+                border: 1px solid #26849A !important;
+            }
+
+            .leaflet-tooltip {
+                background: #0B2944 !important;
+                color: #EAFBFF !important;
+                border: 1px solid #48E0D4 !important;
+            }
+
+            /* Prediction legend */
+            .legend {
+                background: rgba(11, 41, 68, 0.95) !important;
+                color: #EAFBFF !important;
+                border: 1px solid #26849A !important;
+                border-radius: 6px !important;
+            }
+
+            .legend text {
+                fill: #EAFBFF !important;
+            }
+
+            .legend .caption {
+                color: #65E1D7 !important;
+            }
+
+        </style>
+        """)
+    )
+
+
+    # --------------------------------------------------------
+    # DISTRICT COLOUR STYLING
+    # --------------------------------------------------------
 
     def district_style(feature):
 
@@ -624,12 +692,25 @@ def create_homepage_map():
 
         return {
             "fillColor": colour_scale(cases),
-            "color": "#48e0d4",
-            "weight": 1.2,
-            "fillOpacity": 0.65
+            "color": "#48E0D4",
+            "weight": 1.5,
+            "opacity": 1,
+            "fillOpacity": 0.78
         }
 
-    # District hover information.
+    def district_highlight(feature):
+
+        return {
+            "color": "#FFFFFF",
+            "weight": 3,
+            "opacity": 1,
+            "fillOpacity": 0.95
+        }
+
+    # --------------------------------------------------------
+    # DISTRICT TOOLTIP
+    # --------------------------------------------------------
+
     tooltip = folium.GeoJsonTooltip(
         fields=[
             "district_key",
@@ -637,19 +718,28 @@ def create_homepage_map():
         ],
         aliases=[
             "District:",
-            "Predicted cases:"
+            "Predicted dengue cases:"
         ],
         localize=True,
         sticky=True,
-        labels=True
+        labels=True,
+        style=(
+            "background-color: #0B2944;"
+            "color: #EAFBFF;"
+            "font-family: Arial;"
+            "font-size: 12px;"
+            "padding: 8px;"
+        )
     )
 
-    # Convert timestamps and other unsupported values
-    # before converting the GeoDataFrame to GeoJSON.
+    # --------------------------------------------------------
+    # CONVERT DATA INTO JSON-SAFE FORMAT
+    # --------------------------------------------------------
 
     geojson_data = map_data.copy()
 
     for column in geojson_data.columns:
+
         if column == "geometry":
             continue
 
@@ -661,11 +751,14 @@ def create_homepage_map():
             )
 
         elif geojson_data[column].dtype == "object":
-            geojson_data[column] = geojson_data[column].apply(
-                lambda value: (
-                    value.isoformat()
-                    if isinstance(value, (pd.Timestamp,))
-                    else value
+
+            geojson_data[column] = (
+                geojson_data[column].apply(
+                    lambda value: (
+                        value.isoformat()
+                        if isinstance(value, pd.Timestamp)
+                        else value
+                    )
                 )
             )
 
@@ -674,21 +767,28 @@ def create_homepage_map():
         drop_id=True
     )
 
+    # --------------------------------------------------------
+    # ADD DISTRICT POLYGONS
+    # --------------------------------------------------------
+
     folium.GeoJson(
         geojson_string,
         name="Dengue predictions",
         style_function=district_style,
-        tooltip=tooltip,
-        highlight_function=lambda feature: {
-            "color": "#ffffff",
-            "weight": 3,
-            "fillOpacity": 0.9
-        }
+        highlight_function=district_highlight,
+        tooltip=tooltip
     ).add_to(homepage_map)
+
+    # --------------------------------------------------------
+    # ADD PREDICTION LEGEND
+    # --------------------------------------------------------
 
     colour_scale.add_to(homepage_map)
 
-    # Fit map to district boundaries.
+    # --------------------------------------------------------
+    # FIT MAP TO SRI LANKA
+    # --------------------------------------------------------
+
     minx, miny, maxx, maxy = map_data.total_bounds
 
     homepage_map.fit_bounds([
@@ -696,29 +796,39 @@ def create_homepage_map():
         [maxy, maxx]
     ])
 
-    # Forecast period information.
+    # --------------------------------------------------------
+    # FORECAST INFORMATION PANEL
+    # --------------------------------------------------------
+
     title_html = f"""
     <div style="
         position: fixed;
         top: 10px;
         left: 50px;
         z-index: 9999;
-        background: rgba(7, 23, 43, 0.92);
-        color: #eaffff;
-        border: 1px solid #48e0d4;
+        background: rgba(7, 23, 43, 0.95);
+        color: #EAFBFF;
+        border: 1px solid #48E0D4;
         border-radius: 8px;
         padding: 9px 12px;
         font-family: Arial;
         font-size: 11px;
+        line-height: 1.5;
+        box-shadow: 0 0 12px rgba(72, 224, 212, 0.2);
     ">
-        <b>RISKWEAVE DENGUE FORECAST</b><br>
+        <b style="color:#65E1D7;">
+            RISKWEAVE DENGUE FORECAST
+        </b><br>
+
         Origin: {forecast_info['origin_year']}
         Week {forecast_info['origin_week']}<br>
+
         Target: {forecast_info['target_year']}
         Week {forecast_info['target_week']}<br>
+
         {forecast_info['target_start']:%d %b}
-        – {forecast_info['target_end']:%d %b %Y}
-        <br>
+        – {forecast_info['target_end']:%d %b %Y}<br>
+
         {forecast_info['status']}
     </div>
     """

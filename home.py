@@ -2,12 +2,32 @@
 import streamlit as st
 import textwrap
 
+from streamlit_folium import st_folium
+from src.dengue_forecasting.dengue_map import create_homepage_map
+
+
+# ============================================================
+# 1. HTML RENDERING HELPER
+# ============================================================
+
+def render_html(content):
+
+    st.html(textwrap.dedent(content))
+
+
+# ============================================================
+# 2. HOMEPAGE
+# ============================================================
 
 def render_home():
 
-    st.html(textwrap.dedent("""
+    # --------------------------------------------------------
+    # CUSTOM CSS
+    # --------------------------------------------------------
+
+    render_html("""
     <style>
-    /* MAIN BACKGROUND */
+
     .stApp {
         background:
             radial-gradient(circle at center, #10364d, #07172b 75%);
@@ -17,9 +37,11 @@ def render_home():
     .block-container {
         max-width: 1600px;
         padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     /* HEADER */
+
     .rw-header {
         display: flex;
         justify-content: space-between;
@@ -67,7 +89,8 @@ def render_home():
         margin-bottom: 20px;
     }
 
-    /* TOP METRICS */
+    /* METRICS */
+
     .rw-metrics {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -101,40 +124,15 @@ def render_home():
         font-size: 10px;
     }
 
-    /* COMMAND CENTRE */
-    .rw-command {
-        display: grid;
-        grid-template-columns: minmax(190px, .9fr)
-                               minmax(350px, 1.8fr)
-                               minmax(190px, .9fr);
-        gap: 10px;
-        min-height: 470px;
-    }
-
-    .rw-stack {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        position: relative;
-        z-index: 3;
-    }
-
-    /* OVERLAPPING SIDE PANELS */
-    .rw-command > .rw-stack:first-child {
-        margin-right: -38px;
-    }
-
-    .rw-command > .rw-stack:last-child {
-        margin-left: -38px;
-    }
+    /* PANELS */
 
     .rw-panel {
-        background: rgba(8, 37, 61, .94);
+        background: rgba(8, 37, 61, .96);
         border: 1px solid #26849a;
         border-radius: 10px;
         padding: 13px;
+        margin-bottom: 12px;
         box-shadow: 0 0 17px #087e9040;
-        backdrop-filter: blur(12px);
     }
 
     .rw-panel-title {
@@ -167,75 +165,30 @@ def render_home():
         margin-top: 9px;
     }
 
-    /* CENTRAL MAP */
-    .rw-map {
-        min-height: 470px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        border: 1px solid #48e0d4;
-        border-radius: 14px;
-        background:
-            radial-gradient(ellipse, #176a6850, transparent 65%),
-            linear-gradient(145deg, #123d4d, #071a30);
-        box-shadow: 0 0 28px #13d5c744,
-                    inset 0 0 35px #16b5ae22;
-    }
-
-    .rw-map-grid {
-        position: absolute;
-        inset: 0;
-        background-image:
-            linear-gradient(#56cbd315 1px, transparent 1px),
-            linear-gradient(90deg, #56cbd315 1px, transparent 1px);
-        background-size: 30px 30px;
-    }
-
-    .rw-map-content {
-        z-index: 1;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .rw-island {
-        font-size: 115px;
-        filter: drop-shadow(0 0 20px #4de6d5);
-    }
+    /* MAP PANEL */
 
     .rw-map-heading {
-        color: white;
-        font-size: 20px;
-        font-weight: 900;
-        letter-spacing: 3px;
+        color: #65e1d7;
+        font-size: 13px;
+        font-weight: 800;
+        padding: 10px 12px;
+        background: #0b2944;
+        border: 1px solid #26849a;
+        border-radius: 9px 9px 0 0;
     }
 
-    .rw-map-copy {
-        color: #a4cbd7;
-        font-size: 11px;
-        max-width: 280px;
-        margin: 10px auto;
-        line-height: 1.6;
-    }
-
-    .rw-legend {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 7px;
-    }
-
-    .rw-legend span {
-        color: #c4eeee;
-        font-size: 9px;
-        border: 1px solid #3a9da0;
-        border-radius: 20px;
-        padding: 5px 9px;
-        background: #09283d;
+    .rw-map-caption {
+        color: #91b9ce;
+        font-size: 10px;
+        padding: 8px 12px;
+        background: #0b2944;
+        border: 1px solid #26849a;
+        border-top: none;
+        border-radius: 0 0 9px 9px;
     }
 
     /* BOTTOM PANELS */
+
     .rw-bottom {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -271,49 +224,54 @@ def render_home():
         margin-top: 20px;
     }
 
-    /* RESPONSIVE */
-    @media(max-width: 950px) {
-        .rw-command {
-            grid-template-columns: 1fr 1fr;
-        }
+    /* STREAMLIT MAP CONTAINER */
 
-        .rw-command > .rw-stack:first-child,
-        .rw-command > .rw-stack:last-child {
-            margin: 0;
-        }
-
-        .rw-map {
-            grid-column: 1 / -1;
-            grid-row: 1;
-        }
+    div[data-testid="stVerticalBlock"] {
+        gap: 0.6rem;
     }
 
-    @media(max-width: 650px) {
+    @media(max-width: 800px) {
+
         .rw-metrics {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        .rw-command,
         .rw-bottom {
             grid-template-columns: 1fr;
         }
 
-        .rw-map {
-            grid-column: auto;
-            min-height: 330px;
+        .rw-title {
+            font-size: 21px;
+        }
+
+        .rw-header {
+            flex-direction: column;
+            gap: 10px;
         }
     }
-    </style>
 
-    <!-- HEADER -->
+    </style>
+    """)
+
+    # --------------------------------------------------------
+    # HEADER
+    # --------------------------------------------------------
+
+    render_html("""
     <div class="rw-header">
         <div>
-            <div class="rw-logo">RISK<span>WEAVE</span> LANKA</div>
+            <div class="rw-logo">
+                RISK<span>WEAVE</span> LANKA
+            </div>
+
             <div style="color:#91b9ce;font-size:10px;letter-spacing:2px">
                 CLIMATE & DENGUE INTELLIGENCE
             </div>
         </div>
-        <div class="rw-status">● RESEARCH MONITORING PLATFORM</div>
+
+        <div class="rw-status">
+            ● RESEARCH MONITORING PLATFORM
+        </div>
     </div>
 
     <div class="rw-title">
@@ -323,8 +281,13 @@ def render_home():
     <div class="rw-subtitle">
         SEE THE RISK · PREDICT THE CHANGE · PLAN THE RESPONSE
     </div>
+    """)
 
-    <!-- TOP METRICS -->
+    # --------------------------------------------------------
+    # TOP METRICS
+    # --------------------------------------------------------
+
+    render_html("""
     <div class="rw-metrics">
 
         <div class="rw-metric">
@@ -348,187 +311,265 @@ def render_home():
         <div class="rw-metric">
             <div class="rw-label">FORECAST HORIZON</div>
             <div class="rw-value">7 Days</div>
-            <div class="rw-note">Next-week prediction target</div>
+            <div class="rw-note">Forecast target horizon</div>
         </div>
 
     </div>
+    """)
 
-    <!-- MAIN COMMAND CENTRE -->
-    <div class="rw-command">
+    # --------------------------------------------------------
+    # MAIN COMMAND CENTRE
+    # --------------------------------------------------------
 
-        <!-- LEFT PANELS -->
-        <div class="rw-stack">
+    left_col, map_col, right_col = st.columns(
+        [0.95, 2.1, 0.95],
+        gap="small"
+    )
 
-            <div class="rw-panel">
-                <div class="rw-panel-title">
-                    🦟 DENGUE SURVEILLANCE
-                </div>
-                <div class="rw-row">
-                    <span>Weekly cases</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>District</span><strong>All areas</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Reporting week</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Source</span><strong>NDCU</strong>
-                </div>
+    # ========================================================
+    # LEFT PANELS
+    # ========================================================
+
+    with left_col:
+
+        render_html("""
+        <div class="rw-panel">
+
+            <div class="rw-panel-title">
+                🦟 DENGUE SURVEILLANCE
             </div>
 
-            <div class="rw-panel">
-                <div class="rw-panel-title">
-                    🌱 ENVIRONMENTAL ANOMALIES
-                </div>
-                <div class="rw-row">
-                    <span>Rainfall anomaly</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Temperature anomaly</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Humidity anomaly</span><strong>--</strong>
-                </div>
+            <div class="rw-row">
+                <span>Weekly cases</span>
+                <strong>--</strong>
             </div>
 
-            <div class="rw-panel">
-                <div class="rw-panel-title">
-                    📍 GEOGRAPHIC COVERAGE
-                </div>
-                <div class="rw-row">
-                    <span>Target geography</span>
-                    <strong>District / MOH*</strong>
-                </div>
-                <div class="rw-description">
-                    Geographic resolution depends on verified
-                    historical data and available boundaries.
-                </div>
+            <div class="rw-row">
+                <span>District</span>
+                <strong>All areas</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Reporting week</span>
+                <strong>--</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Source</span>
+                <strong>NDCU</strong>
             </div>
 
         </div>
 
-        <!-- CENTRAL MAP -->
-        <div class="rw-map">
+        <div class="rw-panel">
 
-            <div class="rw-map-grid"></div>
+            <div class="rw-panel-title">
+                🌱 ENVIRONMENTAL ANOMALIES
+            </div>
 
-            <div class="rw-map-content">
-                <div class="rw-island">🇱🇰</div>
+            <div class="rw-row">
+                <span>Rainfall anomaly</span>
+                <strong>--</strong>
+            </div>
 
-                <div class="rw-map-heading">
-                    SRI LANKA
-                </div>
+            <div class="rw-row">
+                <span>Temperature anomaly</span>
+                <strong>--</strong>
+            </div>
 
-                <div class="rw-map-copy">
-                    CLIMATE & PUBLIC HEALTH INTELLIGENCE
-
-                    <br><br>
-
-                    Central geographic visualization.
-                    Interactive district and MOH risk map
-                    will be integrated here.
-                </div>
-
-                <div class="rw-legend">
-                    <span>● Dengue surveillance</span>
-                    <span>● Weather signals</span>
-                    <span>● Forecast outputs</span>
-                </div>
+            <div class="rw-row">
+                <span>Humidity anomaly</span>
+                <strong>--</strong>
             </div>
 
         </div>
 
-        <!-- RIGHT PANELS -->
-        <div class="rw-stack">
+        <div class="rw-panel">
 
-            <div class="rw-panel">
-                <div class="rw-panel-title">
-                    🌦️ WEATHER INTELLIGENCE
-                </div>
-                <div class="rw-row">
-                    <span>Mean temperature</span>
-                    <strong>-- °C</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Daily rainfall</span>
-                    <strong>-- mm</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Relative humidity</span>
-                    <strong>-- %</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Last update</span>
-                    <strong>--</strong>
-                </div>
+            <div class="rw-panel-title">
+                📍 GEOGRAPHIC COVERAGE
             </div>
 
-            <div class="rw-panel">
-                <div class="rw-panel-title">
-                    🧠 FORECAST INTELLIGENCE
-                </div>
-                <div class="rw-row">
-                    <span>Next-week cases</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Forecast model</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Uncertainty</span><strong>--</strong>
-                </div>
+            <div class="rw-row">
+                <span>Target geography</span>
+                <strong>District / MOH*</strong>
             </div>
 
-            <div class="rw-panel">
-                <div class="rw-panel-title">
-                    🚩 INSPECTION OPERATIONS
-                </div>
-                <div class="rw-row">
-                    <span>Priority areas</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Suggested visits</span><strong>--</strong>
-                </div>
-                <div class="rw-row">
-                    <span>Route distance</span><strong>-- km</strong>
-                </div>
+            <div class="rw-description">
+                Geographic resolution depends on verified
+                historical data and available boundaries.
+            </div>
+
+        </div>
+        """)
+
+    # ========================================================
+    # CENTRAL INTERACTIVE MAP
+    # ========================================================
+
+    with map_col:
+
+        render_html("""
+        <div class="rw-map-heading">
+            🗺️ SRI LANKA — DENGUE FORECAST MAP
+        </div>
+        """)
+
+        try:
+
+            dengue_map = create_homepage_map()
+
+            st_folium(
+                dengue_map,
+                width=None,
+                height=510,
+                returned_objects=[]
+            )
+
+        except Exception as error:
+
+            st.error(
+                f"Unable to load dengue map: {error}"
+            )
+
+            st.info(
+                "Please check the dengue prediction "
+                "and geographical data files."
+            )
+
+        render_html("""
+        <div class="rw-map-caption">
+            District colours represent model-predicted dengue cases.
+            Select or hover over a district for further information.
+        </div>
+        """)
+
+    # ========================================================
+    # RIGHT PANELS
+    # ========================================================
+
+    with right_col:
+
+        render_html("""
+        <div class="rw-panel">
+
+            <div class="rw-panel-title">
+                🌦️ WEATHER INTELLIGENCE
+            </div>
+
+            <div class="rw-row">
+                <span>Mean temperature</span>
+                <strong>-- °C</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Daily rainfall</span>
+                <strong>-- mm</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Relative humidity</span>
+                <strong>-- %</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Last update</span>
+                <strong>--</strong>
             </div>
 
         </div>
 
-    </div>
+        <div class="rw-panel">
 
-    <!-- BOTTOM INFORMATION -->
+            <div class="rw-panel-title">
+                🧠 FORECAST INTELLIGENCE
+            </div>
+
+            <div class="rw-row">
+                <span>Next-week cases</span>
+                <strong>--</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Forecast model</span>
+                <strong>--</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Uncertainty</span>
+                <strong>--</strong>
+            </div>
+
+        </div>
+
+        <div class="rw-panel">
+
+            <div class="rw-panel-title">
+                🚩 INSPECTION OPERATIONS
+            </div>
+
+            <div class="rw-row">
+                <span>Priority areas</span>
+                <strong>--</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Suggested visits</span>
+                <strong>--</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Route distance</span>
+                <strong>-- km</strong>
+            </div>
+
+        </div>
+        """)
+
+    # --------------------------------------------------------
+    # BOTTOM INFORMATION
+    # --------------------------------------------------------
+
+    render_html("""
     <div class="rw-bottom">
 
         <div class="rw-bottom-panel">
+
             <div class="rw-bottom-title">
                 🌧️ WEATHER & CLIMATE TRENDS
             </div>
+
             <div class="rw-bottom-text">
                 Temperature and rainfall trends from
                 the processed weather dataset.
             </div>
+
         </div>
 
         <div class="rw-bottom-panel">
+
             <div class="rw-bottom-title">
                 📊 MODEL PERFORMANCE
             </div>
+
             <div class="rw-bottom-text">
                 Temporal evaluation, MAE, RMSE
                 and prediction uncertainty.
             </div>
+
         </div>
 
         <div class="rw-bottom-panel">
+
             <div class="rw-bottom-title">
                 ⚙️ DATA & SYSTEM STATUS
             </div>
+
             <div class="rw-bottom-text">
                 Dengue data updates, weather API status
                 and data-quality monitoring.
             </div>
+
         </div>
 
     </div>
@@ -537,5 +578,4 @@ def render_home():
         RISKWEAVE LANKA · CLIMATE-INFORMED DENGUE
         FORECASTING & INSPECTION PLANNING
     </div>
-
-    """))
+    """)
