@@ -1,11 +1,11 @@
 
 import streamlit as st
 import textwrap
+import pandas as pd
 
 from streamlit_folium import st_folium
 from src.dengue_forecasting.dengue_map import create_homepage_map
-
-
+from src.dashboard.homepage_data import load_homepage_data
 # ============================================================
 # 1. HTML RENDERING HELPER
 # ============================================================
@@ -20,6 +20,10 @@ def render_html(content):
 # ============================================================
 
 def render_home():
+
+    # Load actual RiskWeave data
+    data = load_homepage_data()
+
 
     # --------------------------------------------------------
     # CUSTOM CSS
@@ -287,25 +291,28 @@ def render_home():
     # TOP METRICS
     # --------------------------------------------------------
 
-    render_html("""
+
+    render_html(f"""
     <div class="rw-metrics">
 
         <div class="rw-metric">
-            <div class="rw-label">TEMPERATURE</div>
-            <div class="rw-value">-- °C</div>
-            <div class="rw-note">Weather monitoring</div>
+            <div class="rw-label">MEAN TEMPERATURE</div>
+            <div class="rw-value">{data['temperature_mean']:.2f} °C</div>
+            <div class="rw-note">25-district mean</div>
         </div>
 
         <div class="rw-metric">
-            <div class="rw-label">RAINFALL</div>
-            <div class="rw-value">-- mm</div>
-            <div class="rw-note">Precipitation monitoring</div>
+            <div class="rw-label">MEAN RAINFALL</div>
+            <div class="rw-value">{data['rainfall_mean']:.2f} mm</div>
+            <div class="rw-note">25-district mean</div>
         </div>
 
         <div class="rw-metric">
             <div class="rw-label">DENGUE CASES</div>
-            <div class="rw-value">--</div>
-            <div class="rw-note">Latest reported cases</div>
+            <div class="rw-value">{data['dengue_total']:,.0f}</div>
+            <div class="rw-note">
+                Reporting week {data['dengue_week']}, {data['dengue_year']}
+            </div>
         </div>
 
         <div class="rw-metric">
@@ -316,6 +323,7 @@ def render_home():
 
     </div>
     """)
+
 
     # --------------------------------------------------------
     # MAIN COMMAND CENTRE
@@ -330,9 +338,8 @@ def render_home():
     # LEFT PANELS
     # ========================================================
 
-    with left_col:
 
-        render_html("""
+        render_html(f"""
         <div class="rw-panel">
 
             <div class="rw-panel-title">
@@ -341,17 +348,17 @@ def render_home():
 
             <div class="rw-row">
                 <span>Weekly cases</span>
-                <strong>--</strong>
+                <strong>{data['dengue_total']:,.0f}</strong>
             </div>
 
             <div class="rw-row">
-                <span>District</span>
-                <strong>All areas</strong>
+                <span>Districts covered</span>
+                <strong>{data['dengue_district_count']}</strong>
             </div>
 
             <div class="rw-row">
                 <span>Reporting week</span>
-                <strong>--</strong>
+                <strong>W{data['dengue_week']} / {data['dengue_year']}</strong>
             </div>
 
             <div class="rw-row">
@@ -368,18 +375,23 @@ def render_home():
             </div>
 
             <div class="rw-row">
-                <span>Rainfall anomaly</span>
-                <strong>--</strong>
+                <span>Rainfall anomalies</span>
+                <strong>{data['rainfall_anomalies']:,.0f}</strong>
             </div>
 
             <div class="rw-row">
-                <span>Temperature anomaly</span>
-                <strong>--</strong>
+                <span>Temperature anomalies</span>
+                <strong>{data['temperature_anomalies']:,.0f}</strong>
             </div>
 
             <div class="rw-row">
-                <span>Humidity anomaly</span>
-                <strong>--</strong>
+                <span>Humidity anomalies</span>
+                <strong>{data['humidity_anomalies']:,.0f}</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>District-days with anomalies</span>
+                <strong>{data['total_anomaly_days']:,.0f}</strong>
             </div>
 
         </div>
@@ -391,17 +403,23 @@ def render_home():
             </div>
 
             <div class="rw-row">
-                <span>Target geography</span>
-                <strong>District / MOH*</strong>
+                <span>Weather districts</span>
+                <strong>{data['weather_district_count']} / 25</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Dengue districts</span>
+                <strong>{data['dengue_district_count']} / 25</strong>
             </div>
 
             <div class="rw-description">
-                Geographic resolution depends on verified
-                historical data and available boundaries.
+                Coverage is based on the currently loaded
+                weather and dengue datasets.
             </div>
 
         </div>
         """)
+
 
     # ========================================================
     # CENTRAL INTERACTIVE MAP
@@ -448,9 +466,16 @@ def render_home():
     # RIGHT PANELS
     # ========================================================
 
-    with right_col:
 
-        render_html("""
+        weather_date = data["weather_date"].strftime("%d %b %Y")
+
+        forecast_date = (
+            data["forecast_date"].strftime("%d %b %Y")
+            if pd.notna(data["forecast_date"])
+            else "Unavailable"
+        )
+
+        render_html(f"""
         <div class="rw-panel">
 
             <div class="rw-panel-title">
@@ -459,26 +484,33 @@ def render_home():
 
             <div class="rw-row">
                 <span>Mean temperature</span>
-                <strong>-- °C</strong>
+                <strong>{data['temperature_mean']:.2f} °C</strong>
             </div>
 
             <div class="rw-row">
                 <span>Daily rainfall</span>
-                <strong>-- mm</strong>
+                <strong>{data['rainfall_mean']:.2f} mm</strong>
             </div>
 
             <div class="rw-row">
                 <span>Relative humidity</span>
-                <strong>-- %</strong>
+                <strong>{data['humidity_mean']:.2f} %</strong>
             </div>
 
             <div class="rw-row">
-                <span>Last update</span>
-                <strong>--</strong>
+                <span>Observed date</span>
+                <strong>{weather_date}</strong>
+            </div>
+
+            <div class="rw-row">
+                <span>Forecast data date</span>
+                <strong>{forecast_date}</strong>
             </div>
 
         </div>
+        """)
 
+        render_html("""
         <div class="rw-panel">
 
             <div class="rw-panel-title">
@@ -498,6 +530,11 @@ def render_home():
             <div class="rw-row">
                 <span>Uncertainty</span>
                 <strong>--</strong>
+            </div>
+
+            <div class="rw-description">
+                Forecast performance and uncertainty will be
+                connected after model evaluation.
             </div>
 
         </div>
@@ -525,6 +562,7 @@ def render_home():
 
         </div>
         """)
+
 
     # --------------------------------------------------------
     # BOTTOM INFORMATION
