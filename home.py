@@ -263,6 +263,7 @@ def render_home():
 
     render_html("""
     <div class="rw-header">
+
         <div>
             <div class="rw-logo">
                 RISK<span>WEAVE</span> LANKA
@@ -276,6 +277,7 @@ def render_home():
         <div class="rw-status">
             ● RESEARCH MONITORING PLATFORM
         </div>
+
     </div>
 
     <div class="rw-title">
@@ -335,8 +337,8 @@ def render_home():
     # --------------------------------------------------------
 
     left_col, map_col, right_col = st.columns(
-        [0.95, 2.1, 0.95],
-        gap="small"
+        [1.05, 2.4, 1.05],
+        gap="medium"
     )
 
     # ========================================================
@@ -403,29 +405,6 @@ def render_home():
             </div>
 
         </div>
-
-        <div class="rw-panel">
-
-            <div class="rw-panel-title">
-                📍 GEOGRAPHIC COVERAGE
-            </div>
-
-            <div class="rw-row">
-                <span>Weather districts</span>
-                <strong>{data['weather_district_count']} / 25</strong>
-            </div>
-
-            <div class="rw-row">
-                <span>Dengue districts</span>
-                <strong>{data['dengue_district_count']} / 25</strong>
-            </div>
-
-            <div class="rw-description">
-                Coverage is based on the currently loaded
-                weather and dengue datasets.
-            </div>
-
-        </div>
         """)
 
     # ========================================================
@@ -447,7 +426,7 @@ def render_home():
             st_folium(
                 dengue_map,
                 width=None,
-                height=510,
+                height=550,
                 returned_objects=[]
             )
 
@@ -542,29 +521,6 @@ def render_home():
             <div class="rw-description">
                 Forecast performance and uncertainty will be
                 connected after model evaluation.
-            </div>
-
-        </div>
-
-        <div class="rw-panel">
-
-            <div class="rw-panel-title">
-                🚩 INSPECTION OPERATIONS
-            </div>
-
-            <div class="rw-row">
-                <span>Priority areas</span>
-                <strong>--</strong>
-            </div>
-
-            <div class="rw-row">
-                <span>Suggested visits</span>
-                <strong>--</strong>
-            </div>
-
-            <div class="rw-row">
-                <span>Route distance</span>
-                <strong>-- km</strong>
             </div>
 
         </div>
