@@ -6,12 +6,13 @@ import pandas as pd
 from streamlit_folium import st_folium
 from src.dengue_forecasting.dengue_map import create_homepage_map
 from src.dashboard.homepage_data import load_homepage_data
+
+
 # ============================================================
 # 1. HTML RENDERING HELPER
 # ============================================================
 
 def render_html(content):
-
     st.html(textwrap.dedent(content))
 
 
@@ -23,7 +24,6 @@ def render_home():
 
     # Load actual RiskWeave data
     data = load_homepage_data()
-
 
     # --------------------------------------------------------
     # CUSTOM CSS
@@ -291,27 +291,33 @@ def render_home():
     # TOP METRICS
     # --------------------------------------------------------
 
-
     render_html(f"""
     <div class="rw-metrics">
 
         <div class="rw-metric">
             <div class="rw-label">MEAN TEMPERATURE</div>
-            <div class="rw-value">{data['temperature_mean']:.2f} °C</div>
+            <div class="rw-value">
+                {data['temperature_mean']:.2f} °C
+            </div>
             <div class="rw-note">25-district mean</div>
         </div>
 
         <div class="rw-metric">
             <div class="rw-label">MEAN RAINFALL</div>
-            <div class="rw-value">{data['rainfall_mean']:.2f} mm</div>
+            <div class="rw-value">
+                {data['rainfall_mean']:.2f} mm
+            </div>
             <div class="rw-note">25-district mean</div>
         </div>
 
         <div class="rw-metric">
             <div class="rw-label">DENGUE CASES</div>
-            <div class="rw-value">{data['dengue_total']:,.0f}</div>
+            <div class="rw-value">
+                {data['dengue_total']:,.0f}
+            </div>
             <div class="rw-note">
-                Reporting week {data['dengue_week']}, {data['dengue_year']}
+                Reporting week {data['dengue_week']},
+                {data['dengue_year']}
             </div>
         </div>
 
@@ -323,7 +329,6 @@ def render_home():
 
     </div>
     """)
-
 
     # --------------------------------------------------------
     # MAIN COMMAND CENTRE
@@ -338,6 +343,7 @@ def render_home():
     # LEFT PANELS
     # ========================================================
 
+    with left_col:
 
         render_html(f"""
         <div class="rw-panel">
@@ -358,7 +364,9 @@ def render_home():
 
             <div class="rw-row">
                 <span>Reporting week</span>
-                <strong>W{data['dengue_week']} / {data['dengue_year']}</strong>
+                <strong>
+                    W{data['dengue_week']} / {data['dengue_year']}
+                </strong>
             </div>
 
             <div class="rw-row">
@@ -420,7 +428,6 @@ def render_home():
         </div>
         """)
 
-
     # ========================================================
     # CENTRAL INTERACTIVE MAP
     # ========================================================
@@ -466,14 +473,14 @@ def render_home():
     # RIGHT PANELS
     # ========================================================
 
+    with right_col:
 
         weather_date = data["weather_date"].strftime("%d %b %Y")
 
-        forecast_date = (
-            data["forecast_date"].strftime("%d %b %Y")
-            if pd.notna(data["forecast_date"])
-            else "Unavailable"
-        )
+        if pd.notna(data["forecast_date"]):
+            forecast_date = data["forecast_date"].strftime("%d %b %Y")
+        else:
+            forecast_date = "Unavailable"
 
         render_html(f"""
         <div class="rw-panel">
@@ -562,7 +569,6 @@ def render_home():
 
         </div>
         """)
-
 
     # --------------------------------------------------------
     # BOTTOM INFORMATION
